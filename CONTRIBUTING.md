@@ -122,4 +122,4 @@ Adicionando tutoriais/artigos
 Recomendações de Leitura
 ------------------------
 
-1. [Sintaxe de Markdown válida no Github](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+1. [Sintaxe de Markdown válida no Github](https://guides.github.com/features/mastering-markdown/)
