@@ -7,7 +7,7 @@ difícil de responder, mas pode-se dar algumas sugestões. Seguem então algumas
 ideias a respeito (siga aquelas que lhe servirem).
 
 Pratique **e** leia
-===================
+-------------------
 
 Apenas escrever código é um erro. Apenas ler é um erro. Equilibre: leia a
 respeito do que você irá programar (preferencialmente antes de tentar bater no
@@ -58,7 +58,7 @@ por tal critério", etc.), mas ficará bastante motivada de fazer o seu primeiro
 
 
 Mantenha a simplicidade
-=======================
+-----------------------
 
 É interessante ter projetos em mente, objetivos bem claros, mas é também
 interessante não tentar fazer um prédio porque você aprendeu a martelar um
@@ -86,7 +86,7 @@ plataforma que permita fazer algo próximo do que deseja (no exemplo de Jogos,
 um RPG Maker, Game Maker ou Unity).
 
 Termine seus projetos
-=====================
+---------------------
 
 Não há muito o que dizer, apenas termine seus projetos. Nada de
 "pausar eles por tempo indeterminado": estabeleça como objetivo terminá-los. Se
@@ -98,7 +98,7 @@ você não está tentando montar prédios sabendo apenas martelar.
 
 
 Seu Ctrl+C, Ctrl+V não funcionam, portanto escreva!
-===================================================
+---------------------------------------------------
 
 É uma prática bastante comum, no início (aos que perpetuam essa prática: vamos
 lá, vocês podem dar mais de si), ficar ligeiramente perdido (ou tendo erros de
@@ -120,7 +120,7 @@ você não se acostumou com as construções, começam a surgir dúvidas como
 \*?".
 
 Anote
-=====
+-----
 
 Quando estiver aprendendo algo novo (mesmo que seja a primeira coisa que você
 estiver aprendendo), tenha consigo um bloco de anotações/caderno/o que for. Se
