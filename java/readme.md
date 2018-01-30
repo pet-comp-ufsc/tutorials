@@ -4,7 +4,7 @@ Java
 Índice
 ------
 
-1. [Como estudar programação]()
+1. [Como estudar programação](01-how-to-study.md)
 2. [Java e linguagens de programação]()
 3. [Variáveis]()
 
