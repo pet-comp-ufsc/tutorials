@@ -7,9 +7,9 @@ Contribuindo
 1. [Guia de estilos](#guia-de-estilos)
     1. [Estrutura](#estrutura)
     2. [Cabeçalhos](#cabeçalhos)
-    3. [Conteúdo](#conteudo)
-2. [Adicionando tutoriais/artigos](#adicionando-tutoriais-artigos)
-    1. [Orientações gerais](#orientacoes-gerais)
+    3. [Conteúdo](#conteúdo)
+2. [Adicionando tutoriais/artigos](#adicionando-tutoriaisartigos)
+    1. [Orientações gerais](#orientações-gerais)
 
 Guia de estilos
 ---------------
