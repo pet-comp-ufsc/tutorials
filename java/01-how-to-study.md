@@ -106,7 +106,7 @@ Seu Ctrl+C, Ctrl+V não funcionam, portanto escreva!
 lá, vocês podem dar mais de si), ficar ligeiramente perdido (ou tendo erros de
 compilação sem conseguir perceber diferença alguma do seu código para o código
 de exemplo) quanto a um tópico e então decidir copiar e colar códigos de
-exemplo (ou soluções da internet). Tirando a questão de plágio ou o que for e
+exemplo ou soluções da internet. Tirando a questão de plágio ou o que for e
 focando apenas na questão de aprendizado: essa é uma **péssima** prática para o
 seu aprendizado! E a solução para ela é bem simples: leia o código e escreva
 você mesmo, como um Ctrl+C Ctrl+V manual. Sempre fique imaginando que esses
