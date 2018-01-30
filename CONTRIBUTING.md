@@ -27,7 +27,7 @@ Título principal
     1. [Subtópico 1.1](#subtopico-1-1)
     2. [Subtópico 1.2](#subtopico-1-2)
 2. [Tópico 2](#topico-2)
-3. [Recomendações de leitura](#recomendacoes-de-leitura)
+3. [Recomendações de leitura](#recomendações-de-leitura)
 4. [Bibliografia](#bibliografia)
 
 Tópico 1
