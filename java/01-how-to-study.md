@@ -116,10 +116,9 @@ você quiser copiar, precisa escrever caractere por caractere por conta própria
 Escrever em vez de copiar e colar te dá a grande vantagem de perceber os
 detalhes e as construções da linguagem e abordagem que você está vendo.
 Acredite, faz toda a diferença, inclusive porque uma hora você terá que
-escrever código por conta própria, sem ter auxílio de fora, e nesses casos, se
-você não se acostumou com as construções, começam a surgir dúvidas como
-"primeiro vem () ou o nome? primeiro vem o nome do parâmetro ou o tipo? é & ou
-\*?".
+escrever código por conta própria, sem ter auxílio de fora, e se você não se
+acostumou com as construções, começarão a surgir dúvidas como "primeiro vem ()
+ou o nome? primeiro vem o nome do parâmetro ou o tipo? é & ou \*?".
 
 Anote
 -----
