@@ -1,5 +1,5 @@
-1. Como estudar programação?
-============================
+(1) Como estudar programação?
+=============================
 
 Quando alguém decide ou precisa aprender a programar, provavelmente uma das
 suas primeiras dúvidas é: "como aprender a programar?". No fundo, uma pergunta
