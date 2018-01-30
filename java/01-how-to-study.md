@@ -13,7 +13,7 @@ Apenas escrever código é um erro. Apenas ler é um erro. Equilibre: leia a
 respeito do que você irá programar (preferencialmente antes de tentar bater no
 teclado programando no modo
 [Go-Horse](https://pt.stackoverflow.com/q/164124/59974)). Tentar concluir as
-coisas por conta própria através de tentativa e erro é altamente sucetível a
+coisas por conta própria através de tentativa e erro é altamente suscetível a
 tirar conclusões extremamente erradas, por exemplo: não conhecer a ferramenta
 que você usa e achar que ela é lenta para determinada coisa -- quando na
 verdade é você que está usando da maneira errada --, ou mesmo achar que
@@ -77,7 +77,8 @@ Perceba o possível trajeto:
    computador) e entender como fazer NPCs ativos;
 
 3. Fazer um jogo simples de labirinto (2D visto de cima) em que o jogador deve
-   levar seu personagem à saída, e com isso entender como implementar colisão;
+   levar seu personagem à saída, e com isso entender como implementar colisão
+   com o cenário de forma mais eficiente;
 
 Perceba que todos eles possuem um tempo de produção muito mais curto do que
 partir direto para o tal GTA e trazem o suficiente para aprender algo que pode
@@ -88,11 +89,12 @@ um RPG Maker, Game Maker ou Unity).
 Termine seus projetos
 ---------------------
 
-Não há muito o que dizer, apenas termine seus projetos. Nada de
-"pausar eles por tempo indeterminado": estabeleça como objetivo terminá-los. Se
-seus projetos nunca são terminados, procure formas de ser mais produtivo (o
-livro "The Pragmatic Programmer" é uma ótima pedida nesse quesito) ou veja se
-você não está tentando montar prédios sabendo apenas martelar.
+Não há muito o que dizer, apenas termine seus projetos. Nada de "pausar eles
+por tempo indeterminado": estabeleça como objetivo terminá-los **mesmo que não
+da maneira mais perfeita que você gostaria**. Se seus projetos nunca são
+terminados, procure formas de ser mais produtivo (o livro **"The Pragmatic
+Programmer"**, de Andrew Hunt e David Thomas, é uma ótima pedida nesse quesito)
+ou veja se você não está tentando montar prédios sabendo apenas martelar.
 
 **Não esqueça: a sensação de terminar um projeto motiva MUITO.**
 
