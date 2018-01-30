@@ -136,3 +136,9 @@ Provavelmente não irá conseguir, mas se você estava estudando algo em Maio,
 pode lembrar que anotou algo a respeito na semana do dia 20. Essas coisas nem
 sempre pegam de uma semana para outra: às vezes você precisa revisar coisas que
 viu há meses ou mesmo anos).
+
+
+Recomendações de leitura
+========================
+
+1. [Quero programar, por onde começo?](https://medium.com/@robotlolita/quero-programar-por-onde-come%C3%A7o-43daeea807b2)
