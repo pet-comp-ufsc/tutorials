@@ -118,3 +118,20 @@ escrever código por conta própria, sem ter auxílio de fora, e nesses casos, s
 você não se acostumou com as construções, começam a surgir dúvidas como
 "primeiro vem () ou o nome? primeiro vem o nome do parâmetro ou o tipo? é & ou
 \*?".
+
+Anote
+=====
+
+Quando estiver aprendendo algo novo (mesmo que seja a primeira coisa que você
+estiver aprendendo), tenha consigo um bloco de anotações/caderno/o que for. Se
+preferir anotar no computador/celular, você pode aproveitar ferramentas como
+OneNote (Microsoft), GoogleKeep (ou Google Docs), que possuem esquemas de
+organização de anotações bastante decente. E não sinta medo de escrever o que
+entendeu para depois ler, encontrar erros, apagar e rabiscar: tudo isso conta,
+e conta muito. Lembre-se: o que você anota é o que você pode rever, mas o que
+você deixa apenas na sua cabeça não. Duvida? Diga o que você aprendeu em uma
+data aleatória no ano passado (por exemplo, na semana do dia 20 de Maio).
+Provavelmente não irá conseguir, mas se você estava estudando algo em Maio,
+pode lembrar que anotou algo a respeito na semana do dia 20. Essas coisas nem
+sempre pegam de uma semana para outra: às vezes você precisa revisar coisas que
+viu há meses ou mesmo anos).
