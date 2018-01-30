@@ -117,4 +117,4 @@ Acredite, faz toda a diferença, inclusive porque uma hora você vai ter que
 escrever código por conta própria, sem ter auxílio de fora, e nesses casos, se
 você não se acostumou com as construções, começam a surgir dúvidas como
 "primeiro vem () ou o nome? primeiro vem o nome do parâmetro ou o tipo? é & ou
-*?".
+\*?".
