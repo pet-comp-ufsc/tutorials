@@ -106,12 +106,12 @@ Seu Ctrl+C, Ctrl+V não funcionam, portanto escreva!
 lá, vocês podem dar mais de si), ficar ligeiramente perdido (ou tendo erros de
 compilação sem conseguir perceber diferença alguma do seu código para o código
 de exemplo) quanto a um tópico e então decidir copiar e colar códigos de
-exemplo ou soluções da internet. Tirando a questão de plágio ou o que for e
-focando apenas na questão de aprendizado: essa é uma **péssima** prática para o
-seu aprendizado! E a solução para ela é bem simples: leia o código e escreva
-você mesmo, como um Ctrl+C Ctrl+V manual. Sempre fique imaginando que esses
-atalhos não existem: se você quiser copiar, precisa escrever caractere por
-caractere por conta própria.
+exemplo ou soluções da internet. Saiba que essa é uma **péssima** prática para
+o seu aprendizado!
+
+A solução para ela é bem simples: leia o código e escreva você mesmo, como um
+Ctrl+C Ctrl+V manual. Sempre fique imaginando que esses atalhos não existem: se
+você quiser copiar, precisa escrever caractere por caractere por conta própria.
 
 Escrever em vez de copiar e colar te dá a grande vantagem de perceber os
 detalhes e as construções da linguagem e abordagem que você está vendo.
