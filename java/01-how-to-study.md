@@ -15,8 +15,8 @@ teclado programando no modo
 [Go-Horse](https://pt.stackoverflow.com/q/164124/59974)). Tentar concluir as
 coisas por conta própria através de tentativa e erro é altamente suscetível a
 tirar conclusões extremamente erradas, por exemplo: não conhecer a ferramenta
-que você usa e achar que ela é lenta para determinada coisa -- quando na
-verdade é você que está usando da maneira errada --, ou mesmo achar que
+que você usa e achar que ela é lenta para determinada coisa --- quando na
+verdade é você que está usando da maneira errada ---, ou mesmo achar que
 internamente o seu programa executa de uma maneira, quando na verdade é de
 outra totalmente diferente. Leia, descubra, entenda: nada de conclusões
 precipitadas!
@@ -51,10 +51,10 @@ relacionados a:
 Dessa forma podemos evitar o efeito "desânimo" causado por não ver objetivo no
 que você está aprendendo. Alguém que quer aprender a fazer jogos provavelmente
 não se sentirá motivada a aprender a programar CRUD's (_Create, Read, Update,
-Delete_ -- são aqueles sistemas de gerenciamento cuja operações giram em torno
-de "cadastrar usuário", "editar usuário", "listar usuários", "filtrar usuários
-por tal critério", etc.), mas ficará bastante motivada de fazer o seu primeiro
-[Pong](https://en.wikipedia.org/wiki/Pong). E por falar em Pong...
+Delete_ --- são aqueles sistemas de gerenciamento cujas operações giram em
+torno de "cadastrar usuário", "editar usuário", "listar usuários", "filtrar
+usuários por tal critério", etc. ---), mas ficará bastante motivada de fazer o
+seu primeiro [Pong](https://en.wikipedia.org/wiki/Pong). E por falar em Pong...
 
 
 Mantenha a simplicidade
