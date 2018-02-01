@@ -42,8 +42,7 @@ Em seguida, enquanto o número for menor que 0 (ou seja, negativo), informamos o
 usuário do erro e pedimos para ele digitar outro número. Se o número deixar de
 ser negativo, então o programa passa para a próxima etapa, que é mostrar o
 número escolhido pelo usuário. A linguagem utilizada nesse exemplo é
-[Python](python.org), uma linguagem do paradigma imperativo (ver a recomendação
-[1](#recomendações-de-leitura)).
+[Python](python.org).
 
 Essas duas linguagens possuem formas completamente diferentes de se descrever
 problemas nelas, visto que a primeira é do que chamamos de "paradigma
