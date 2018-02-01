@@ -138,20 +138,19 @@ sempre pegam de uma semana para outra: às vezes você precisa revisar coisas qu
 viu há meses ou mesmo anos).
 
 Leia a documentação
------
+-------------------
 
-Você provavelmente algum dia já foi até o Google e procurou "How to <sua dúvida
-aqui>". Esta é uma prática muito comum quando precisamos fazer alguma coisa 
-rápida. Geralmente encontramos a resposta facilmente em sites como Stack Overflow
-ou similares e em alguns casos até conseguimos boas respostas. O problema é que
-algumas vezes a pessoa que te deu a resposta está te passando uma solução que 
-não é a melhor de todas (e ele não está fazendo isso por mal, provavelmente, mas
-sim porque ele também não leu a documentação e foi a maneira a qual encontrou
-para resolver o problema). Por isso sempre que tiver tempo, leia a documentação.
-Cada vez mais as linguagens e bibliotecas estão com a documentação muito rica
-e te dão passo-a-passo do que você pode fazer com a ferramenta. Dificilmente
-você não vai achar o que precisa na documentação e quando isso acontecer você
-mesmo pode contribuir para o documento ajudando o registro a ficar ainda mais
-atualizado e detalhando, contribuindo para futuros programadores que tiverem
-a mesma dúvida que a sua.
-
+Você provavelmente algum dia já foi até o Google e procurou "How to \<sua dúvida
+aqui\>". Esta é uma prática muito comum quando precisamos fazer alguma coisa 
+rápida. Geralmente encontramos a resposta facilmente em sites como 
+[Stack Overflow](https://stackoverflow.com) ou similares e em alguns casos até
+conseguimos boas respostas. O problema é que algumas vezes a pessoa que te deu
+a resposta está te passando uma solução que não é a melhor de todas (e ele não
+está fazendo isso por mal, provavelmente, mas sim porque ele também não leu a
+documentação e foi a maneira a qual encontrou para resolver o problema). Por 
+isso sempre que tiver tempo, leia a documentação. Cada vez mais as linguagens
+e bibliotecas estão com a documentação muito rica e te dão passo-a-passo do
+que você pode fazer com a ferramenta. Dificilmente você não vai achar o que
+precisa na documentação e quando isso acontecer você mesmo pode contribuir 
+para o documento ajudando o registro a ficar ainda mais atualizado e detalhado,
+contribuindo para futuros programadores que tiverem a mesma dúvida que a sua.
