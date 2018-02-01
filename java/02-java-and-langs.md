@@ -29,12 +29,12 @@ exemplos:
 > print(f'Você escolheu o número {n}')
 > ```
 
-No [Exemplo 1](#exemplo-1), temos a definição de uma função (de matemática
-mesmo) chamada "`square`". Na primeira linha, estamos instruindo que `square`
-pega um número inteiro e entrega como resposta outro número inteiro. Na segunda
-linha, indicamos que esse inteiro se chama `x`, e a resposta de square é x
-multiplicado por ele mesmo (elevando ao quadrado). A linguagem utilizada nesse
-exemplo é [Haskell](haskell.org/).
+No [Exemplo 1](#exemplo-1), temos a definição de uma função (semelhante a
+matemática) chamada "`square`". Na primeira linha, estamos instruindo que
+`square` pega um número inteiro e entrega como resposta outro número inteiro.
+Na segunda linha, indicamos que esse inteiro se chama `x`, e a resposta de
+square é x multiplicado por ele mesmo (elevando ao quadrado). A linguagem
+utilizada nesse exemplo é [Haskell](haskell.org/).
 
 Já no [Exemplo 2](#exemplo-2), temos um pequeno programa que pede ao usuário
 para digitar um número inteiro. Esse pedido é feito pelo `input('mensagem')`.
