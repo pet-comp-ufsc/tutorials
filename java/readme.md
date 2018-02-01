@@ -5,8 +5,9 @@ Java
 ------
 
 1. [Como estudar programação](01-how-to-study.md)
-2. Java e linguagens de programação
-3. Variáveis
+2. [Java e linguagens de programação](02-java-and-langs.md)
+3. "Hello, world!"
+4. Variáveis
 
 Recomendações de leitura
 ------------------------
