@@ -73,8 +73,8 @@ funcionar:
 > main = do putStrLn "Hello, World!"
 > ```
 
-> ### Compilação
->
+### Compilação
+
 > A partir de um programa escrito em uma linguagem, gerar um programa
 > equivalente em outra linguagem.
 
@@ -120,8 +120,8 @@ sua distribuição. Na recomendação [2](#recomendações-de-leitura) são desc
 outros dois métodos de compilação, inclusive um deles utilizado há bastante
 tempo por Java e outro está para chegar para Java 10 (18.3).
 
-> ### Interpretação
->
+### Interpretação
+
 > Executar diretamente um programa escrito em uma linguagem.
 
 Ou seja, em vez de o código ser compilado para um executável, apenas
