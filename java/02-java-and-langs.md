@@ -169,8 +169,9 @@ logo acima: perceba que o código é literalmente o mesmo, mas em um momento o
 compilamos com o `ghc`, e em outro momento o interpretamos com o `runghc`. E aí
 pergunta-se: Haskell é compilada ou interpretada? A resposta é: você *pode*
 compilar Haskell e você *pode* interpretar Haskell. É uma linguagem apenas, o
-que você faz com ela não importa. Se uma linguagem possui apenas interpretador,
-nada impede alguém de criar um compilador para ela (e vice-versa).
+que você faz com ela é outra história. Se uma linguagem possui apenas
+interpretador, nada impede alguém de criar um compilador para ela (e
+vice-versa).
 
 > **Observação**: Apesar do pedantismo, é "socialmente aceito" dizer "a
 > linguagem X é compilada" em alguns casos como uma forma de dizer "ninguém
