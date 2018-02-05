@@ -162,7 +162,7 @@ O caso de Java
 > "E Java? É uma linguagem compilada e interpretada?"
 
 No fundo, ser interpretada e ser compilada não é uma característica da
-ferramenta. É como perguntar se um parafuso é parafusado com chave de fenda ou
+linguagem. É como perguntar se um parafuso é parafusado com chave de fenda ou
 com uma parafusadeira: não é uma característica do parafuso, é apenas a
 ferramenta que você utiliza no parafuso. Podemos pegar o exemplo de Haskell
 logo acima: perceba que o código é literalmente o mesmo, mas em um momento o
