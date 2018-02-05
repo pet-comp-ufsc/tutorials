@@ -32,7 +32,7 @@ exemplos:
 No [Exemplo 1](#exemplo-1), temos a definição de uma função (semelhante a
 matemática) chamada "`square`".
 
-- Na primeira linha, estamos instruindo que `square` pega um número inteiro e
+- Na primeira linha, estamos instruindo que `square` recebe um número inteiro e
   entrega como resposta outro número inteiro;
 - Na segunda linha, indicamos que esse inteiro se chama `x`, e a resposta de
   square é x multiplicado por ele mesmo (elevando ao quadrado).
