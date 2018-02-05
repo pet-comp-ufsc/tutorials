@@ -30,25 +30,32 @@ exemplos:
 > ```
 
 No [Exemplo 1](#exemplo-1), temos a definição de uma função (semelhante a
-matemática) chamada "`square`". Na primeira linha, estamos instruindo que
-`square` pega um número inteiro e entrega como resposta outro número inteiro.
-Na segunda linha, indicamos que esse inteiro se chama `x`, e a resposta de
-square é x multiplicado por ele mesmo (elevando ao quadrado). A linguagem
-utilizada nesse exemplo é [Haskell](haskell.org/).
+matemática) chamada "`square`".
 
-Já no [Exemplo 2](#exemplo-2), temos um pequeno programa que pede ao usuário
-para digitar um número inteiro. Esse pedido é feito pelo `input('mensagem')`.
-Em seguida, enquanto o número for menor que 0 (ou seja, negativo), informamos o
-usuário do erro e pedimos para ele digitar outro número. Se o número deixar de
-ser negativo, então o programa passa para a próxima etapa, que é mostrar o
-número escolhido pelo usuário. A linguagem utilizada nesse exemplo é
-[Python](python.org).
+- Na primeira linha, estamos instruindo que `square` pega um número inteiro e
+  entrega como resposta outro número inteiro;
+- Na segunda linha, indicamos que esse inteiro se chama `x`, e a resposta de
+  square é x multiplicado por ele mesmo (elevando ao quadrado).
+
+A linguagem utilizada nesse exemplo é [Haskell](haskell.org/).
+
+
+Já no [Exemplo 2](#exemplo-2), temos um pequeno programa que:
+
+- Pede ao usuário para digitar um número inteiro. Esse pedido é feito pelo
+  `input('mensagem')`.
+- Em seguida, enquanto o número for menor que 0 (ou seja, negativo), informamos
+  o usuário do erro e pedimos para ele digitar outro número.
+- Se o número deixar de ser negativo, então o programa passa para a próxima
+  etapa, que é mostrar o número escolhido pelo usuário.
+
+A linguagem utilizada nesse exemplo é [Python](python.org).
 
 Essas duas linguagens possuem formas completamente diferentes de se descrever
-problemas nelas, visto que a primeira é do que chamamos de "paradigma
-funcional" (ver a recomendação [1](#recomendações-de-leitura)) e outra do
-"paradigma imperativo". Java (a linguagem que será vista nas duas primeiras
-fases do curso) se encaixa no segundo caso.
+problemas nelas, visto que a primeira é do que chamamos de "paradigma funcional
+(ver a recomendação [1](#recomendações-de-leitura)) e a segunda do paradigma
+imperativo. Java (a linguagem que será vista nas duas primeiras fases do curso
+de Ciência da Computação da UFSC) se encaixa no segundo caso.
 
 
 Executando um programa a partir de um código
@@ -78,7 +85,7 @@ Architecture)](https://en.wikipedia.org/wiki/Instruction_set_architecture) que
 especifica a forma de executar esse código binário. Por essa razão, um mesmo
 binário que executa em um processador i5 (que implementa a ISA Intel x86_64)
 não executa em um celular com processador ARM Cortex A53 (que implementa a ISA
-ARMv8-A), já que as ISA's não são as mesmas.
+ARMv8-A), já que as duas ISA's são incompatíveis.
 
 Em Haskell, isso é possível de ser feito com o comando:
 
