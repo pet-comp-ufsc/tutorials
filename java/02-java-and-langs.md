@@ -52,7 +52,7 @@ Já no [Exemplo 2](#exemplo-2), temos um pequeno programa que:
 A linguagem utilizada nesse exemplo é [Python](python.org).
 
 Essas duas linguagens possuem formas completamente diferentes de se descrever
-problemas nelas, visto que a primeira é do que chamamos de "paradigma funcional
+problemas nelas, visto que a primeira é do que chamamos de paradigma funcional
 (ver a recomendação [1](#recomendações-de-leitura)) e a segunda do paradigma
 imperativo. Java (a linguagem que será vista nas duas primeiras fases do curso
 de Ciência da Computação da UFSC) se encaixa no segundo caso.
