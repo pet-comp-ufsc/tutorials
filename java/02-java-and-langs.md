@@ -89,7 +89,7 @@ ARMv8-A), já que as duas ISA's são incompatíveis.
 
 Em Haskell, isso é possível de ser feito com o comando:
 
-```bash
+```
 $ ghc exemplo.hs
 ```
 
@@ -110,7 +110,7 @@ dele (afinal, partes que não mudaram nem sempre precisam ser recompiladas).
 Tendo o executável gerado, ele pode ser executado como qualquer outro, seja por
 um clique duplo ou pelo terminal:
 
-```bash
+```
 $ ./exemplo
 Hello, world!
 ```
@@ -135,7 +135,7 @@ print("Hello, world!")
 Podemos simplesmente chamar o comando `python`, passando o arquivo, e o código
 dele será executado na hora:
 
-```bash
+```
 $ python hello.py
 Hello, world!
 ```
