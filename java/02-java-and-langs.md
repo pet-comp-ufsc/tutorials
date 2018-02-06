@@ -37,7 +37,7 @@ matemática) chamada "`square`".
 - Na segunda linha, indicamos que esse inteiro se chama `x`, e a resposta de
   square é x multiplicado por ele mesmo (elevando ao quadrado).
 
-A linguagem utilizada nesse exemplo é [Haskell](haskell.org/).
+A linguagem utilizada nesse exemplo é [Haskell](https://haskell.org/).
 
 
 Já no [Exemplo 2](#exemplo-2), temos um pequeno programa que:
@@ -49,7 +49,7 @@ Já no [Exemplo 2](#exemplo-2), temos um pequeno programa que:
 - Se o número deixar de ser negativo, então o programa passa para a próxima
   etapa, que é mostrar o número escolhido pelo usuário.
 
-A linguagem utilizada nesse exemplo é [Python](python.org).
+A linguagem utilizada nesse exemplo é [Python](https://python.org).
 
 Essas duas linguagens possuem formas completamente diferentes de se descrever
 problemas nelas, visto que a primeira é do que chamamos de paradigma funcional
