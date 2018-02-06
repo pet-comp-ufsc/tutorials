@@ -158,5 +158,4 @@ contribuindo para futuros programadores que tiverem a mesma dúvida que a sua.
 Recomendações de leitura
 ========================
 
-1. [Quero programar, por onde começo?]
-   (https://medium.com/@robotlolita/quero-programar-por-onde-come%C3%A7o-43daeea807b2)
+1. [Quero programar, por onde começo?](https://medium.com/@robotlolita/quero-programar-por-onde-come%C3%A7o-43daeea807b2)
