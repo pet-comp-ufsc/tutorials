@@ -1,6 +1,7 @@
 Java e linguagens de programação
 ================================
 
+
 Índice
 ------
 
@@ -66,6 +67,7 @@ problemas nelas, visto que a primeira é do que chamamos de paradigma funcional
 (ver a recomendação [1](#recomendações-de-leitura)) e a segunda do paradigma
 imperativo. Java (a linguagem que será vista nas duas primeiras fases do curso
 de Ciência da Computação da UFSC) se encaixa no segundo caso.
+
 
 
 Executando um programa a partir de um código
@@ -166,6 +168,7 @@ ferramentas é mais importante verificar rapidamente se estão funcionando de
 acordo fazendo diversas alterações em pouco tempo.
 
 
+
 O caso de Java
 --------------
 
@@ -211,8 +214,10 @@ bytecode:
 ```
 
 
+
 Recomendações de leitura
 ------------------------
 
 1. Paradigmas de programação: Imperativo? Funcional? Lógico?
 2. Compilação AOT e JIT.
+
