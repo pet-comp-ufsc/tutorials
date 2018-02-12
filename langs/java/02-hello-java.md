@@ -135,7 +135,7 @@ Veremos de dentro para fora como funciona esse programa de exemplo:
   or a JavaFX application class must extend javafx.application.Application
   ```
 
-  Esse erro está basicamente nos dizendo "não encontrei o `main`, por favor,
+  Esse erro está simplesmente nos dizendo "não encontrei o `main`, por favor,
   se for executar essa classe, defina o `main` nela", o que demonstra que
   efetivamente o `main` é o que Java procura para executar.
 
