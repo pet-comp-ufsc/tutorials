@@ -1,6 +1,13 @@
 "Hello, Java!"
 ==============
 
+
+Índice
+------
+
+1. [Primeiro programa em Java](#primeiro-programa-em-java)
+2. [Ferramentas](#ferramentas)
+
 Primeiro programa em Java
 -------------------------
 
@@ -8,7 +15,7 @@ Primeiro programa em Java
 
 _(Obs: antes de seguir, certifique-se de que você possui a JDK instalada e que
 a pasta dela está configurada na variável de ambiente "path" - veja como fazer
-isso na [recomendação 1](#recomendações-de-leitura))_
+isso na [Ferramenta 1](#ferramentas))_
 
 Primeiramente vamos dar uma olhada em um simples código em Java:
 
@@ -169,8 +176,11 @@ Veremos de dentro para fora como funciona esse programa de exemplo:
 
   Nosso arquivo precisaria se chamar "AnotherName.java".
 
+
+
 Ferramentas
 -----------
 
-1. [JDK](tools/jdk.md)
-2. [Eclipse](tools/eclipse.md)
+1. [JDK](/tools/jdk.md)
+2. [Eclipse](/tools/eclipse.md)
+
