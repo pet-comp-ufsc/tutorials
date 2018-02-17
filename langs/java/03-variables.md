@@ -132,7 +132,7 @@ Os tipos primitivos são os que guardam a menor unidade possível de dado. São 
 | int     | Número inteiro  | 4 bytes | -2^(32) a 2^(32) - 1 |
 | long    | Número inteiro  | 8 bytes | -2^(64) a 2^(64) - 1 |
 |---------|-----------------|---------|----------------------|
-k float   | Número real     | 4 bytes | [1]                  |
+| float   | Número real     | 4 bytes | [1]                  |
 | double  | Número real     | 8 bytes | [1]                  |
 |---------|-----------------|---------|----------------------|
 | boolean | Valor lógico    | 1 byte  | Falso e Verdadeiro   |
