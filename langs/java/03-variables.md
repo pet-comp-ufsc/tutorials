@@ -125,7 +125,6 @@ Os tipos de dados guardados por variáveis e constantes são separados entre
 
 Os tipos primitivos são os que guardam a menor unidade possível de dado. São eles:
 
-+---------+-----------------+---------+----------------------+
 | Tipo    | Significado     | Tamanho | Valores possíveis    |
 +---------+-----------------+---------+----------------------+
 | byte    | Número inteiro  | 1 byte  | -128 a 127           |
@@ -139,7 +138,6 @@ Os tipos primitivos são os que guardam a menor unidade possível de dado. São 
 | boolean | Valor lógico    | 1 byte  | Falso e Verdadeiro   |
 +---------+-----------------+---------+----------------------+
 | char    | Um caractere    | 2 bytes | [2]                  |
-+---------+-----------------+---------+----------------------+
 
 [1]: Definir os valores possíveis para números reais não é uma tarefa tão
      simples à primeira vista. Números reais utilizam um padrão de
