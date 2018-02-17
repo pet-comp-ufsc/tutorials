@@ -194,7 +194,7 @@ não-ocidentais, e, como o nome diz: ocupa 16 bits por caractere), 97 é o valor
 que simboliza a letra "a" (minúsculo), enquanto 98 simboliza "b", 65 a letra
 "A" (maiúsculo) e 33 simboliza "!". Porém, texto em computação não
 necessariamente é apenas letras (a-z, A-Z), acentos e pontuações ("!", "`",
-"~", ...), mas também quebra de linha. Por exemplo:
+"~", ...), mas também elementos especiais como quebra de linha. Por exemplo:
 
 ```java
 char lineBreak = 13;
