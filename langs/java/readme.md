@@ -6,7 +6,7 @@ Java
 
 1. [Java e linguagens de programação](01-java-and-langs.md)
 2. ["Hello, world!"](02-hello-java.md)
-3. Variáveis
+3. [Variáveis](03-variables.md)
 
 Recomendações de leitura
 ------------------------
