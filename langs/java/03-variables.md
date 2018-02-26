@@ -14,7 +14,7 @@ Para isso, precisamos de uma maneira de referenciar esses dados para poder
 trabalhar com eles, além de poder saber qual tipo de dado estamos trabalhando e
 realizar operações em cima deles. Nesse quesito, temos o que chamamos de
 variáveis e constantes. Uma variável/constante é uma forma de sabermos **o
-estado atual** de um dado. Veremos a seguir como trabalhar com eles.
+estado atual** de um dado. Veremos a seguir como trabalhar com elas.
 
 Pequeno exemplo
 ---------------
@@ -58,41 +58,50 @@ Para criar uma variável, deve-se seguir o padrão:
 tipo identificador = valor;
 ```
 
-**Tipo**: O tipo de dado a ser guardado ou referenciado pela variável. Veja em
-[Tipos de dados](#tipos-de-dados) para ver o que se pode utilizar.
+- **Tipo**: O tipo de dado a ser guardado ou referenciado pela variável. Veja
+  em [Tipos de dados](#tipos-de-dados) para ver o que se pode utilizar.
 
-**Identificador**: O nome que utilizaremos para a variável. Em java, esse nome
-segue o padrão **camelCase**, que é exatamente da mesma forma como foi escrito:
-primeira letra do nome é minúscula, todas as palavras são juntas e a primeira
-letra de cada palavra é maiúscula. Exemplos:
+- **Identificador**: O nome que utilizaremos para a variável. Em Java, esse
+  nome segue o padrão **camelCase**: a primeira letra do nome é minúscula,
+  todas as palavras são juntas e a primeira letra de cada palavra é maiúscula
+  (que é exatamente da mesma forma como foi escrito), por exemplo:
 
-```java
-int value;
-int anotherValue;
-int aValueWithAReallyBigName;
-```
+  ```java
+  int value;
+  int anotherValue;
+  int aValueWithAReallyBigName;
+  ```
 
-Podemos nos referir a uma variável através de seu identificador, como visto no
-pequeno exemplo. Podemos, inclusive, utilizar uma variável para dar valor a
-outra:
+  Podemos nos referir a uma variável através de seu identificador, como visto no
+  pequeno exemplo. Podemos, inclusive, utilizar uma variável para dar valor a
+  outra:
 
-```java
-int x = 10;
-int y = x;
-```
+  ```java
+  int x = 10;
+  int y = x;
+  ```
 
-Nesse caso, tanto x quanto y guardam o valor 10. Se fizermos, porém:
+  Nesse caso, tanto x quanto y guardam o valor 10. Se fizermos, porém:
 
-```java
-int x = 10;
-int y = x;
-x = 4;
-```
+  ```java
+  int x = 10;
+  int y = x;
+  x = 4;
+  ```
 
-A variável `x` terá mudado de valor para 4, porém `y` manterá o valor 10.
-Inclusive, o fato de podermos mudar o valor de `x` é o que caracteriza a ideia
-de variáveis: o valor delas **pode variar** durante o programa (se algum
-programador disser que o valor dela será alterado, como no caso de `x`).
+  A variável `x` terá mudado de valor para 4, porém `y` manterá o valor 10.
+  Inclusive, o fato de podermos mudar o valor de `x` é o que caracteriza a ideia
+  de variáveis: o valor delas **pode variar** durante o programa (se algum
+  programador disser que o valor dela será alterado, como no caso de `x`).
+
+  **Caso especial: _Siglas_**. No caso de siglas, é preferível que variáveis
+  sigam padrões no estilo:
+
+  ```java
+  String cpf;          // Todo o nome é uma sigla
+  DvdPlayer dvdPlayer; // O nome começa com uma sigla
+  int userId;          // O nome termina com uma sigla (ou ela está no meio)
+  ```
 
 Constantes
 ----------
@@ -114,6 +123,14 @@ x = 4; // Erro de compilação: não se pode alterar o valor de uma constante
 
 Quando utilizar constantes? Sempre que o valor não for feito para ser alterado
 no contexto em que é utilizado.
+
+O padrão de nomenclatura para constantes é **SCREAMING\_SNAKE\_CASE**: todas as
+letras em maiúsculo, palavras separadas por um _underscore_/_underline_ ("\_").
+Por exemplo:
+
+```java
+final double PI = 3.1415926535897932384626433;
+```
 
 Tipos de dados
 --------------
@@ -224,3 +241,67 @@ Os tipos compostos são, em resumo, todos os que não são primitivos. Por exemp
 - `Object`;
 - `ArrayList`;
 - Arrays (demarcados com um `[]`, visto na [próxima aula](04-arrays.md)).
+
+[Em uma aula mais a frente](06-classes.md), aprenderemos a criar nossos
+próprios tipos compostos.
+
+Declaração e instanciação
+-------------------------
+
+Três conceitos que serão vistos frequentemente em programação imperativa:
+
+### Declaração
+
+Trata-se de "dizer que uma variável existe". Em código:
+
+```java
+int x;
+String name;
+double thing;
+```
+
+Perceba que essas variáveis não foram inicializadas: o que foi feito é uma
+**declaração** sem que houvesse uma inicialização, ou seja: dissemos que elas
+existem, mas não demos um valor.
+
+Porém:
+
+```java
+int x = 0;
+```
+
+Estamos declarando `x` **e** inicializando.
+
+### Instanciação
+
+Instanciar é criar um valor novo, a grosso modo. Por exemplo:
+
+```java
+int x = 0;  // Instanciamos o valor 0, que é um número inteiro
+int y = 10; // Instanciamos o valor 10, que é um número inteiro
+int z = x;  // Instanciamos um valor novo que é uma *cópia* do valor de `x`
+
+String name = "Alice"; // Instanciamos uma String com o texto "Alice"
+String fullname = "Alice" + " " + "Cooper";
+```
+
+Na última linha, instanciamos 5 `String`'s, respectivamente:
+
+- Uma contendo o texto "Alice";
+- Outra contendo o texto " " (apenas um espaço em branco);
+- Outra contendo o texto "Cooper";
+- Outra sendo a concatenação de "Alice" e " ", que gera uma instância contendo
+  "Alice ";
+- Por fim, outra sendo a concatenação de "Alice " e "Cooper', que gera uma
+  instância contendo o texto "Alice Cooper".
+
+Porém, foi declarada apenas uma variável: `fullname`. Uma situação semelhante
+pode ser vista em:
+
+```java
+int x = 0;
+x = 3;
+```
+
+Ainda temos apenas uma única variável declarada (`x`), porém inicialmente
+instanciamos o valor 0 e, em seguida, o valor 3.
