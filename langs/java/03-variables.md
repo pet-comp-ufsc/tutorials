@@ -1,6 +1,18 @@
 03 - Variáveis e Constantes
 ===========================
 
+Índice
+------
+
+1. [Motivação](#motivação)
+2. [Pequeno Exemplo](#pequeno-exemplo)
+3. [Constantes](#constantes)
+4. [Tipos de dados](#tipos-de-dados)
+    1. [Primitivos](#primitivos)
+    2. [Compostos](#compostos)
+5. [Declaração e instanciação](#declaração-e-instanciação)
+6. [Recomendações de Leitura](#recomendações-de-leitura)
+
 Motivação
 ---------
 
@@ -177,7 +189,7 @@ exemplo, ambientes com objetos 3D compostos de absurdamente muitos vértices
 
 _(OBS: **NÃO** utilize `float` nem `double` para armazenar dados sensíveis
 (como, por exemplo, dinheiro). Veja na [recomendação de leitura
-#1](#recomendações-de-leitura) o porquê disso.)_
+ #1](#recomendações-de-leitura) o porquê disso.)_
 
 [2]: Textos, dentro do mundo da computação, possuem codificações específicas
 para indicar o que é cada caractere. Essencialmente, um caractere não passa de
@@ -305,3 +317,9 @@ x = 3;
 
 Ainda temos apenas uma única variável declarada (`x`), porém inicialmente
 instanciamos o valor 0 e, em seguida, o valor 3.
+
+Recomendações de Leitura
+------------------------
+
+1. "Por que meu `==` não funciona para String?"
+2. Cópia e "move"
