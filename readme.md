@@ -26,6 +26,10 @@ Os tutoriais são divididos nas seguintes categorias:
   > Tutoriais a respeito de linguagens específicas, desde Java (primeira
   > linguagem vista no curso) a Python, Haskell, etc.
 
+- [Ferramentas](/tools/)
+  > Tutoriais a respeito de como instalar e utilizar ferramentas, incluindo
+  > atalhos de teclado e outros recursos de usabilidade.
+
 Recomendações de leitura
 ------------------------
 
