@@ -36,6 +36,7 @@ Recomendações de leitura
 ### Calouros
 
 - [Tutoriais sobre Java](/langs/java/)
+- [Como instalar/utilizar a JDK](/tools/jdk.md)
 
 Contato
 -------

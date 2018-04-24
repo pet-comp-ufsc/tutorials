@@ -33,13 +33,13 @@ Instalação
 
 ### Informações gerais
 
-**Versão sugerida**: OpenJDK-9 (mais recente)
+**Versão sugerida**: OpenJDK-10 (mais recente)
 
 ### Windows
 
 1. Siga para a [página de download oficial da
    Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-   e clique no botão "Download" com o ícone de Java 9.
+   e clique no botão "Download" com o ícone de Java 10.
 
 2. Na seção cinza com o título "Java SE Development Kit _<Versão>_", marque
    "**Accept License Agreement**";
@@ -63,7 +63,7 @@ versão sugerida acima no lugar.
 Execute o comando:
 
 ```
-pacman -S jdk9-openjdk
+pacman -S jdk10-openjdk
 ```
 
 
