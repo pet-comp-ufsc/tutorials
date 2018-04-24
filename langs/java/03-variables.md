@@ -142,6 +142,7 @@ Por exemplo:
 
 ```java
 final double PI = 3.1415926535897932384626433;
+final int NUM_THREADS = 4;
 ```
 
 Tipos de dados
