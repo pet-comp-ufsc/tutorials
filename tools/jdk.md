@@ -13,8 +13,8 @@ JDK
 3. [Como utilizar](#como-utilizar)
    1. [Compilar](#compilar)
    2. [Executar um código compilado](#executar-um-código-compilado)
-   3. [Alterar para onde vão os arquivos .class](#alterar-para-onde-vão-os-arquivos-.class)
-   4. [Gerar .jar](#gerar-.jar)
+   3. [Alterar para onde vão os arquivos .class](#alterar-para-onde-vão-os-arquivos-class)
+   4. [Gerar .jar](#gerar-jar)
 
 Sobre
 -----
