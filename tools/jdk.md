@@ -32,7 +32,7 @@ Instalação
 
 **Versão sugerida**: OpenJDK-10 (mais recente)
 
-### Windows
+### Instalação para Windows
 
 1. Siga para a [página de download oficial da
    Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
@@ -47,7 +47,7 @@ Instalação
 
 5. [Teste](#como-utilizar) se a ferramenta está no PATH.
 
-### Linux
+### Instalação para Linux
 
 #### Ubuntu
 
@@ -72,7 +72,7 @@ _(OBS: Se as classes que você irá compilar estão em um `package`, veja o
 tutorial [Como trabalhar com pacotes](/langs/java/xx-packages.md) para saber
 como compilá-los da maneira correta)_
 
-#### Windows:
+#### Compilar no Windows
 
 Para compilar um arquivo de código Java:
 
@@ -109,7 +109,7 @@ Para compilar um arquivo de código Java:
    > javac HelloWorld.java
    ```
 
-#### Linux:
+#### Compilar no Linux
 
 Para compilar um arquivo de código Java, execute:
 
