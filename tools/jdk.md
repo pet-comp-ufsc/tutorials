@@ -6,8 +6,8 @@ JDK
 
 1. [Sobre](#sobre)
 2. [Instalação](#instalação)
-   1. [Windows](#windows)
-   2. [Linux](#linux)
+   1. [Windows](#instalar-no-windows)
+   2. [Linux](#instalar-no-linux)
        1. [Ubuntu](#ubuntu)
        2. [ArchLinux](#archlinux)
 3. [Como utilizar](#como-utilizar)
@@ -32,7 +32,7 @@ Instalação
 
 **Versão sugerida**: OpenJDK-10 (mais recente)
 
-### Instalação para Windows
+### Instalar no Windows
 
 1. Siga para a [página de download oficial da
    Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
@@ -47,7 +47,7 @@ Instalação
 
 5. [Teste](#como-utilizar) se a ferramenta está no PATH.
 
-### Instalação para Linux
+### Instalar no Linux
 
 #### Ubuntu
 
