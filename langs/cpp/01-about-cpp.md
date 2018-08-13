@@ -10,21 +10,23 @@ Por conta de algumas premissas descritas abaixo, há razões para compiladores d
 C++ geralmente prezarem por gerar código otimizado. Em resumo, C++ pode ser
 utilizado em lugares em que façam parte das preocupações do programador:
 
-1. **Performance** ótima, previsível e garantida, e isso
-   graças ao seu compilador principal: **g++**;
+1. **Performance** ótima, previsível e garantida, e isso é oferecido pela
+   linguagem graças ao seu compilador principal: **g++**;
 2. **Abstração** de operações, tipos, manipulação de memória, etc., sendo
    possível que operações e manipulações complexas possuam uma interfaces
    simples de se utilizar ou mesmo automatizar o gerenciamento de memória
    dinâmica **sem a necessidade de um Garbage Collector**;
 3. **Compatibilidade de arquitetura**: como o g++ é análogo a um irmão do gcc
-   (compilador de C), é possível compilar código C++ para arquiteturas
-   diversas, principalmente microcontroladores que costumam ser
-   preocupantemente difíceis de se ter um compilador de outra linguagem para
-   eles. É possível, por exemplo, desenvolver para processadores diversos
-   processadores ARM, mesmo antigos como ARM7TDMI (processador do console
-   GameBoyAdvance) ou novos como os Cortex (como o dos celulares Android
-   modernos), ao mesmo tempo que é possível desenvolver para processadores
-   voltados a Desktops e Notebooks, como os Intel/AMD x86 e x86_64;
+   (compilador de C), que possui uma longa data de existência (e portanto mais
+   pessoas se dedicaram a portar o compilador para suas plataformas), é
+   possível compilar código C++ para arquiteturas diversas, principalmente
+   microcontroladores que costumam ser preocupantemente difíceis de se ter um
+   compilador de outra linguagem para eles. É possível, por exemplo,
+   desenvolver para processadores diversos processadores ARM, mesmo antigos
+   como ARM7TDMI (processador do console GameBoyAdvance) ou novos como os
+   Cortex (como o dos celulares Android modernos e vários microcontroladores),
+   ao mesmo tempo que é possível desenvolver para processadores voltados a
+   Desktops e Notebooks, como os Intel/AMD x86 e x86_64;
 4. Recursos de programação moderna (a partir de C++11), mesmo para programação
    de sistemas básicos (como Sistemas Operacionais, _Device Drivers_, etc.):
    funções lambda, suporte a Threads, dentre outros;
