@@ -4,7 +4,7 @@ Sobre C++
 Por que usar C++?
 -----------------
 
-C++ é uma **Linguagem de Propósito Geral** (GPP -- _General Purpose Language_).
+C++ é uma **Linguagem de Propósito Geral** (GPL -- _General Purpose Language_).
 Ou seja, é projetada para que o programador decida onde será utilizada.
 Por conta de algumas premissas descritas abaixo, há razões para compiladores de
 C++ geralmente prezarem por gerar código otimizado. Em resumo, C++ pode ser
