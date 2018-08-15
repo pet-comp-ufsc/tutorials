@@ -151,3 +151,8 @@ C++ é próxima do hardware, assim como C?
 
 Não, pelos mesmos motivos pelo qual
 [C também não é](https://queue.acm.org/detail.cfm?id=3212479).
+
+Recomendações de Leitura
+------------------------
+
+1. [#define's são seguros?](/langs/c/defines-are-evil.md)
