@@ -11,7 +11,8 @@ C++ geralmente prezarem por gerar código otimizado. Em resumo, C++ pode ser
 utilizado em lugares em que façam parte das preocupações do programador:
 
 1. **Performance** ótima, previsível e garantida, e isso é oferecido pela
-   linguagem graças ao seu compilador principal: **g++**;
+   linguagem graças aos seus compiladores principais: **g++**, **clang** e
+   **CL** (este último para o Microsoft Visual Studio Community/Ultimate);
 2. **Abstração** de operações, tipos, manipulação de memória, etc., sendo
    possível que operações e manipulações complexas possuam uma interfaces
    simples de se utilizar ou mesmo automatizar o gerenciamento de memória
