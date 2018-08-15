@@ -29,7 +29,7 @@ utilizado em lugares em que façam parte das preocupações do programador:
    ao mesmo tempo que é possível desenvolver para processadores voltados a
    Desktops e Notebooks, como os Intel/AMD x86 e x86_64;
 4. Recursos de programação moderna (a partir de C++11), mesmo para programação
-   de sistemas básicos (como Sistemas Operacionais, _Device Drivers_, etc.):
+   de software de base (como Sistemas Operacionais, _Device Drivers_, etc.):
    funções lambda, suporte a Threads, dentre outros;
 5. Necessidade de reimplementação de recursos básicos: é possível implementar
    qualquer recurso da biblioteca padrão da linguagem sem a necessidade de uma
