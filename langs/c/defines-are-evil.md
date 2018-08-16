@@ -1,8 +1,8 @@
-#define são seguros?
-====================
+#defines são seguros?
+=====================
 
 Para responder a essa pergunta, vamos primeiramente entender como #defines
-funcionam:
+(chamadas de **Macros**) funcionam:
 
 ```c
 #include <stdio.h>
@@ -92,7 +92,9 @@ Antes de continuar, sem compilar, responda: qual você acredita que será o
 resultado? 15? Ou 10? Ou nenhum dos dois?
 
 ...
+
 ...
+
 ...
 
 Se você respondeu "15", você errou. Se você respondeu "10", você também errou!
@@ -177,7 +179,9 @@ Mais uma vez, outro código inocente. Mais uma vez, antes de compilar e
 executar, qual você acredita ser o resultado desta vez? 10 ou -1?
 
 ...
+
 ...
+
 ...
 
 Se você acreditou em 10, parabéns, você acertou! Mas...ao executar, perceba o
@@ -235,5 +239,6 @@ bar()
 ```
 
 Agora sim, sem chamadas extras. E uma macro bastante ilegível. Conclusão:
-macros de C (como são chamados os #defines) são inocentes, mas extremamente
-inseguras.
+macros de C são inocentes, mas extremamente propensas a erro, exigindo uma
+atenção extra e exagerada do programador. Seu uso também não reflete o esperado
+pelos mecanismos da linguagem, já que não se caracterizam como uma função.
