@@ -1,6 +1,11 @@
 Sobre C++
 =========
 
+1. [Por que usar C++?](#por-que-usar-c)
+2. [Apelo: atualizações na linguagem](#apelo-atualizações-na-linguagem)
+3. [C++ é C com std::cout?](#c-é-c-com-stdcout)
+4. [C++ é próxima do hardware, assim como C?](#c-é-próxima-do-hardware-assim-como-c)
+
 Por que usar C++?
 -----------------
 
@@ -150,7 +155,16 @@ C++ é próxima do hardware, assim como C?
 ----------------------------------------
 
 Não, pelos mesmos motivos pelo qual
-[C também não é](https://queue.acm.org/detail.cfm?id=3212479).
+[C também não é](https://queue.acm.org/detail.cfm?id=3212479). Mas, é claro,
+várias construções da linguagem são capazes de dar essa ilusão ao programador.
+
+Documentação Recomendada
+------------------------
+
+É recomendado procurar a documentação no site
+[cpp-reference](https://cppreference.com/), que costuma estar atualizado,
+conter boas explicações, indicações claras das versões de C++, exemplos de uso,
+e conformidade com o que se espera de código moderno da linguagem.
 
 Recomendações de Leitura
 ------------------------
