@@ -175,8 +175,8 @@ int main(void) {
 }
 ```
 
-Mais uma vez, outro código inocente. Mais uma vez, antes de compilar e
-executar, qual você acredita ser o resultado desta vez? 10 ou -1?
+Mais uma vez, outro código inocente. Novamente, antes de compilar e executar,
+qual você acredita ser o resultado desta vez? 10 ou -1?
 
 ...
 
@@ -197,8 +197,8 @@ foo()
 ```
 
 Você consegue perceber o problema? Consegue perceber que `foo()` foi chamada
-**duas vezes**? Mais uma vez, como `#define` é um "find-replace", temos um novo
-problema:
+**duas vezes**? Como dito anteriormente, `#define` é um "find-replace", logo
+temos um novo problema:
 
 ```c
 int main(void) {
