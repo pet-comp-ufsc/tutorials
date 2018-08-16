@@ -1,7 +1,10 @@
 #defines são seguros?
 =====================
 
-Para responder a essa pergunta, vamos primeiramente entender como `#define`s
+O que são #defines?
+-------------------
+
+Para entender os problemas, vamos primeiramente entender como `#define`s
 (chamadas de **Macros**) funcionam:
 
 ```c
@@ -55,8 +58,13 @@ int main(void) {
 
 E esse é o código que é efetivamente compilado (na verdade, quase esse). Parece
 um recurso interessante à primeira vista (ao menos para iniciantes), então
-vamos brincar de fazer comandos genéricos! Suponha que você queira fazer uma
-função que, dados `a` e `b`, retorne o maior deles. Essa função poderia ser:
+vamos brincar de fazer comandos genéricos!
+
+Problemas
+---------
+
+Suponha que você queira fazer uma função que, dados `a` e `b`, retorne o maior
+deles. Essa função poderia ser:
 
 ```c
 int max(int a, int b) {
@@ -238,7 +246,11 @@ bar()
 10
 ```
 
-Agora sim, sem chamadas extras. E uma macro bastante ilegível. Conclusão:
-macros de C são inocentes, mas extremamente propensas a erro, exigindo uma
+Agora sim, sem chamadas extras, mas com uma macro bastante ilegível.
+
+Conclusão
+---------
+
+Macros de C são inocentes, mas extremamente propensas a erro, exigindo uma
 atenção extra e exagerada do programador. Seu uso também não reflete o esperado
 pelos mecanismos da linguagem, já que não se caracterizam como uma função.
