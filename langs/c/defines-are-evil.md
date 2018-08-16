@@ -1,7 +1,7 @@
 #defines são seguros?
 =====================
 
-Para responder a essa pergunta, vamos primeiramente entender como #defines
+Para responder a essa pergunta, vamos primeiramente entender como `#define`s
 (chamadas de **Macros**) funcionam:
 
 ```c
@@ -27,12 +27,12 @@ int main(void) {
 ```
 
 O código acima (escrito em C) preenche um vetor de 30 inteiros com valores
-aleatórios de 0 a 100. Mas o que o #define faz? Ele simplesmente serve para
+aleatórios de 0 a 100. Mas o que o `#define` faz? Ele simplesmente serve para
 fazer um "find-replace" durante o pré-processamento, ou seja: **antes de
-compilar seu código C**, os trechos em que há o uso do #define são substituídos
-pelo que ele define, o que é feito pelo **pré-processador** (chamado "C
-Pre-Processor" --- `cpp`). Ou seja, o código acima, após a passada do
-pré-processador, se torna:
+compilar seu código C**, os trechos em que há o uso do `#define` são
+substituídos pelo que ele define, o que é feito pelo **pré-processador**
+(chamado "C Pre-Processor" --- `cpp`). Ou seja, o código acima, após a passada
+do pré-processador, se torna:
 
 ```c
 [... código do stdio.h ...]
@@ -66,7 +66,7 @@ int max(int a, int b) {
 
 É simples, porém não é genérico o suficiente: e se for necessário o maior entre
 dois floats? Ou doubles? Ou shorts? Seria necessário criar uma função nova para
-cada um desses casos, todas elas com os mesmos comandos. Mas #defines não
+cada um desses casos, todas elas com os mesmos comandos. Mas `#define`s não
 exigem tipos explícitos (afinal, são "find-replace": não fazem parte da
 linguagem, apenas geram código), então um programador ingênuo pensaria em
 utilizá-los:
@@ -197,7 +197,7 @@ foo()
 ```
 
 Você consegue perceber o problema? Consegue perceber que `foo()` foi chamada
-**duas vezes**? Mais uma vez, como #define é um "find-replace", temos um novo
+**duas vezes**? Mais uma vez, como `#define` é um "find-replace", temos um novo
 problema:
 
 ```c
@@ -217,8 +217,8 @@ int main(void) {
 Ou seja, em vez de aproveitar o resultado de `foo()` ou de `bar()`,
 decididamente uma das duas é chamava uma segunda vez.
 
-A correção é, no #define, criar um trecho de código que guarda o resultado das
-funções e usa o valor guardado para comparar e retornar (em vez de usar a
+A correção é, no `#define`, criar um trecho de código que guarda o resultado
+das funções e usa o valor guardado para comparar e retornar (em vez de usar a
 chamada da função):
 
 ```c
