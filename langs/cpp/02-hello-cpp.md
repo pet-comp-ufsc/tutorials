@@ -99,9 +99,52 @@ após "Hello, world!".
 Ausência de return no main
 --------------------------
 
-_(TODO)_
+Em C++, a única função que não exige retorno (ao menos de maneira segura) é a
+`main`. Nesse caso, por padrão o retorno é 0. O retorno de `main` é utilizado
+por quem executou o programa para saber se ele chegou ao fim com sucesso (ou
+seja, retorno 0) ou ocorreu alguma falha (ou seja, retorno negativo). As falhas
+podem envolver argumentos insuficientes (o programa exigia 4 argumentos, mas
+foram passados 3 ou nenhum), programa interrompido pelo usuário, dentre outros.
+
+Os argumentos do programa podem vir mudando a definição de `main` para:
+
+```c++
+int main(int argc, char* argv[]) {
+    std::cout << "Num. of arguments: " << argc << '\n';
+
+    std::cout << "First arg: " << argv[0] << '\n';
+}
+```
+
+Ou seja, `argc` conterá *quantos* argumentos foram passados, e `argv` contém
+*quais* os argumentos passados. Vale lembrar que o primeiro argumento
+(`argv[0]`) é sempre o nome do programa.
 
 std::endl
 ---------
 
-_(TODO)_
+É comum ver exemplos de código da forma:
+
+```c++
+std::cout << "Texto" << std::endl;
+```
+
+O `std::endl`, assim como o `\n`, serve para pular linha. Porém ele **não**
+deve ser usado de maneira desleixada, pois além de pular linha, ele também
+força um "flush" na saída do console (ao contrário do caractere `\n`, que
+apenas é um caractere que, ao ser mostrado, será interpretado como quebra de
+linha). O "flush" serve para forçar o texto a ser escrito na tela, o que é uma
+operação lenta (não muito, mas se feita muitas vezes tem um efeito
+perceptível), e pode servir para situações como:
+
+```c++
+std::cout << "Texto que eu preciso que seja mostrado" << std::endl;
+funcao_que_pode_dar_erro();
+```
+
+Se a função acabar jogando um erro, o texto ainda será mostrado (afinal, está
+sendo forçada a escrita dele na tela). Com apenas `\n`, o texto seria escrito
+quando o buffer de saída do console enchesse (por exemplo, mandar exibir textos
+muito grandes, ou mandar várias exibições de texto) ou quando um certo tempo
+passase (que é bastante curto). Nesse meio tempo, é possível redirecionar mais
+e mais textos para a saída do console.
