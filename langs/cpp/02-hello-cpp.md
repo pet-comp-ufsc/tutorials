@@ -64,7 +64,7 @@ lembrar que antes de um padrão de C++ ficar pronto ele é disponibilizado com
 uma flag específica. Por exemplo, antes de C++11 ficar pronto, a flag era
 `-std=c++0x`. Antes de C++14 ficar pronto, a flag era `-std=c++1y`, e antes de
 C++17 ficar pronto, a flag era `-std=c++1z`. Por fim, para utilizar C++20 (que
-[ainda não está pronto](https://en.cppreference.com/w/cpp/compiler_support), a
+[ainda não está pronto](https://en.cppreference.com/w/cpp/compiler_support)), a
 flag é `-std=c++2a`.
 
 Explicação do código
