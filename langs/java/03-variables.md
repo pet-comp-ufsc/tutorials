@@ -324,3 +324,7 @@ Recomendações de Leitura
 
 1. "Por que meu `==` não funciona para String?"
 2. Cópia e "move"
+
+------------------------------------------------------------------------------
+
+[Ir para a próxima aula](/langs/java/04-if.md)
