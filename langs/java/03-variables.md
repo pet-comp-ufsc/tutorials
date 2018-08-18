@@ -328,6 +328,7 @@ Recomendações de Leitura
 
 1. "Por que meu `==` não funciona para String?"
 2. Cópia e "move"
+3. [Operadores em Java](/langs/java/operators.md)
 
 ------------------------------------------------------------------------------
 
