@@ -6,7 +6,8 @@
 ------
 
 1. [Primeiro programa em Java](#primeiro-programa-em-java)
-2. [Ferramentas](#ferramentas)
+2. [Erros de Compilação e Execução](#erros-de-compilação-e-execução)
+3. [Ferramentas](#ferramentas)
 
 Primeiro programa em Java
 -------------------------
@@ -177,8 +178,10 @@ Veremos de dentro para fora como funciona esse programa de exemplo:
   Nosso arquivo precisaria se chamar "AnotherName.java".
 
 
-Erros: Compilação e Execução
-----------------------------
+
+
+Erros de Compilação e Execução
+------------------------------
 
 Durante os tutoriais vistos aqui, chamaremos de "Erros de compilação" os erros
 que acontecerem durante a geração de um executável/biblioteca de nosso
@@ -186,6 +189,7 @@ programa. No caso destes tutoriais, isso se resume a erros que acontecem
 durante o comando `javac`. Já os "Erros de execução" são os que acontecem
 enquanto o programa em si está executando (ou seja, quando rodamos `java
 ClassePrincipal`).
+
 
 
 Ferramentas

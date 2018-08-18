@@ -1,6 +1,15 @@
 05 - Funções
 ============
 
+
+Índice
+------
+
+1. [Motivação](#motivação)
+2. [Pequeno exemplo](#pequeno-exemplo)
+3. [Sobrecarga](#sobrecarga)
+4. [Assinatura de uma função](#assinatura-de-uma-função)
+
 Motivação
 ---------
 
@@ -32,6 +41,7 @@ em cada um dos lugares. Porém, se em vez disso tivermos uma função
 "askPassword", teremos que corrigir apenas um único lugar (que é na
 implementação dessa função), e então todo lugar que a chamar já estará
 consertado.
+
 
 Pequeno exemplo
 ---------------
@@ -92,6 +102,7 @@ parâmetros e também não entrega uma resposta, apenas executa comandos.
 
 Inclusive, até o momento vimos uma função com retorno `void`: a função `main`.
 
+
 Sobrecarga
 ----------
 
@@ -130,6 +141,7 @@ Esse mecanismo (de poder ter funções com mesmo nome, porém tipos dos parâmet
 diferentes) se chama "Sobrecarga de função". Perceba que é essencial que as
 funções mantenham uma **assinatura** diferente.
 
+
 Assinatura de uma função
 ------------------------
 
@@ -149,3 +161,4 @@ int foo(int x) { ... } // Erro: foo(int) já foi definida
 ------------------------------------------------------------------------------
 
 A próxima aula está por vir
+

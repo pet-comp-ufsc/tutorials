@@ -1,15 +1,14 @@
 03 - Variáveis e Constantes
 ===========================
 
+
 Índice
 ------
 
 1. [Motivação](#motivação)
-2. [Pequeno Exemplo](#pequeno-exemplo)
+2. [Pequeno exemplo](#pequeno-exemplo)
 3. [Constantes](#constantes)
 4. [Tipos de dados](#tipos-de-dados)
-    1. [Primitivos](#primitivos)
-    2. [Compostos](#compostos)
 5. [Declaração e instanciação](#declaração-e-instanciação)
 6. [Recomendações de Leitura](#recomendações-de-leitura)
 
@@ -27,6 +26,7 @@ trabalhar com eles, além de poder saber qual tipo de dado estamos trabalhando e
 realizar operações em cima deles. Nesse quesito, temos o que chamamos de
 variáveis e constantes. Uma variável/constante é uma forma de sabermos **o
 estado atual** de um dado. Veremos a seguir como trabalhar com elas.
+
 
 Pequeno exemplo
 ---------------
@@ -115,6 +115,7 @@ tipo identificador = valor;
   int userId;          // O nome termina com uma sigla (ou ela está no meio)
   ```
 
+
 Constantes
 ----------
 
@@ -144,6 +145,7 @@ Por exemplo:
 final double PI = 3.1415926535897932384626433;
 final int NUM_THREADS = 4;
 ```
+
 
 Tipos de dados
 --------------
@@ -258,6 +260,7 @@ Os tipos compostos são, em resumo, todos os que não são primitivos. Por exemp
 [Em uma aula mais a frente](06-classes.md), aprenderemos a criar nossos
 próprios tipos compostos.
 
+
 Declaração e instanciação
 -------------------------
 
@@ -319,6 +322,7 @@ x = 3;
 Ainda temos apenas uma única variável declarada (`x`), porém inicialmente
 instanciamos o valor 0 e, em seguida, o valor 3.
 
+
 Recomendações de Leitura
 ------------------------
 
@@ -328,3 +332,4 @@ Recomendações de Leitura
 ------------------------------------------------------------------------------
 
 [Ir para a próxima aula](/langs/java/04-if.md)
+
