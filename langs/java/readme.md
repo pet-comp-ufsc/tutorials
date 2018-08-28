@@ -8,7 +8,9 @@ Java
 2. ["Hello, world!"](02-hello-java.md)
 3. [Variáveis](03-variables.md)
 4. [Estrutura condicional If](04-if.md)
-5. [Funções](05-functions.md)
+5. [Estruturas de repetição `for` e `while`](05-for-while.md)
+6. [Arrays](06-arrays.md)
+7. [Funções](07-functions.md)
 
 Recomendações de leitura
 ------------------------
