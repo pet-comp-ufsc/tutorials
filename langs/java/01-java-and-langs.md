@@ -224,4 +224,4 @@ Recomendações de leitura
 
 ------------------------------------------------------------------------------
 
-[Ir para a próxima aula](/langs/java/02-hello-java.md)
+[Ir para o próximo tutorial](/langs/java/02-hello-java.md)

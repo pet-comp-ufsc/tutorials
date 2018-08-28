@@ -201,4 +201,4 @@ Ferramentas
 
 ------------------------------------------------------------------------------
 
-[Ir para a próxima aula](/langs/java/03-variables.md)
+[Ir para o próximo tutorial](/langs/java/03-variables.md)
