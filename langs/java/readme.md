@@ -17,3 +17,4 @@ Recomendações de leitura
 2. Paradigmas de programação: Imperativo? Funcional? Lógico?
 3. Java: orientada a objetos ou não?
 4. [Operadores em Java](/langs/java/operators.md)
+5. [Aritmética - Detalhes](/langs/java/arithmetic-details.md)
