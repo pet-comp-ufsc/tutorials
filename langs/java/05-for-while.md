@@ -118,6 +118,27 @@ Nesse caso, o que o programa fará é:
 11. `i` é menor que 3? Ou seja: 3 é menor que 3? Não, e portanto said do `for`;
 12. Mostra o texto "Fim do programa.".
 
+Visualizando como uma tabela:
+
+| Instrução                                 | `i` | Resultado                  |
+|-------------------------------------------|-----|----------------------------|
+| `var i = 0`                               | `0` | -                          |
+| `i < 3`                                   | `0` | `true`                     |
+| `System.out.printf("Mostrando %d\n", i);` | `0` | Console: `Mostrando 0`     |
+| `i++`                                     | `1` | -                          |
+| `i < 3`                                   | `1` | `true`                     |
+| `System.out.printf("Mostrando %d\n", i);` | `1` | Console: `Mostrando 1`     |
+| `i++`                                     | `2` | -                          |
+| `i < 3`                                   | `2` | `true`                     |
+| `System.out.printf("Mostrando %d\n", i);` | `2` | Console: `Mostrando 2`     |
+| `i++`                                     | `3` | -                          |
+| `i < 3`                                   | `3` | `false` (sai do `for`)     |
+| `System.out.println("Fim do programa.");` | \*  | Console: `Fim do programa` |
+
+\*: Vale lembrar que, após a execução do `for`, como `i` foi declarado no
+`for`, então `i` já não existe mais quando o `for` terminar de executar.
+
+
 ### Adaptando para a listagem de pares de 0 a 10
 
 Listar números de 0 a 10 pode ser, então, feito da seguinte forma:
