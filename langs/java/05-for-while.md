@@ -8,7 +8,7 @@ Estruturas de repetição `for` e `while`
 2. [Termos](#termos)
 3. [Estrutura `for`](#estrutura-for)
    1. [Sintaxe de um `for`](#sintaxe-de-um-for)
-   2. [Funcionamento detalhado (passo a passo)](#funcionamento-detalhado-(passo-a-passo))
+   2. [Funcionamento detalhado (passo a passo)](#funcionamento-detalhado-passo-a-passo)
    3. [Adaptando para a listagem de pares de 0 a 10](#adaptando-para-a-listagem-de-pares-de-0-a-10)
 4. [Estrutura `while`](#estrutura-while)
    1. [Sintaxe de um `while`](#sintaxe-de-um-while)

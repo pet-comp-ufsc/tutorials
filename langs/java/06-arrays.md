@@ -1,6 +1,18 @@
 Arrays
 ======
 
+Índice
+------
+
+1. [Motivação](#motivação)
+2. [Criação de um array](#criação-de-um-array)
+   1. [Quando se tem um tamanho específico](#quando-se-tem-um-tamanho-específico)
+   2. [Quando se quer uma lista de elementos pré-definidos](#quando-se-quer-uma-lista-de-elementos-pré-definidos)
+3. [Acessando elementos de um array](#acessando-elementos-de-um-array)
+4. [Acessando o tamanho de um array](#acessando-o-tamanho-de-um-array)
+5. [Combinando arrays e `for`s](#combinando-arrays-e-fors)
+6. [Recomendações de Leitura](#recomendações-de-leitura)
+
 Motivação
 ---------
 
@@ -156,10 +168,61 @@ cada passo o índice é incrementado, e é executado o `for` até que `i` chegue
 elementos de um vetor. Inclusive, `array[i]` pode ser lido como "o i-ésimo
 elemento de `array`".
 
+Estrutura `for-each`
+--------------------
+
+Semelhante a um `for` normal, existe uma estrutura específica para iterar por
+uma coleção (por exemplo, um vetor). Essa estrutura possui a seguinte sintaxe:
+
+```java
+for (T nome: coleção) {
+    // Sequência de comandos
+}
+```
+
+Em que `T` é o tipo de cada item da coleção (`var` é permitido), `nome` é o
+nome da variável que guardará cada item da coleção. Para ver melhor como ele
+funciona:
+
+```java
+var array = new int[] {25, 19, -12};
+
+for (var item: array) {
+    System.out.println(item);
+}
+```
+
+O programa acima, ao ser executado, mostrará:
+
+```text
+25
+19
+-12
+```
+
+Ou seja, a cada iteração, `item` guarda um dos itens de `array`. Esse `for` é
+util quando o índice do elemento não é importante (no exemplo acima, o que
+importa é acessar os elementos em ordem, mas efetivamente qual o índice deles
+não é importante). O código é equivalente (perceba: equivalente, mas não
+igual!) a:
+
+```java
+var array = new int[] {25, 19, -12};
+
+for (var i = 0; i < array.length; i++) {
+    var item = array[i];
+    System.out.println(item);
+}
+```
+
+No fundo, o que o `for-each` faz é aproveitar a interface
+[Iterable](https://docs.oracle.com/javase/10/docs/api/java/lang/Iterable.html)
+dos padrões da linguagem, mas isso será visto noutro tutorial.
+
 Recomendações de leitura
 ------------------------
 
-Nenhuma.
+1. Uso adequado de matrizes
 
 --------------------------------------------------------------------------------
 
