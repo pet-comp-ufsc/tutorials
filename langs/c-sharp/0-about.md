@@ -28,4 +28,6 @@ Há ainda, porém, a mesma restrição de Java quanto a arquivos: todo arquivo
 Leituras recomendadas
 ---------------------
 
-- [C# para programadores C](from-c.md)
+1. [C# para programadores C](from-c.md)
+2. [C# para programadores C++](from-cpp.md)
+3. [Algumas Features de C#](some-features.md)
