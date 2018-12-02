@@ -24,7 +24,7 @@ Para compilar um arquivo (supondo que o código acima esteja salvo como
 g++ arquivo.cpp
 ```
 
-Isso irá verar um arquivo com nome padrão ("a.out"). Esse arquivo pode ser
+Isso irá gerar um arquivo com nome padrão ("a.out"). Esse arquivo pode ser
 executado diretamente:
 
 ```bash
@@ -67,44 +67,62 @@ C++17 ficar pronto, a flag era `-std=c++1z`. Por fim, para utilizar C++20 (que
 [ainda não está pronto](https://en.cppreference.com/w/cpp/compiler_support)), a
 flag é `-std=c++2a`.
 
-Explicação do código
---------------------
+Explicação do código de exemplo
+-------------------------------
 
-A primeira linha é demarcada por um `#include`. Comandos iniciados com `#` são
-**diretivas de pré-processador**, que são processadas antes do código ser
-efetivamente compilado. No caso da `#include`, ela indica que o conteúdo de um
-arquivo deve ser incluído naquele ponto. Para buscar esse arquivo, é dada
-preferência por ele bibliotecas do sistema (o que é demarcado pelo uso de
-`<>`). Caso a preferência fosse por arquivos na pasta atual, seria utilizado
+A primeira linha é demarcada por um `#include`:
+
+```c++
+#include <iostream>
+```
+
+Comandos iniciados com `#` são **diretivas de pré-processador**, que são
+processadas antes do código ser efetivamente compilado. No caso da `#include`,
+ela indica que o conteúdo de um arquivo deve ser incluído naquele ponto. Para
+buscar esse arquivo, foi utilizado `<>` para dar preferência às bibliotecas do
+sistema. Caso a preferência fosse por arquivos na pasta atual, seria utilizado
 `""`, mas isso será visto melhor mais tarde.
 
 Sendo assim, em resumo, está sendo incluído o conteúdo do arquivo "iostream",
 presente na biblioteca padrão de C++.
 
-Mais à frente é criada uma função chamada `main` com tipo de retorno `int`.
+Mais à frente é criada uma função chamada `main` com tipo de retorno `int`:
+
+```c++
+int main() {
+```
+
 Essa função é responsável por ser o ponto de início do programa. Ou seja,
 quando `a.out` foi executado, ela foi o ponto de entrada do programa. As chaves
 (`{}`) delimitam o que chamamos de Escopo, e o Escopo de uma função são os
 comandos que ela executa quando chamada.
 
-O que `main` executa ao ser chamada é apenas chamar o operador `<<` de `cout`.
-`<<` é o chamado "operador de left-shift", que é utilizado para rotacionar os
-bits de números inteiros. Porém, `std::cout` é uma instância de um tipo
-definido na biblioteca padrão, e esse tipo define seu próprio comportamento
-para quando `<<` é utilizado sobre ele. No caso, o comportamento sobrescrito é
-de redirecionar o texto para a saída do console. Dessa maneira, `std::cout <<
-"Texto"` irá mostrar "Texto". Por fim, o `\n` apenas indica para pular a linha
-após "Hello, world!".
+O que `main` executa ao ser chamada é apenas chamar o operador `<<` de `cout`:
+
+```c++
+    std::cout << "Hello, world!\n";
+```
+
+O `<<` é o chamado "operador de left-shift", que é utilizado para deslocar os
+bits de números inteiros (ou seja, um número cujos bits fossem `0110`,
+deslocado 2 bits à direita ficaria `0001`). Porém, `std::cout` é uma instância
+de um tipo definido na biblioteca padrão, e esse tipo define seu próprio
+comportamento para quando `<<` é utilizado sobre ele. No caso, o comportamento
+definido é redirecionar o texto para a saída do console (ou seja, mostrar na
+tela0. Dessa maneira, `std::cout << "Texto"` irá mostrar "Texto". Por fim, o
+`\n` apenas indica para pular a linha após "Hello, world!".
 
 Ausência de return no main
 --------------------------
 
-Em C++, a única função que não exige retorno (ao menos de maneira segura) é a
+Em C++, a única função que não exige retorno (ao menos de maneira segura, então
+se alguma outra função compilar mesmo sem colocar o retorno: cuidado) é a
 `main`. Nesse caso, por padrão o retorno é 0. O retorno de `main` é utilizado
 por quem executou o programa para saber se ele chegou ao fim com sucesso (ou
 seja, retorno 0) ou ocorreu alguma falha (ou seja, retorno negativo). As falhas
 podem envolver argumentos insuficientes (o programa exigia 4 argumentos, mas
-foram passados 3 ou nenhum), programa interrompido pelo usuário, dentre outros.
+foram passados 3, 5 ou mesmo nenhum), programa interrompido pelo usuário,
+dentre outros.
 
 Os argumentos do programa podem vir mudando a definição de `main` para:
 
@@ -146,5 +164,6 @@ Se a função acabar jogando um erro, o texto ainda será mostrado (afinal, est�
 sendo forçada a escrita dele na tela). Com apenas `\n`, o texto seria escrito
 quando o buffer de saída do console enchesse (por exemplo, mandar exibir textos
 muito grandes, ou mandar várias exibições de texto) ou quando um certo tempo
-passase (que é bastante curto). Nesse meio tempo, é possível redirecionar mais
-e mais textos para a saída do console.
+passase (que é bastante curto), assim caso a função `funcao_que_pode_dar_erro`
+jogasse um erro, o texto estaria apenas em um buffer temporário, mas não seria
+escrito na tela.
