@@ -35,7 +35,7 @@ Recomendações de leitura
 
 ### Iniciantes
 
-- [Como aprender a programar?](/general/how-to-study.md)
+- [Como estudar programação?](/general/how-to-study.md)
 
 ### Calouros
 
