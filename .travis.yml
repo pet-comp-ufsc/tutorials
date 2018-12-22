@@ -21,6 +21,5 @@ deploy:
     skip-cleanup: true
     github-token: $GITHUB_TOKEN
     local-dir: book
-    fqdn: tutoriais.pet-cco.com
     on:
         branch: master
