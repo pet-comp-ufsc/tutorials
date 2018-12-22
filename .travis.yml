@@ -14,12 +14,13 @@ before_script:
 
 script:
     - mdbook build -d ../book/main main
+    - mdbook build -d ../book/langs/java langs/java
 
 deploy:
     provider: pages
     skip-cleanup: true
     github-token: $GITHUB_TOKEN
     local-dir: book
-    fqdn: tutoriais.pet.cco
+    fqdn: tutoriais.pet-cco.com
     on:
         branch: master
