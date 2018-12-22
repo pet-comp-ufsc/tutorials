@@ -1,0 +1,6 @@
+[book]
+build-dir = "book"
+authors = ["PET Computação UFSC"]
+multilingual = false
+src = "src"
+title = "PET Computação - Tutoriais"
