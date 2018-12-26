@@ -1,0 +1,1 @@
+# Definindo seu próprio tipo
