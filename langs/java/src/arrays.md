@@ -222,8 +222,4 @@ dos padrões da linguagem, mas isso será visto noutro tutorial.
 Recomendações de leitura
 ------------------------
 
-1. Uso adequado de matrizes
-
---------------------------------------------------------------------------------
-
-[Ir para o próximo tutorial](/lang/java/07-functions.md)
+1. Como representar matrizes adequadamente

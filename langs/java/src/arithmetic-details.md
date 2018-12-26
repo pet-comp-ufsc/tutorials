@@ -103,7 +103,3 @@ Recomendações de Leitura
 
 1. [Operadores em Java](/langs/java/operators.md)
 2. [Por que não utilizar float e double para representar dinheiro?](https://stackoverflow.com/a/3730040/3326309)
-
---------------------------------------------------------------------------------
-
-[Voltar ao índice](/langs/java/readme.md)

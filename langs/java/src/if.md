@@ -1,12 +1,13 @@
 04 - Estrutura condicional `If`
 ===============================
 
-
 Índice
 ------
 
 1. [Motivação](#motivação)
 2. [Sintaxe de um If](#sintaxe-de-um-if)
+3. [If-Else](#if-else)
+4. [Brincando com o código](#brincando-com-o-código)
 
 Motivação
 ---------
@@ -158,7 +159,3 @@ public class PlayWithIf {
     }
 }
 ```
-
-------------------------------------------------------------------------------
-
-[Ir para o próximo tutorial](/langs/java/05-functions.md)

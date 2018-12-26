@@ -1,9 +1,12 @@
 # Summary
 
 [Java e Linguagens de Programação](./java-and-langs.md)
+[Ferramentas](./tools.md)
 
 - [Introdução a Java](./intro.md)
     - ["Hello, world!"](./hello-java.md)
+    - ["Hello, world! - Explicação detalhada"](./hello-detailed.md)
+    - [Erros de Compilação e Execução](./errors.md)
     - [Variáveis](./variables.md)
     - [Estrutura condicional If](./if.md)
     - [Estruturas de repetição `for` e `while`](./for-while.md)

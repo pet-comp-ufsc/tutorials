@@ -1,6 +1,14 @@
 Operadores para tipos primitivos
 ================================
 
+Índice
+------
+
+1. [Operadores aritméticos](#operadores-aritméticos)
+2. [Operadores relacionais](#operadores-relacionais)
+3. [Operadores unários](#operadores-unários)
+4. [Outros operadores](#outros-operadores)
+
 Operadores aritméticos
 ----------------------
 
@@ -28,6 +36,7 @@ x módulo 3: |  1 |  2 |  0 |  1 |  2 |  0 |  1 |  2 |  0 |  1 |  2 |
 Perceba que, diferente do resto da divisão, o "módulo" sempre repete os valores
 \[0..N), em que, para a tabela de cima, N seria 3.
 
+
 Operadores relacionais
 ----------------------
 
@@ -42,6 +51,7 @@ elementos é verdadeira (ou seja, sempre retornarão `true` ou `false`).
 | Maior que      | `x > y`     |
 | Menor ou igual | `x <= y`    |
 | Maior ou igual | `x >= y`    |
+
 
 Operadores unários
 ------------------
@@ -58,9 +68,11 @@ Operadores unários são aqueles que operam por apenas um único dado.
 \*: O complemento lógico serve para retornar o inverso de um booleano. Ou seja,
 se `thing` era verdadeiro, `!thing` é falso.
 
+
 Outros operadores
 -----------------
 
 Neste tutorial estão listados apenas os operadores mais usuais.
 Uma lista completa de operadores pode ser vista
 [na documentação da Oracle](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html).
+

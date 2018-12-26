@@ -282,7 +282,3 @@ Recomendações de leitura
 ------------------------
 
 Nenhuma.
-
---------------------------------------------------------------------------------
-
-[Ir para o próximo tutorial](/langs/java/06-arrays.md)

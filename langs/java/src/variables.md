@@ -1,7 +1,6 @@
 03 - Variáveis e Constantes
 ===========================
 
-
 Índice
 ------
 

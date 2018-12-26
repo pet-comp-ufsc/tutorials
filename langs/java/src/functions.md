@@ -1,7 +1,6 @@
 05 - Funções
 ============
 
-
 Índice
 ------
 
@@ -157,8 +156,3 @@ void foo(int otherParamName) { ... } // Erro: foo(int) já foi definida
 int foo() { ... } // Erro: foo() já foi definida
 int foo(int x) { ... } // Erro: foo(int) já foi definida
 ```
-
-------------------------------------------------------------------------------
-
-A próxima aula está por vir
-

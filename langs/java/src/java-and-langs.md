@@ -1,7 +1,6 @@
 01 - Java e linguagens de programação
 =====================================
 
-
 Índice
 ------
 
@@ -220,8 +219,3 @@ Recomendações de leitura
 
 1. Paradigmas de programação: Imperativo? Funcional? Lógico?
 2. Compilação AOT e JIT.
-
-
-------------------------------------------------------------------------------
-
-[Ir para o próximo tutorial](/langs/java/02-hello-java.md)
