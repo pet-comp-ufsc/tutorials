@@ -46,10 +46,10 @@ utilizado em lugares em que façam parte das preocupações do programador:
    camadas de abstração em C++ (seja para conectar duas interfaces
    não-compatíveis, ou oferecer uma API adequada a partir de outra, ou
    construir uma API completamente nova e independente) sem que isso imponha
-   custo adicional. O compilador deve capaz de otimizar e eliminar tais camadas
-   sempre que possível (por exemplo, uma chamada para função que retorne um
-   valor fixo é substituída pelo próprio valor retornado), dentre outras
-   otimizações relacionadas a abstração (seja de tipos, operações ou
+   custo adicional. O compilador deve ser capaz de otimizar e eliminar tais
+   camadas sempre que possível (por exemplo, uma chamada para função que
+   retorne um valor fixo é substituída pelo próprio valor retornado), dentre
+   outras otimizações relacionadas a abstração (seja de tipos, operações ou
    arquitetura);
 7. **Semântica de _"move"_**: a linguagem oferece a possibilidade de evitar
    cópias desnecessárias (ou que não devem existir) em contextos diversos.
@@ -139,24 +139,30 @@ serve de regra:
 
 > C em código C++ é C++ ruim.
 
-Por exemplo: em C é comum e necessário trabalhar com ponteiros explicitamente.
-Em C++ isso é, para praticamente todo caso, um erro (por conta de diversos
-problemas de segurança relacionados a ponteiros, _undefined-behaviours_ não
-muito óbvios ao programador, e por C++ oferecer recursos melhores para
-gerenciá-los). O mesmo se aplica ao uso da diretiva `#define`: para se escrever
-código genérico em C, `#define` é essencial. Porém C++ possui seu próprio
-mecanismo de código genérico:
-[Templates](https://en.cppreference.com/w/cpp/language/templates), que reduzem
-a possibilidade de erros (veja a
-[Recomendação de Leitura #1](#recomendações-de-leitura)) e aproveitam melhor o
-sistema de tipos da linguagem.
+Por exemplo:
+- Em C é comum e necessário trabalhar com ponteiros explicitamente.  Em C++
+  isso é, para praticamente todo caso, um erro (por conta de diversos problemas
+  de segurança relacionados a ponteiros, _undefined-behaviours_ não muito
+  óbvios ao programador, e por C++ oferecer recursos melhores para
+  gerenciá-los).
+- O mesmo se aplica ao uso da diretiva `#define`: para se escrever código
+  genérico em C, `#define` é essencial. Porém C++ possui seu próprio mecanismo
+  de código genérico:
+  [Templates](https://en.cppreference.com/w/cpp/language/templates), que
+  reduzem a possibilidade de erros (veja a [Recomendação de Leitura
+  #1](#recomendações-de-leitura)) e aproveitam melhor o sistema de tipos da
+  linguagem.
 
 C++ é próxima do hardware, assim como C?
 ----------------------------------------
 
 Não, pelos mesmos motivos pelo qual
 [C também não é](https://queue.acm.org/detail.cfm?id=3212479). Mas, é claro,
-várias construções da linguagem são capazes de dar essa ilusão ao programador.
+várias construções da linguagem são capazes de dar essa ilusão ao programador,
+por exemplo: gerenciamento manual de memória, suporte nativo da linguagem para
+referência explícita de locais na memória, tipos primitivos dependentes da
+arquitetura, o fato de que compiladores de C e C++ costumam gerar código
+nativo, dentre outros.
 
 Documentação Recomendada
 ------------------------
@@ -166,7 +172,11 @@ Documentação Recomendada
 conter boas explicações, indicações claras das versões de C++, exemplos de uso,
 e conformidade com o que se espera de código moderno da linguagem.
 
+Outra documentação frequentemente encontrada é o
+[C-plus-plus](http://www.cplusplus.com/), porém ela costuma dar exemplos pouco
+idiomáticos e muitas vezes misturando código C em exemplos de C++.
+
 Recomendações de Leitura
 ------------------------
 
-1. [#define's são seguros?](/langs/c/defines-are-evil.md)
+1. [#define's são seguros?](../c/others/defines-are-evil.md)

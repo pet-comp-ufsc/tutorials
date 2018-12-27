@@ -2,7 +2,11 @@
 
 book:
 	mdbook build -d ../book/ main
-	mdbook build -d ../../book/langs/java langs/java
+	for book in {general,langs,tools}/*; do \
+	    if [ -d $${book} ]; then \
+	        mdbook build -d ../../book/$${book} $${book}; \
+	    fi; \
+	done
 
 clean:
 	rm -rf book
