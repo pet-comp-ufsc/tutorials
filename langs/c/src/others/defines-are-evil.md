@@ -138,8 +138,8 @@ true
 ```
 
 Sendo assim, é então jogado o resultado para o operador ternário ("?"), que no
-código acima indica: se o resultado der verdadeiro, retorne 2, senão, retorne
-3. Como 10 é maior que 3, o resultado é verdadeiro, e portanto o ternário cai
+código acima indica: se o resultado der verdadeiro, retorne 2, senão, retorne 3.
+Como 10 é maior que 3, o resultado é verdadeiro, e portanto o ternário cai
 no caso "retorne 2".
 
 Mas okay, vamos corrigir o `MAX`. Um programador ingênuo neste momento poderia
