@@ -1,34 +1,5 @@
-Algumas Features de C#
-======================
-
-Nullables
----------
-
-Nullables servem para guardar ValueTypes que podem receber o valor `null`,
-funcionando de forma bem semelhante a `std::optional` de C++ e `Option` de
-Rust. Segue um código de exemplo:
-
-```cs
-bool foo = true;          // `foo` é um bool normal
-bool? bar = true;         // `bar` é um bool nullable
-var foobar = (bool?)null; // Com inferência de tipo
-
-if (foo && bar) {}    // true && false = false: não entra no if
-if (foo && foobar) {} // true && ? = ?: entra ou não no if?
-if (bar) {}           // true: entra no if
-if (foobar) {}        // ?
-
-if (bar.GetValueOrDefault(false)) {}    // bar = true, logo entra no if
-if (bar.GetValueOrDefault(true)) {}     // bar = true, logo entra no if
-if (foobar.GetValueOrDefault(false)) {} // foobar = null, logo pega o default,
-                                        // que é falso, e portanto não entra no
-                                        // if
-if (foobar.GetValueOrDefault(true)) {}  // foobar = null, logo pega o default,
-                                        // que é true, e portanto entra no if
-```
-
 Properties
-----------
+==========
 
 Em linguagens OO, costumam ser padrões as seguintes regras:
 
@@ -125,3 +96,4 @@ seja possível ele em si ser uma property). Não utilize properties caso o
 _setter_ ou o _getter_ envolva algum cálculo! Nesse caso, use um método
 explícito, a fim de manter a intuitividade de que o acesso aquele valor não é
 necessariamente trivial/barato.
+

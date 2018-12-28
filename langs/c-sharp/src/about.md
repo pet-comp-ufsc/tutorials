@@ -24,10 +24,3 @@ de tipo (via `var`) desde Visual C# 3.0 (lançado em 2007).
 
 Há ainda, porém, a mesma restrição de Java quanto a arquivos: todo arquivo
 `.cs` deve expor uma classe pública no escopo mais externo (fora namespaces).
-
-Leituras recomendadas
----------------------
-
-1. [C# para programadores C](from-c.md)
-2. [C# para programadores C++](from-cpp.md)
-3. [Algumas Features de C#](some-features.md)

@@ -11,12 +11,20 @@ ERROR="[${RED}ERROR${DEFAULT}]"
 GOOD="[${GREEN}GOOD${DEFAULT}]"
 SKIP="[${OTHER}SKIP${DEFAULT}]"
 
+build-book() {
+    local output=$1
+    local book=$2
+
+    printf "${INFO} Building ${book}...\n"
+    mdbook build -d "${output}" "${book}"
+}
+
 build() {
-    mdbook build -d ../book/ main
-    for book in {general,langs,tools}/*; do
+    build-book ../book/ main
+    build-book ../book/tools tools
+    for book in {general,langs}/*; do
         if [ -d ${book} ]; then
-            printf "${INFO} Building ${book}...\n"
-            mdbook build -d ../../book/${book} ${book}
+            build-book "../../book/${book}" "${book}"
         else
             printf "${SKIP} ${book}: not a directory.\n"
         fi

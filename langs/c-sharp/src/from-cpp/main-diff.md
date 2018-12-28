@@ -1,11 +1,12 @@
-C# para programadores C++
-=========================
+Principais Diferenças
+=====================
 
 _(OBS: Este tutorial encontra-se bastante incompleto. Se puder, ficaremos
-  gratos em receber um Pull Request seu)_
+gratos em receber um [Pull Request](https://github.com/pet-comp-ufsc/tutorials)
+seu)_
 
 Se você veio de C++, o caminho é bem mais simples quanto
-[se você viesse de C](from-c.md).
+[se você viesse de C](../from-c/about.md).
 
 Assim como foi feito com C, segue uma pequena tabela com algumas das diferenças
 entre C# e C++:
@@ -39,10 +40,12 @@ fica marcado como um método estático e os argumentos da linha de comando ficam
 em um array de strings).
 
 No geral não haverão muitas diferenças na forma de modelar o código. Algumas
-nomenclaturas, apesar de iguais, funcionam de forma diferente, dentre elas o
-`using`:
+nomenclaturas, apesar de iguais, funcionam de forma diferente. São elas:
 
-- Um `using`s não pode ser utilizado dentro de qualquer escopo como em C++;
+`using`
+-------
+
+- Um `using` não pode ser utilizado dentro de qualquer escopo como em C++;
 - `using`, em C#, possui três funções:
   - Incluir namespaces, como o `using` do C++ mesmo, porém apenas no escopo
     geral;
@@ -50,7 +53,8 @@ nomenclaturas, apesar de iguais, funcionam de forma diferente, dentre elas o
   - Criar _aliases_ para classes (serve tanto para resolver ambiguidade quanto
     para importar apenas o que precisar de uma determinada namespace).
 
-E `struct`s:
+`struct`
+--------
 
 - Não há a diferença de modificador de acesso padrão entre Classes (que em C++
   é `private`) e Structs (que em C++ é `public`): o padrão de ambos é
@@ -61,7 +65,8 @@ E `struct`s:
   `ref`, e nesse caso *apenas* `ref`s podem ser passadas para aquele parâmetro
   em específico).
 
-Outras diferenças menores:
+Outras diferenças menores
+-------------------------
 
 - Para acessar um elemento de uma _namespace_ se utiliza `namespace.something`
   em vez de `namespace::something`;

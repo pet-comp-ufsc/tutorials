@@ -8,4 +8,4 @@ Selecione sua linguagem de interesse para acessar tutoriais dedicados a ela:
 - [C#](langs/c-sharp/index.md)
 - [C++](./langs/cpp/index.md)
 - [Java](./langs/java/index.md)
-- [Python](./langs/python/index.md)
+- Python _(Em breve)_
