@@ -1,7 +1,7 @@
 .PHONY: book
 
 book:
-	./build.sh
+	bash build.sh
 
 clean:
 	rm -rf book
