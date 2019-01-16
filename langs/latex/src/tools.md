@@ -13,6 +13,9 @@ No caso do seu computador, é necessário:
 - Escrever um arquivo de .tex como arquivo principal do documento;
 - Compilar para gerar o .pdf (ou corrigir os erros apontados pelo compilador).
 
+Você pode checar a seção [Editores](#editores) nesta página para ver quais as
+possibilidades de aplicativos para editar LaTeX.
+
 Distribuições
 -------------
 
@@ -83,6 +86,39 @@ principal dele está disponível em 3 línguas diferentes (inglês, francês e
 espanhol). São esses PDFs de documentação que você deverá ler na maioria das
 vezes, que conterão toda a descrição do pacote, seus objetivos, e como fazer
 cada coisa que eles disponibilizam.
+
+Editores
+--------
+
+Documentos LaTeX nada mais são do que arquivos de texto, padronizados com a
+extensão ".tex". Então no fundo qualquer editor de texto serve, mas vale
+lembrar que vários editores oferecem recursos que facilitam sua vida.
+
+Editores específicos:
+- [Overleaf](https://overleaf.com): Como apontado antes, é como um Google Docs
+  para LaTeX. Funciona totalmente online, possui atalhos de teclado,
+  compiladores, visualizador de PDF e etc. configurados prontamente sem que
+  você precise fazer algo adicional. Pode ser ótimo para se aventurar com LaTeX
+  sem se preocupar em adquirir ferramentas como TeX Live e semelhantes. Além
+  disso, possui um sistema de colaboração em que várias pessoas podem editar o
+  mesmo arquivo ao mesmo tempo. Também possui integração com repositórios do
+  [GitLab](https://gitlab.com).
+
+  ![Demonstração do Overleaf](./img/example-overleaf.png)
+
+- [TeXStudio](https://www.texstudio.org/): Infelizmente não conheço do
+  TeXStudio para dizer sobre ele, então sugiro ver a página oficial dele para
+  mais detalhes. Se você já conhece o TeXStudio, sinta-se à vontade para fazer
+  um Fork do [repositório de
+  tutoriais](https://github.com/pet-comp-ufsc/tutorials) e enviar um Pull
+  Request com suas alterações descrevendo melhor o editor.
+
+Editores independentes:
+- [VisualStudio Code](https://code.visualstudio.com/): Possui extensões para
+  melhor uso de LaTeX, desde poder pré-visualizar seu documento e automatizar a
+  compilação até destacar linhas com _warnings_ e erros de compilação. Veja
+  imagens e recursos na [Página da extensão de LaTeX para
+  VSCode](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
 Comunidade
 ----------
