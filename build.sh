@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 DEFAULT="\033[0m"
 
 GREEN="\033[92m"
