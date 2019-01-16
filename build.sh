@@ -11,6 +11,10 @@ ERROR="[${RED}ERROR${DEFAULT}]"
 GOOD="[${GREEN}GOOD${DEFAULT}]"
 SKIP="[${OTHER}SKIP${DEFAULT}]"
 
+shopt -s extglob
+
+FUNCTIONS="build|clean"
+
 build-book() {
     local output=$1
     local book=$2
@@ -22,6 +26,7 @@ build-book() {
 build() {
     build-book ../book/ main
     build-book ../book/tools tools
+
     for book in {general,langs}/*; do
         if [ -d ${book} ]; then
             build-book "../../book/${book}" "${book}"
@@ -31,4 +36,28 @@ build() {
     done
 }
 
-build
+clean() {
+    rm -rf book
+}
+
+nofun() {
+    if [ -z $1 ]; then
+        echo "Usage: ${0} <function>"
+    else
+        echo "${1} not found."
+    fi
+
+    echo "Available functions: "
+    echo "    $(echo ${FUNCTIONS} | sed 's/|/\n    /g')"
+    exit 1
+}
+
+FS="@(${FUNCTIONS})"
+case $1 in
+    ${FS})
+        $*
+        ;;
+    *)
+        nofun $*
+        ;;
+esac

@@ -13,7 +13,7 @@ before_script:
     - cargo install-update -a
 
 script:
-    - make
+    - ./build.sh build
 
 deploy:
     provider: pages

@@ -1,0 +1,1 @@
+# Definindo variáveis
