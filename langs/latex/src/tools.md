@@ -17,7 +17,7 @@ Distribuições
 -------------
 
 LaTeX vem em pacotes de ferramentas chamados de distribuições. Um resumo
-retirado da documentação do Overleaf (plataforma online de LaTeX):
+retirado da documentação do Overleaf:
 
 - **MiKTeX**: para Windows;
 - **proTeXt**: também para Windows, baseado no MiKTeX;
