@@ -62,8 +62,10 @@ seguem tanto o código final de exemplo quanto os PDFs gerados quando utilizando
 \end{document}
 ```
 
-Com `article`:
+### Com `article`
+
 ![Exemplo 1 compilado com Article](./img/example-article-1.png)
 
-Com `beamer`:
+### Com `beamer`
+
 ![Exemplo 1 compilado com Beamer](./img/example-beamer-1.png)
