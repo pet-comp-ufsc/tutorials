@@ -66,27 +66,6 @@ Mais informações sobre compiladores de LaTeX podem ser encontradas na
 [documentação do Overleaf sobre
 compiladores](https://www.overleaf.com/learn/latex/Choosing_a_LaTeX_Compiler)
 
-Documentação recomendada
-------------------------
-
-Há duas recomendações de documentação para caso precise tirar dúvidas sobre
-LaTeX:
-1. As documentações do Overleaf (o que inclui um guia de [como aprender LaTeX
-   em 30
-   minutos](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes));
-2. As documentações dos pacotes que for utilizar.
-
-**Nota**: No caso do overleaf, perceba o índice à esquerda para ver que há
-vários conteúdos interessantes para iniciantes.
-
-As documentações dos pacotes costumam ficar disponíveis em PDF no
-[CTAN](https://ctan.org/). Por exemplo, se vier na [documentação do
-`booktabs`](https://ctan.org/pkg/booktabs), poderá ver que a documentação
-principal dele está disponível em 3 línguas diferentes (inglês, francês e
-espanhol). São esses PDFs de documentação que você deverá ler na maioria das
-vezes, que conterão toda a descrição do pacote, seus objetivos, e como fazer
-cada coisa que eles disponibilizam.
-
 Editores
 --------
 
@@ -119,6 +98,27 @@ Editores independentes:
   compilação até destacar linhas com _warnings_ e erros de compilação. Veja
   imagens e recursos na [Página da extensão de LaTeX para
   VSCode](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+
+Documentação recomendada
+------------------------
+
+Há duas recomendações de documentação para caso precise tirar dúvidas sobre
+LaTeX:
+1. As documentações do Overleaf (o que inclui um guia de [como aprender LaTeX
+   em 30
+   minutos](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes));
+2. As documentações dos pacotes que for utilizar.
+
+**Nota**: No caso do overleaf, perceba o índice à esquerda para ver que há
+vários conteúdos interessantes para iniciantes.
+
+As documentações dos pacotes costumam ficar disponíveis em PDF no
+[CTAN](https://ctan.org/). Por exemplo, se vier na [documentação do
+`booktabs`](https://ctan.org/pkg/booktabs), poderá ver que a documentação
+principal dele está disponível em 3 línguas diferentes (inglês, francês e
+espanhol). São esses PDFs de documentação que você deverá ler na maioria das
+vezes, que conterão toda a descrição do pacote, seus objetivos, e como fazer
+cada coisa que eles disponibilizam.
 
 Comunidade
 ----------
