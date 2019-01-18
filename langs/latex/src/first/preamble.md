@@ -6,11 +6,10 @@ classe e o documento. Nele vão:
 - Os pacotes utilizados (serão vistos mais à frente);
 - (Re)Definição de comandos, ambientes e _macros_.
 
-Macros são nomes que serão substituídos por algum conteúdo quando o seu LaTeX
-for compilado. Algumas _macros_ são, por exemplo, `\title`, `\author` e
-`\date`, que representam respectivamente o título, autor e data do documento.
-
-Essas macros podem ser definidas da seguinte forma:
+**Macros** são nomes que serão substituídos por algum conteúdo quando o seu
+LaTeX for compilado. Algumas _macros_ são, por exemplo, `\title`, `\author` e
+`\date`, que representam respectivamente o título, autor e data do documento, e
+podem ser definidas da seguinte forma:
 
 ```latex
 \title{Título de exemplo}
