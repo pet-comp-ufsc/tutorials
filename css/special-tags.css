@@ -1,3 +1,44 @@
-concept {
+tag {
+    display: inline-block;
+    font-size: small;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+tag::before {
+    content: '<< ';
+    font-size: smaller;
+}
+
+tag::after {
+    content: ' >>';
+    font-size: smaller;
+}
+
+title {
     display: block;
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+concept {
+    background: #eef;
+    border: solid 1px #aaf;
+    display: block;
+    padding: 1em;
+}
+
+warning {
+    background: #efe;
+    border: solid 1px #afa;
+    display: block;
+    padding: 1em;
+}
+
+trap {
+    background: #fee;
+    border: solid 1px #faa;
+    display: block;
+    padding: 1em;
 }

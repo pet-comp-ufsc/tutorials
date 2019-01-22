@@ -13,7 +13,7 @@ SKIP="[${OTHER}SKIP${DEFAULT}]"
 
 shopt -s extglob
 
-FUNCTIONS="build|clean"
+FUNCTIONS="build|clean|serve"
 
 build-book() {
     local output=$1
@@ -23,21 +23,12 @@ build-book() {
     mdbook build -d "${output}" "${book}"
 }
 
-build() {
-    build-book ../book/ main
-    build-book ../book/tools tools
-
-    for book in {general,langs}/*; do
-        if [ -d ${book} ]; then
-            build-book "../../book/${book}" "${book}"
-        else
-            printf "${SKIP} ${book}: not a directory.\n"
-        fi
+fix-js-path() {
+    for file in $(find -name "*.html");
+    do
+        echo "Fixing JS for ${file}"
+        sed -i "s/src=\"\(.*\)\(special-.*.js\)\"/src=\"\/js\/\2\"/g" "${file}"
     done
-}
-
-clean() {
-    rm -rf book
 }
 
 nofun() {
@@ -50,6 +41,32 @@ nofun() {
     echo "Available functions: "
     echo "    $(echo ${FUNCTIONS} | sed 's/|/\n    /g')"
     exit 1
+}
+
+# Commands
+
+build() {
+    build-book ../book/ main
+    build-book ../book/tools tools
+
+    for book in {general,langs}/*; do
+        if [ -d ${book} ]; then
+            build-book "../../book/${book}" "${book}"
+        else
+            printf "${SKIP} ${book}: not a directory.\n"
+        fi
+    done
+
+    fix-js-path
+}
+
+serve() {
+    build
+    mdbook serve -d book/ -p 3004
+}
+
+clean() {
+    rm -rf book
 }
 
 FS="@(${FUNCTIONS})"

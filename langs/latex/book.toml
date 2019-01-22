@@ -3,3 +3,7 @@ authors = ["João Paulo Taylor Ienczak Zanette"]
 multilingual = false
 src = "src"
 title = "LaTeX"
+
+[output.html]
+additional-css = ["../../css/special-tags.css"]
+additional-js = ["../../js/special-tags.js"]

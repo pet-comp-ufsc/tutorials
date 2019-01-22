@@ -7,7 +7,7 @@
   - [Preâmbulo: autor, título e data](./first/preamble.md)
   - [Formatação de texto](./first/text-formatting.md)
   - [Listagem](./first/lists.md)
-  - [Inserindo imagens](./first/mages.md)
+  - [Inserindo imagens](./first/images.md)
   - [Referências com BibTeX](./first/references.md)
   - [Apresentações de slides](./first/presentations.md)
 - [Tabelas](./tables/about.md)
