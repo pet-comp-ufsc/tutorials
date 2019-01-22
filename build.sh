@@ -35,7 +35,7 @@ nofun() {
     if [ -z $1 ]; then
         echo "Usage: ${0} <function>"
     else
-        echo "${1} not found."
+        echo "No function \"${1}\"."
     fi
 
     echo "Available functions: "
