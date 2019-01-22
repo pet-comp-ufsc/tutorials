@@ -27,7 +27,7 @@ fix-js-path() {
     for file in $(find -name "*.html");
     do
         echo "Fixing JS for ${file}"
-        sed -i "s/src=\"\(.*\)\(special-.*.js\)\"/src=\"\/js\/\2\"/g" "${file}"
+        sed -i "s/src=\"\(.*\)\(special-.*.js\)\"/src=\"\/tutorials\/js\/\2\"/g" "${file}"
     done
 }
 
