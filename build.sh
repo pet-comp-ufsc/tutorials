@@ -24,10 +24,19 @@ build-book() {
 }
 
 fix-js-path() {
+    local pat="src=\"\(.*\)\(special-.*.js\)\""
+
+    if [ $1 = "--local" ];
+    then
+        local dst="src=\"..\/..\/js\/\2\""
+    else
+        local dst="src=\"\/tutorials\/js\/\2\""
+    fi
+
     for file in $(find -name "*.html");
     do
         echo "Fixing JS for ${file}"
-        sed -i "s/src=\"\(.*\)\(special-.*.js\)\"/src=\"\/tutorials\/js\/\2\"/g" "${file}"
+        sed -i "s/${pat}/${dst}/g" "${file}"
     done
 }
 
@@ -46,6 +55,8 @@ nofun() {
 # Commands
 
 build() {
+    echo "Build flags: $*"
+
     build-book ../book/ main
     build-book ../book/tools tools
 
@@ -57,7 +68,7 @@ build() {
         fi
     done
 
-    fix-js-path
+    fix-js-path $1
 }
 
 serve() {
