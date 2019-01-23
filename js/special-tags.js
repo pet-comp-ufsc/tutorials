@@ -1,5 +1,5 @@
 function feedSpecialTags() {
-    let tags = ['concept', 'warning', 'trap'];
+    let tags = ['concept', 'warn', 'trap'];
 
     for (let tag of tags) {
         let specialElms = document.getElementsByTagName(`${tag}`);

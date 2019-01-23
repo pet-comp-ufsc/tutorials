@@ -37,11 +37,20 @@ concepttag {
     text-align: center;
 }
 
-warning {
-    background: #efe;
-    border: solid 1px #afa;
+warn {
+    background: #feb;
+    border: solid 1px #fd8;
     display: block;
     padding: 1em;
+}
+
+warntag {
+    background: #fd9;
+    border: solid 1px #fd8;
+    border-bottom: none;
+    display: block;
+    padding: 0.5em;
+    text-align: center;
 }
 
 trap {
@@ -49,4 +58,13 @@ trap {
     border: solid 1px #faa;
     display: block;
     padding: 1em;
+}
+
+traptag {
+    background: #fcc;
+    border: solid 1px #faa;
+    border-bottom: none;
+    display: block;
+    padding: 0.5em;
+    text-align: center;
 }

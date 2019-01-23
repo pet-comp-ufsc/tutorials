@@ -100,7 +100,6 @@ Esboce seu primeiro documento seguindo os passos:
 
    Você pode ainda aproveitar e colocar um título para esse `frame`, da forma:
 
-
    ```latex
    \begin{document}
        \begin{frame}{Primeiro Frame}
