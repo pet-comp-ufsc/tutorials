@@ -5,22 +5,62 @@ Contribuindo
 ------
 
 1. [Guia de estilos](#guia-de-estilos)
-    1. [Estrutura](#estrutura)
-    2. [Cabeçalhos](#cabeçalhos)
-    3. [Conteúdo](#conteúdo)
+    1. [Hierarquia de pastas](#hierarquia-de-pastas)
+    2. [Estrutura de um tópico](#estrutura-de-um-tópico)
+    3. [Cabeçalhos](#cabeçalhos)
+    4. [Conteúdo](#conteúdo)
 2. [Adicionando tutoriais/artigos](#adicionando-tutoriaisartigos)
-    1. [Orientações gerais](#orientações-gerais)
+    1. [Compilando o livro](#compilando-o-livro)
+    2. [Orientações gerais](#orientações-gerais)
 
 Guia de estilos
 ---------------
 
-### Estrutura
+
+### Hierarquia de pastas
+
+No momento, o projeto está organizado da seguinte forma:
+
+```
+.
+├── arch           # Tutoriais de arquitetura
+├── css            # [Código-fonte] CSS adicional
+├── general        # Tutoriais gerais
+├── js             # [Código-fonte] JS adicional
+├── langs          # Tutoriais sobre linguagens
+│   ├── c          # ...
+│   ├── cpp
+│   ├── c-sharp
+│   ├── java
+│   ├── latex
+│   └── python
+├── main           # Página principal do livro (com índice e categorias)
+└── tools          # Tutoriais sobre ferramentas
+```
+
+Com exceção das pastas com código-fonte do livro (`css` e `js`), todas as
+outras possuem uma pasta `src` e um `book.toml`. O `book.toml` possui as
+configurações de cada sub-livro (conforme [documentação do
+MdBook](https://github.com/rust-lang-nursery/mdBook/blob/master/book-example/src/format/config.md).
+`src` é a pasta que contém cada arquivo Markdown com cada tópico de seu
+respectivo sublivro. É interessante que cada subtópico seja uma pasta separada
+dentro de `src`, para fins de organização (assim não ficam todos os tópicos e
+subtópicos jogados em `src`).
+
+
+### Estrutura de um tópico
+
+É sugerida a seguinte estrutura para cada tópico:
+
+**(OBS: o índice é opcional, utilizado apenas quando for um tópico muito
+grande, o que é comum no caso das ferramentas, já que não há um sublivro para
+cada.)**
 
 ```
 Título principal
 ================
 
-Índice
+Índice (Opcional)
 ------
 
 1. [Tópico 1](#topico-1)
@@ -95,11 +135,27 @@ Header 2 (um pouco maior)
 ### Conteúdo
 
 1. Não passar da coluna 80.
+2. Preferir incluir uma seção com prática em cada tutorial (dadas as devidas
+   exceções).
 
-_(outros tópicos a incrementar)__
+_(outros tópicos a incrementar)_
 
 Adicionando tutoriais/artigos
 -----------------------------
+
+### Compilando o livro
+
+Para compilar o livro, execute:
+
+```console
+$ ./build.sh build --local
+```
+
+No momento o sistema de sublivros não está muito robusto, então é provável que
+o `mdbook serve` não funcione corretamente (e portanto a função `serve` do
+`build.sh` também não). Por consequência, o que tenho feito é abrir o
+`index.html` de cada livro utilizando a navegação de arquivos do próprio
+navegador (ou seja, com `file:///`).
 
 ### Orientações gerais
 
@@ -111,8 +167,8 @@ Adicionando tutoriais/artigos
 4. Ao referenciar sites, procure linká-los. Por exemplo:
 
    ```
-   For more information, check the [official Foo-platform
-   website](fooplatform.com)
+   Para mais informações, cheque o [site oficial da
+   Foo-platform](fooplatform.com)
    ```
 
 5. Procure deixar recomendações de leitura no final do tutorial;
