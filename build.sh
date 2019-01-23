@@ -63,10 +63,12 @@ build() {
     build-book ../book/tools tools
 
     for book in {general,langs}/*; do
-        if [ -d ${book} ]; then
-            build-book "../../book/${book}" "${book}"
-        else
+        if [ -f ${book} ]; then
             printf "${SKIP} ${book}: not a directory.\n"
+        elif [ ! -d "${book}/src" ]; then
+            printf "${SKIP} ${book}: not a valid mdbook.\n"
+        else
+            build-book "../../book/${book}" "${book}"
         fi
     done
 
