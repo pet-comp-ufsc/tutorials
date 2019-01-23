@@ -1,14 +1,15 @@
-function a() {
-    () => {
-        console.log('que?');
-        document.getElementsByTagName('concept').forEach(elm => {
-            console.log('yay');
-            console.log(elm);
-        });
+function feedSpecialTags() {
+    let tags = ['concept', 'warning', 'trap'];
+
+    for (let tag of tags) {
+        let specialElms = document.getElementsByTagName(`${tag}`);
+
+        for (let elm of specialElms) {
+            let specialTag = document.createElement(`${tag}tag`);
+            specialTag.innerHTML = `<title>${elm.title}</title>`;
+            elm.parentNode.insertBefore(specialTag, elm);
+        }
     }
 }
 
-document.addEventListener('DOMContentLoaded', a);
-window.onload = a;
-
-alert('yay');
+document.addEventListener('DOMContentLoaded', feedSpecialTags);

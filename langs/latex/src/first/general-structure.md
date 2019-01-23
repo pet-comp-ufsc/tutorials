@@ -28,8 +28,7 @@ Comandos e ambientes
 Você irá perceber que LaTeX é composto majoritariamente de comandos e
 ambientes.
 
-<concept>
-<tag>Conceito</tag> <title>Comandos</title>
+<concept title="Comandos">
 Assim como _macros_, são precedidos por `\`. Comandos podem alterar a
 formatação de um texto, inserir elementos (como imagens, conteúdos de outros
 arquivos), e efetuar operações (como alterar a linguagem do texto, por

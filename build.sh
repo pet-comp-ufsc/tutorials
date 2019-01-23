@@ -28,14 +28,16 @@ fix-js-path() {
 
     if [ $1 = "--local" ];
     then
-        local dst="src=\"..\/..\/js\/\2\""
+        BASEPATH="$(pwd)/book"
+        local dst="src=\"${BASEPATH//\//\\/}\/js\/\2\""
+        echo "Fixing JS paths (local build)..."
     else
         local dst="src=\"\/tutorials\/js\/\2\""
+        echo "Fixing JS paths..."
     fi
 
     for file in $(find -name "*.html");
     do
-        echo "Fixing JS for ${file}"
         sed -i "s/${pat}/${dst}/g" "${file}"
     done
 }

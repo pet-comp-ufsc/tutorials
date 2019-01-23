@@ -19,7 +19,6 @@ title {
     display: block;
     font-size: large;
     font-weight: bold;
-    padding-bottom: 1em;
 }
 
 concept {
@@ -27,6 +26,15 @@ concept {
     border: solid 1px #aaf;
     display: block;
     padding: 1em;
+}
+
+concepttag {
+    background: #ccf;
+    border: solid 1px #aaf;
+    border-bottom: none;
+    display: block;
+    padding: 0.5em;
+    text-align: center;
 }
 
 warning {
