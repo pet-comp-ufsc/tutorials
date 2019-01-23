@@ -47,9 +47,13 @@ O que irá gerar algo como:
 >**Este trecho está em negrito.**
 >Já este outro não.
 
-**Ambientes** são como comandos, porém para blocos de código em vez de pequenos
-textos. O seu documento, por exemplo, é definido no ambiente `document`, como
-você verá na parte prática. Ambientes podem ser utilizados com:
+<concept title="Ambientes">
+São como comandos, porém para blocos de código em vez de pequenos textos. O seu
+documento, por exemplo, é definido no ambiente `document`, como você verá na
+parte prática.
+</concept>
+
+Ambientes podem ser utilizados com:
 
 ```latex
 \begin{<ambiente>}
