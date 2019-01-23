@@ -3,3 +3,6 @@ authors = ["João Paulo Taylor Ienczak Zanette"]
 multilingual = false
 src = "src"
 title = "Java"
+
+[build]
+build-dir = "../../book/langs/java"

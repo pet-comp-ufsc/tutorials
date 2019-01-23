@@ -3,3 +3,6 @@ authors = ["João Paulo Taylor Ienczak Zanette"]
 multilingual = false
 src = "src"
 title = "Ferramentas"
+
+[build]
+build-dir = "../book/tools"

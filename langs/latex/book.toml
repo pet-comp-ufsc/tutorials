@@ -4,6 +4,9 @@ multilingual = false
 src = "src"
 title = "LaTeX"
 
+[build]
+build-dir = "../../book/langs/latex"
+
 [output.html]
 additional-css = ["../../css/special-tags.css"]
 additional-js = ["../../js/special-tags.js"]

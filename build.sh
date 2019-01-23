@@ -16,11 +16,10 @@ shopt -s extglob
 FUNCTIONS="build|clean|serve"
 
 build-book() {
-    local output=$1
-    local book=$2
+    local book=$1
 
     printf "${INFO} Building ${book}...\n"
-    mdbook build -d "${output}" "${book}"
+    mdbook build "${book}"
 }
 
 fix-js-path() {
@@ -59,8 +58,8 @@ nofun() {
 build() {
     echo "Build flags: $*"
 
-    build-book ../book/ main
-    build-book ../book/tools tools
+    build-book main
+    build-book tools
 
     for book in {general,langs}/*; do
         if [ -f ${book} ]; then
@@ -68,7 +67,7 @@ build() {
         elif [ ! -d "${book}/src" ]; then
             printf "${SKIP} ${book}: not a valid mdbook.\n"
         else
-            build-book "../../book/${book}" "${book}"
+            build-book "${book}"
         fi
     done
 

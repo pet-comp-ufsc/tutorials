@@ -1,6 +1,12 @@
 [book]
-build-dir = "book"
 authors = ["PET Computação UFSC"]
 multilingual = false
 src = "src"
 title = "PET Computação - Tutoriais"
+
+[build]
+build-dir = "../book"
+
+[output.html]
+additional-css = ["css/special-tags.css"]
+additional-js = ["js/special-tags.js"]

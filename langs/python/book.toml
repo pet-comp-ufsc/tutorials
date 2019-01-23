@@ -3,3 +3,6 @@ authors = ["João Paulo Taylor Ienczak Zanette"]
 multilingual = false
 src = "src"
 title = "Python"
+
+[build]
+build-dir = "../../book/langs/python"
