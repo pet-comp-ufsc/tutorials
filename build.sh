@@ -25,7 +25,7 @@ build-book() {
 fix-js-path() {
     local pat="src=\"\(.*\)\(special-.*.js\)\""
 
-    if [ $1 = "--local" ];
+    if [ "$1" = "--local" ];
     then
         BASEPATH="$(pwd)/book"
         local dst="src=\"${BASEPATH//\//\\/}\/js\/\2\""
