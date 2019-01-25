@@ -28,7 +28,7 @@
     - [Acessando elementos de um array](./arrays/accessing.md)
     - [Propriedades de Arrays](./arrays/properties.md)
     - [Combinando arrays e `for`s](./arrays/for.md)
-    - [Estrutura `for-each`](./arrays/for.md)
+    - [Estrutura `for-each`](./arrays/foreach.md)
     - [Recomendações de leitura](./arrays/recommendations.md)
 - [Criando seus próprios comandos](./functions.md)
     - [Definindo funções](./functions/defining.md)
