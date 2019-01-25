@@ -92,12 +92,12 @@ Veremos de dentro para fora como funciona esse programa de exemplo:
 
   Perceba que os comandos executados são apenas os que estão entre chaves ("{"
   e "}"). Isso se dá porque as chaves delimitam o início e fim de um escopo, o
-  que será visto mais adiante na [aula 4](04-if-and-switch.md), mas por
+  que será visto mais adiante na [aula 3](../if.md), mas por
   enquanto entenda como "o início e fim do `main`".
 
   Quanto aos args, trata-se dos argumentos ao executar o programa, que podem
   ser acessados como um vetor/array, o que será explicado na [aula
-  5](05-arrays.md).
+  5](../arrays.md).
 
 - `public class HelloWorld`:
 
@@ -106,7 +106,7 @@ Veremos de dentro para fora como funciona esse programa de exemplo:
   como no `main`, indicam onde começa e termina a implementação dela.
 
   Uma classe nada mais nada menos do que simboliza um modelo e um tipo de dado,
-  o que será melhor explicado na [aula 6](06-classes.md).
+  o que será melhor explicado na [aula 7](../your-own-types.md).
 
 - O nome do arquivo: "HelloWorld.java":
 

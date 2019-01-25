@@ -22,7 +22,7 @@ public class HelloWorld {
 
 Esse primeiro exemplo, salvo num arquivo "HelloWorld.java", faz nada mais nada
 menos do que mostrar um texto ("Hello, world!") na tela. Uma maneira de rodá-lo
-é [compilando](01-java-and-langs.md) com o comando `javac` e então executando
+é [compilando](../java-and-langs.md) com o comando `javac` e então executando
 com o comando `java`:
 
 _(Obs: "~/dev/java" é a pasta em que o terminal está trabalhando - e onde o

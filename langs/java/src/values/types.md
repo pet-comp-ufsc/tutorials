@@ -107,8 +107,8 @@ Os tipos compostos são, em resumo, todos os que não são primitivos. Por exemp
 - `String`;
 - `Object`;
 - `ArrayList`;
-- Arrays (demarcados com um `[]`, visto na [próxima aula](04-arrays.md)).
+- Arrays (demarcados com um `[]`, visto [mais à frente](../arrays.md)).
 
-[Em uma aula mais a frente](06-classes.md), aprenderemos a criar nossos
+[Em uma aula mais a frente](../your-own-types.md), aprenderemos a criar nossos
 próprios tipos compostos.
 

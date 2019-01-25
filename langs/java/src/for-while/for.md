@@ -118,6 +118,6 @@ for (var i = 0; i <= 10; i += 2) {
 }
 ```
 
-[No tutorial seguinte](/langs/java/06-arrays.md), será visto o quanto `for`
+[No tutorial seguinte](../arrays.md), será visto o quanto `for`
 pode ser facilmente combinado para aumentar o potencial de `array`s.
 
