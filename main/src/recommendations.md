@@ -3,7 +3,7 @@ Recomendações de leitura
 
 ### Iniciantes
 
-- [Como estudar programação?](pet-comp-ufsc.github.io/tutorials/general/how-to-study.md)
+- [Como estudar programação?](./general/how-to-study.md)
 - [Tutorial sobre Git](./tools/recommended/git.md)
 
 ### Calouros da UFSC
