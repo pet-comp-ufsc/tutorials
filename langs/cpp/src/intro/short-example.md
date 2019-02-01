@@ -7,12 +7,20 @@ A primeira linha é demarcada por um `#include`:
 #include <iostream>
 ```
 
-Comandos iniciados com `#` são **diretivas de pré-processador**, que são
-processadas antes do código ser efetivamente compilado. No caso da `#include`,
-ela indica que o conteúdo de um arquivo deve ser incluído naquele ponto. Para
-buscar esse arquivo, foi utilizado `<>` para dar preferência às bibliotecas do
-sistema. Caso a preferência fosse por arquivos na pasta atual, seria utilizado
-`""`, mas isso será visto melhor mais tarde.
+Comandos iniciados com `#` são **diretivas do pré-processador**.
+
+<concept title="Pré-processador">
+    O pré-processador é um programa que executa antes do seu código passar para
+    o compilador de verdade. Seus comandos são iniciados com `#` e podem servir
+    para inclusão de código de outros arquivos, instruir o compilador sobre
+    qual linha apontar um erro, gerar código extra para o compilador, dentre
+    outras tarefas.
+</concept>
+
+No caso da `#include`, ela indica que o conteúdo de um arquivo deve ser
+incluído naquele ponto. Para buscar esse arquivo, foi utilizado `<>` para dar
+preferência às bibliotecas do sistema. Caso a preferência fosse por arquivos na
+pasta atual, seria utilizado `""`, mas isso será visto melhor mais tarde.
 
 Sendo assim, em resumo, está sendo incluído o conteúdo do arquivo "iostream",
 presente na biblioteca padrão de C++.

@@ -6,3 +6,5 @@
 [Assuntos Gerais](./general.md)
 [Linguagens](./langs.md)
 [Ferramentas](./tools.md)
+
+[Recomendações de Leitura](./recommendations.md)

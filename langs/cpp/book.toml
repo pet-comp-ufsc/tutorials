@@ -6,3 +6,7 @@ title = "C++"
 
 [build]
 build-dir = "../../book/langs/cpp"
+
+[output.html]
+additional-css = ["../../css/special-tags.css"]
+additional-js = ["../../js/special-tags.js"]

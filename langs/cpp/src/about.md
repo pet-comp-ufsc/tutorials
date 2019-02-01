@@ -4,7 +4,7 @@ Sobre C++
 1. [Por que usar C++?](#por-que-usar-c)
 2. [Apelo: atualizações na linguagem](#apelo-atualizações-na-linguagem)
 3. [C++ é C com std::cout?](#c-é-c-com-stdcout)
-4. [C++ é próxima do hardware, assim como C?](#c-é-próxima-do-hardware-assim-como-c)
+4. [C++ é baixo-nível, assim como C?](#c-é-próxima-do-hardware-assim-como-c)
 
 Por que usar C++?
 -----------------
@@ -66,6 +66,13 @@ segura e robusta a uma linguagem mais moderna, simplificando bastante a forma
 de se programar nela. Logo, a forma de se programar em C++ pré-11 pode ser dita
 como obsoleta. Inclusive, o advento de C++14 e C++17 (lançados em 2014 e 2017,
 respectivamente), já fazem de C++11 um padrão obsoleto em algumas partes.
+
+<warn title="Aprenda C++ moderno">
+Não há por que perder tempo aprendendo C++ antigo: boa parte das _toolchains_
+já lidam com C++ moderno, que além de possuir uma biblioteca padrão mais ampla
+e robusta, é repleto de recursos novos que inutilizam boa parte do trabalho
+braçal das antigas versões de C++.
+</warn>
 
 Como exemplo, o código abaixo exemplifica a criação e iteração por elementos de
 um Map em C++ antigo (pré-C++11):
@@ -137,7 +144,11 @@ criam crenças de que entender de C implica em entender de C++ (e vice-versa),
 além de ser comum programadores escreverem código C no meio de código C++. Mas,
 serve de regra:
 
-> C em código C++ é C++ ruim.
+<warn title="Não misture C com C++">
+_"C em código C++ é C++ ruim."_ C++ possui suas próprias mecânicas para lidar
+com segurança, memória e algoritmos. Além disso, alguns comandos possuem
+significado diferente em C e em C++.
+</warn>
 
 Por exemplo:
 - Em C é comum e necessário trabalhar com ponteiros explicitamente.  Em C++
@@ -153,7 +164,7 @@ Por exemplo:
   #1](#recomendações-de-leitura)) e aproveitam melhor o sistema de tipos da
   linguagem.
 
-C++ é próxima do hardware, assim como C?
+C++ é baixo-nível, assim como C?
 ----------------------------------------
 
 Não, pelos mesmos motivos pelo qual

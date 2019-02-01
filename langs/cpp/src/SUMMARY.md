@@ -8,6 +8,13 @@
   - [Explicação do código de exemplo](./intro/short-example.md)
   - [Ausência de return no main](./intro/main-without-return.md)
   - [`<*>` Argumentos do programa](./intro/args.md)
+  - [Comentários](./intro/comments.md)
+
+- [Estruturas básicas](./statements/about.md)
+  - [`<*>` `If`](./statements/if.md)
+  - [`<*>` `While`](./statements/while.md)
+  - [`<*>` `For`](./statements/for.md)
+  - [`<*>` `Switch-Case`](./statements/switch-case.md)
 
 - [Funções](./functions/about.md)
   - [Retorno de funções](./functions/return.md)
@@ -26,3 +33,6 @@
   - [Separando em arquivos](./projects/files.md)
   - [Linkando bibliotecas](./projects/libs.md)
   - [CMake](./projects/cmake.md)
+
+- [Outros](./others/about.md)
+  - [Operadores](./others/operators.md)

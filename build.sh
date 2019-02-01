@@ -22,21 +22,39 @@ build-book() {
     mdbook build "${book}"
 }
 
-fix-js-path() {
-    local pat="src=\"\(.*\)\(special-.*.js\)\""
+fix-js-css-path() {
+    if [ "$1" = "--css" ];
+    then
+        local ext="css"
+        local tag="href"
+        shift
+    else
+        local ext="js"
+        local tag="src"
+    fi
+
+    local pat="${tag}=\"\(.*\)\(special-.*.${ext}\)\""
 
     if [ "$1" = "--local" ];
     then
         BASEPATH="$(pwd)/book"
-        local dst="src=\"${BASEPATH//\//\\/}\/js\/\2\""
-        echo "Fixing JS paths (local build)..."
+        local dst="${tag}=\"${BASEPATH//\//\\/}\/${ext}\/\2\""
+        echo "Fixing ${ext} paths (local build)..."
+        echo "    -> pat: ${pat}"
+        echo "    -> dst: ${dst}"
     else
-        local dst="src=\"\/tutorials\/js\/\2\""
-        echo "Fixing JS paths..."
+        local dst="${tag}=\"\/tutorials\/${ext}\/\2\""
+        echo "Fixing ${ext} paths..."
     fi
 
     for file in $(find -name "*.html");
     do
+        # if [ "$1" = "--local" ];
+        # then
+        #     echo "File: ${file}"
+        #     # pat="src=\"\(.*"
+        #     echo "Pattern: ${pat}"
+        # fi
         sed -i "s/${pat}/${dst}/g" "${file}"
     done
 }
@@ -71,7 +89,8 @@ build() {
         fi
     done
 
-    fix-js-path $1
+    fix-js-css-path $1
+    fix-js-css-path --css $1
 }
 
 serve() {

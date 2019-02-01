@@ -37,7 +37,6 @@ didática altíssima. Se tiver interesse em arquitetura de computadores, procure
 os livros deles.
 
 
-
 "Encontrei um erro num tutorial"
 --------------------------------
 

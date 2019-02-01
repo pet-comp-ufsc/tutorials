@@ -1,11 +1,6 @@
 Sobre este tutorial
 ===================
 
-1. [Para quem?](#para-quem)
-2. [Comandos no terminal](#comandos-no-terminal)
-3. [Tópicos com \*](#comandos-no-terminal)
-4. ["Encontrei um erro no tutorial"](#encontrei-um-erro-no-tutorial)
-
 Para quem?
 ----------
 
