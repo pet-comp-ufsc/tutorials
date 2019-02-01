@@ -49,12 +49,6 @@ fix-js-css-path() {
 
     for file in $(find -name "*.html");
     do
-        # if [ "$1" = "--local" ];
-        # then
-        #     echo "File: ${file}"
-        #     # pat="src=\"\(.*"
-        #     echo "Pattern: ${pat}"
-        # fi
         sed -i "s/${pat}/${dst}/g" "${file}"
     done
 }
@@ -78,8 +72,9 @@ build() {
 
     build-book main
     build-book tools
+    build-book general
 
-    for book in {general,langs}/*; do
+    for book in langs/*; do
         if [ -f ${book} ]; then
             printf "${SKIP} ${book}: not a directory.\n"
         elif [ ! -d "${book}/src" ]; then

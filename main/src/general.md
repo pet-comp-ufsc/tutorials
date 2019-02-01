@@ -1,1 +1,4 @@
-# Tutoriais sobre Assuntos Gerais
+Tutoriais sobre Assuntos Gerais
+===============================
+
+- [Como estudar programação](./general/how-to-study.md)
