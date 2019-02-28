@@ -1,6 +1,18 @@
 Sistema de Versionamento Git
 ============================
 
+Sobre
+-----
+
+Este não é um tutorial para você **aprender** Git. Caso seu objetivo seja
+aprender, siga o [Git Book](https://git-scm.com/book/en/v2) (não se assuste com
+o tamanho dele: leia com carinho e atenção, é um livro muito bom que irá
+ensiná-lo a utilizar Git corretamente).
+
+Para que este tutorial então? Para servir de consulta rápida dos comandos do
+Git, tendo pequenos exemplos e pequenas descrições do que você possivelmente
+quer fazer.
+
 Comandos básicos
 ----------------
 
@@ -61,7 +73,8 @@ git config user.name "Nome do autor"
 git config user.email "E-mail do autor"
 ```
 
-Identificar autor dos commits para todos os repositórios do usuário logado no computador:
+Identificar autor dos commits para todos os repositórios do usuário logado no
+computador:
 
 ```bash
 git config --global user.name "Nome do autor"
@@ -86,7 +99,11 @@ Initialized empty Git repository in /home/user/example
 
 ### Inicializar repositório a partir de um remoto
 
-Método 1:
+#### Método 1
+
+Para quando:
+- Você não tem o projeto localmente; e
+- Você quer que o nome da pasta seja o mesmo do repositório.
 
 ```bash
 ~/ $ git clone https://github.com/pet-comp-ufsc/git-example
@@ -94,7 +111,11 @@ Método 1:
 ~/git-example $
 ```
 
-Método 2:
+#### Método 2
+
+Para quando:
+- Você não tem o projeto localmente; e
+- Você quer dar um nome específico para a pasta do projeto.
 
 ```bash
 ~/ $ git clone https://github.com/pet-comp-ufsc/git-example example
@@ -102,10 +123,11 @@ Método 2:
 ~/example $
 ```
 
-Método 3:
+Para quando:
+- Você **tem** o projeto localmente; e
+- Você quer relacioná-lo ao remoto.
 
 ```bash
-~/ $ mkdir example
 ~/ $ cd example
 ~/example $ git init
 Initialized empty Git repository in /home/user/example
