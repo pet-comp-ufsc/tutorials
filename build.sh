@@ -11,6 +11,7 @@ ERROR="[${RED}ERROR${DEFAULT}]"
 GOOD="[${GREEN}GOOD${DEFAULT}]"
 SKIP="[${OTHER}SKIP${DEFAULT}]"
 
+# For extra glob features (e.g. ?, *, +, @, !)
 shopt -s extglob
 
 FUNCTIONS="build|clean|serve"
