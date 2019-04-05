@@ -14,3 +14,11 @@ deveriam ser obrigatórias de se aprender no período de graduação, mas
 infelizmente essa não é a realidade de nossos cursos. Então leia com bastante
 atenção, já que muitas dessas decisões tem ligação direta com aspectos bem
 profundos de Teoria da Computação.
+
+<!-- TODO: Mover para um tutorial próprio de tipagem forte/fraca -->
+<warn title="Algumas terminologias não são formalizadas">
+    Infelizmente, é bem comum algumas terminologias intercambearem seus
+    significados em várias situações. Especificamente, tipagem **forte/fraca**
+    possui 3 significados diferentes. Portanto, leia atentamente os tutoriais
+    para saber de qual significado se trata.
+</warn>
