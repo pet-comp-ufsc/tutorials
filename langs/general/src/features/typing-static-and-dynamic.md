@@ -1,0 +1,11 @@
+Tipagem Estática e Dinâmica
+===========================
+
+Um resumo
+---------
+
+Tipagem estática é desejada para:
+- Ter garantias em tempo de compilação (satisfazer operações para determinados tipos de dados, etc.);
+- Aproveitar **overload** de função;
+- Facilitar otimizações do compilador.
+

@@ -1,0 +1,8 @@
+[book]
+authors = ["João Paulo Taylor Ienczak Zanette"]
+multilingual = false
+src = "src"
+title = "Linguagens de Programação"
+
+[build]
+build-dir = "../../book/langs/general"
