@@ -12,4 +12,5 @@ Tipagem estática é desejada para:
 
 Tipagem dinâmica é desejada para:
 - Prototipagem rápida;
-- 
+- Flexibilidade (Duck Typing, por exemplo);
+- Produtividade.
