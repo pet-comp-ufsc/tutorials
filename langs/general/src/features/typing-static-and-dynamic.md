@@ -14,3 +14,13 @@ Tipagem dinâmica é desejada para:
 - Prototipagem rápida;
 - Flexibilidade (Duck Typing, por exemplo);
 - Produtividade.
+
+Tipagem Estática
+----------------
+
+De maneira simples:
+
+<concept title="Tipagem Estática">
+    Quando os tipos de **todos** os objetos do programa são conhecidos sem ser
+    necessário executá-lo.
+</concept>
