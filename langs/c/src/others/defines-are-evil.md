@@ -248,6 +248,75 @@ bar()
 
 Agora sim, sem chamadas extras, mas com uma macro bastante ilegível.
 
+Outro problema: vírgulas
+------------------------
+
+Conforme registrado pela [documentação do
+cppreference](https://en.cppreference.com/w/cpp/error/assert), em C++ (que
+permite várias construções mais complexas), quando se tenta utilizar algo com
+vírgulas as coisas podem ficar estranhas, por exemplo:
+
+```c++
+#include <cassert>
+
+struct Point {
+    int x; int y;
+
+    // Define o operador de == para dois `Point`s.
+    auto operator==(const Point& p) const {
+        return x == p.x and y == p.y;
+    }
+};
+
+int main() {
+    auto p = Point{0, 0};
+    assert(p == Point{0, 0});
+}
+```
+
+`assert` é uma macro que permite fazer validações, por exemplo: naquele caso,
+se quer garantir que `p` seja igual a `{0, 0}`, senão o programa irá abortar
+indicando que aquela asserção falhou. Porém, como não há parênteses ao redor de
+`{0, 0}`, a macro entende que se estão passando 2 argumentos a ela:
+1. `p == {0`;
+2. `0}`.
+
+Porém, `assert` só tem 1 parâmetro, e portanto o programa não compila:
+
+```console
+$ g++ assert_example.cpp
+a.cpp:13:28: error: macro "assert" passed 2 arguments, but takes just 1
+   13 |     assert(p == Point{0, 0});
+      |                            ^
+In file included from /usr/include/c++/9.1.0/cassert:44,
+                 from a.cpp:1:
+/usr/include/assert.h:89: note: macro "assert" defined here
+   89 | #  define assert(expr)       \
+      |
+a.cpp: In function ‘int main()’:
+a.cpp:13:5: error: ‘assert’ was not declared in this scope
+   13 |     assert(p == Point{0, 0});
+      |     ^~~~~~
+a.cpp:2:1: note: ‘assert’ is defined in header ‘<cassert>’; did you forget to ‘#include <cassert>’?
+    1 | #include <cassert>
+  +++ |+#include <cassert>
+    2 |
+```
+
+Perceba que o compilador até se perde e acaba acreditando que nem `assert` foi
+definido nem que `<cassert>` foi incluído. O correto, nesse caso, seria
+envolver o conteúdo do `assert` com um parênteses extra:
+
+```c++
+    assert((p == Point{0, 0}));
+```
+
+E agora o programa compila normalmente:
+
+```console
+$ g++ assert_example.cpp
+```
+
 Conclusão
 ---------
 
