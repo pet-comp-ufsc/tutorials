@@ -1,0 +1,903 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>C#</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="about.html">Sobre C#</a></li><li class="expanded "><a href="from-c/about.html"><strong aria-hidden="true">1.</strong> C# para programadores C</a></li><li><ol class="section"><li class="expanded "><a href="from-c/basics.html"><strong aria-hidden="true">1.1.</strong> Básicos</a></li><li class="expanded "><a href="from-c/oo.html"><strong aria-hidden="true">1.2.</strong> Orientação a Objetos: Novidades em relação a C</a></li><li class="expanded "><a href="from-c/classes.html"><strong aria-hidden="true">1.3.</strong> Classe e Objeto</a></li><li class="expanded "><a href="from-c/methods.html"><strong aria-hidden="true">1.4.</strong> Métodos</a></li><li class="expanded "><a href="from-c/static.html"><strong aria-hidden="true">1.5.</strong> Static</a></li><li class="expanded "><a href="from-c/inherit.html"><strong aria-hidden="true">1.6.</strong> Herança</a></li><li class="expanded "><a href="from-c/access-mod.html"><strong aria-hidden="true">1.7.</strong> Modificadores de acesso</a></li><li class="expanded "><a href="from-c/no-pointers.html"><strong aria-hidden="true">1.8.</strong> Não tenho ponteiros. E agora?</a></li></ol></li><li class="expanded "><a href="from-cpp/about.html"><strong aria-hidden="true">2.</strong> C# para programadores C++</a></li><li><ol class="section"><li class="expanded "><a href="from-cpp/main-diff.html"><strong aria-hidden="true">2.1.</strong> Principais Diferenças</a></li></ol></li><li class="expanded "><a href="feats/about.html"><strong aria-hidden="true">3.</strong> Algumas Features de C#</a></li><li><ol class="section"><li class="expanded "><a href="feats/nullables.html"><strong aria-hidden="true">3.1.</strong> Nullables</a></li><li class="expanded "><a href="feats/properties.html"><strong aria-hidden="true">3.2.</strong> Properties</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">C#</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#sobre-c" id="sobre-c">Sobre C#</a></h1>
+<p>Apesar do nome, C# tem muito mais a ver com Java do que com C e C++, incluindo
+padrões de projeto, nomenclatura, forma de trabalho, organização, etc...
+Basicamente o que C#, C e C++ possuem em comum é ponteiros (e ainda assim não
+funciona da mesma forma, mas dificilmente você os utiliza em C#, por questões
+de segurança - mas vale lembrar que todo objeto é uma referência), e trabalha
+com tipos primitivos de uma forma mais próxima de C e C++ (inclusive na
+definição do tamanho deles: em C# há uint8, uint16, uint32, uint64, int8,
+int16, int32, int64, ...). Específico em relação a C++, C# também possui
+namespaces (o que é ótimo!).</p>
+<p>Mas apesar da semelhança com Java, C# é uma linguagem bem elaborada, com
+bibliotecas com APIs bem fáceis de usar, não costuma ser difícil de lidar com
+ela, e ainda consegue manter uma certa liberdade ao programador e suas
+implementações costumam ter uma performance muito boa.</p>
+<p>Para quem conhece Java, C# possui um sistema de get/set (adicionando Operator
+Overloading, o que é ótimo também), <em>callbacks</em> e
+<a href="https://en.wikipedia.org/wiki/Anonymous_function"><em>lambdas</em></a> muito bem feitos
+e fáceis de usar. Outra característica importante é que C# já possui inferência
+de tipo (via <code>var</code>) desde Visual C# 3.0 (lançado em 2007).</p>
+<p>Há ainda, porém, a mesma restrição de Java quanto a arquivos: todo arquivo
+<code>.cs</code> deve expor uma classe pública no escopo mais externo (fora namespaces).</p>
+<h1><a class="header" href="#c-para-programadores-c" id="c-para-programadores-c">C# para programadores C</a></h1>
+<p>Esta seção é para programadores C que pretendem aprender C#, e portanto
+precisam estar avisados de alguns conceitos que não estão presentes ou são
+diferentes em C.</p>
+<p>Caso você não seja um programador C, pode pular esta seção.</p>
+<h1><a class="header" href="#básicos" id="básicos">Básicos</a></h1>
+<p>Se você veio de C e sabe somente C, prepare-se para o mundo novo da Orientação
+a Objetos. A maior diferença notável entre instâncias de <code>struct</code>s de C e
+objetos de C# é o fato de que objetos possuem métodos (i.e.
+funções do próprio objeto). No caso específico de Java, C# e Cobra, toda função
+é uma função-membro, ou seja, não existe função &quot;solta&quot;, todas elas precisam
+estar dentro de uma classe. Isso inclui também a função main(), visto que, em
+C, um Hello World seria:</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;Hello, world!\n&quot;);
+    return 0;
+}
+</code></pre>
+<p>Enquanto que em C# seria:</p>
+<pre><code class="language-cs">using System;
+
+public class INeedAClassForEverything {
+    public static void Main() {
+        Console.WriteLine(&quot;Hello, world!&quot;);
+    }
+}
+</code></pre>
+<p>Um pouco mais comprido, sim, devido principalmente à decisão de projeto da
+linguagem de que tudo precisa estar em uma classe. Bem, acostume-se.</p>
+<p>Há várias construções que são quase iguais em ambas as linguagens, por exemplo,
+o que em C seria:</p>
+<pre><code class="language-c">int sum = 0;
+for (int i = 0; i &lt; 10; ++i) {
+    sum += 1;
+}
+
+printf(&quot;Sum: %d\n&quot;, sum);
+
+if (sum &gt; 20) {
+    printf(&quot;Sum is bigger than 20\n&quot;);
+} else if (sum &gt; 10) {
+    printf(&quot;Sum is between 10 and 20\n&quot;);
+} else {
+    printf(&quot;Sum is less/equal 10\n&quot;);
+}
+</code></pre>
+<p>Em C# ficaria:</p>
+<pre><code class="language-cs">int sum = 0;
+for (int i = 0; i &lt; 10; i++) {
+    sum += i;
+}
+
+Console.WriteLine(string.Format(&quot;Sum: {0}&quot;, sum));
+
+if (sum &gt; 20) {
+    Console.WriteLine(&quot;Sum is bigger than 20&quot;);
+} else if (sum &gt; 10) {
+    Console.WriteLine(&quot;Sum is between 10 and 20&quot;);
+} else {
+    Console.WriteLine(&quot;Sum is less/equal 10&quot;);
+}
+</code></pre>
+<p>Note o {0} em String.Format. 0 é o índice do parâmetro a ser substituído ali.
+Exemplo:</p>
+<pre><code class="language-cs">String.Format(&quot;{0} {1} {2} {3}&quot;, 1, true, 3.14f, Console.In);
+</code></pre>
+<p>Irá retornar uma String com:</p>
+<pre><code>1 true 3.14 SystemIO.Reader+NullStreamReader
+</code></pre>
+<p>Note também que foi possível colocar um <code>Console.In</code> na formatação de String, o
+que resultou em um texto estranho (<code>SystemIO.Reader+NullStreamReader</code>).  Isso
+se dá porque o string.Format na verdade só chama o método <code>ToString()</code> de cada
+parâmetro, o que em alguns casos o padrão é mostrar o tipo do objeto. Métodos
+serão vistos melhor mais a frente.</p>
+<p>Uma pequena tabela mostrando um pouco do que há em C de diferente/igual a C#:</p>
+<table><thead><tr><th>Recurso</th><th>C</th><th>C#</th></tr></thead><tbody>
+<tr><td>Ponteiros</td><td>Sim</td><td>Não¹</td></tr>
+<tr><td>Classes/Objetos</td><td>Não</td><td>Sim</td></tr>
+<tr><td>Structs</td><td>Sim</td><td>Structs são ValueTypes², Classes são ReferenceTypes³</td></tr>
+<tr><td>Macros</td><td>Sim</td><td>Sim⁴</td></tr>
+<tr><td>Namespaces</td><td>Não</td><td>Sim</td></tr>
+<tr><td>Function-pointer</td><td>Sim</td><td>Possui Delegates e Events</td></tr>
+</tbody></table>
+<p>¹: Na verdade sim, mas apenas em um bloco <code>unsafe</code>.</p>
+<p>²: <a href="https://msdn.microsoft.com/en-us/library/s1ax56ch.aspx">ValueTypes</a></p>
+<p>³: <a href="https://msdn.microsoft.com/en-us/library/490f96s2.aspx">ReferenceTypes</a></p>
+<p>⁴: C# tem macros, mas não da mesma forma que C: elas apenas definem símbolos
+que podem ser utilizados em <code>#ifndef</code>, por exemplo, mas não servem para
+definir constantes. Também não há a necessidade de <em>include-guards</em>.</p>
+<h1><a class="header" href="#orientação-a-objetos-novidades-em-relação-a-c" id="orientação-a-objetos-novidades-em-relação-a-c">Orientação a Objetos: Novidades em relação a C</a></h1>
+<p>Se você vem de C, é necessário entender um pouco sobre Orientação a Objetos
+(OO). Em C não existe Objeto no sentido de OO, então as estruturas são
+agregados de informações conforme você definir (para não sair infestando o
+programa com variáveis em todo lugar, definindo tipos que possuem propriedades
+próprias, como <code>User</code> possuir <code>login</code> e <code>email</code>). Ou seja, são muito mais
+organizacionais do que exatamente feitos para interagir entre si (comparando
+com objetos).</p>
+<p>Em linguagens que possuem orientação a objetos, você tem, advinhe, objetos.
+Objetos são diferentes (inclusive conceitualmente) de estruturas do C.</p>
+<p>Por simplicidade, um objeto possui <strong>atributos</strong> (as variáveis internas dele),
+<strong>constantes</strong> internas, e <strong>métodos</strong> (funções-membro).</p>
+<p>Uma das ideias da orientação a objetos é a <strong>troca de mensagens</strong> entre os
+objetos, que se dá por meio de <strong>métodos</strong> (lembre-se de que operadores, ou
+seja, +, -, *, /, &lt;&lt;, &gt;&gt;, &lt;, &gt;, &lt;=, &gt;=, etc., também são mensagens - menos em
+Java e Object-Pascal, são umas das únicas linguagens orientadas a objeto em que
+operadores são procedurais - ou seja, fazem apenas comparações numéricas -;
+definir como esses operadores funcionam se chama <strong><em>operator overloading</em></strong>).</p>
+<p>Em C, quando você instancia uma estrutura, os dados internos dela (suas
+variáveis) são carregados com lixo de memória, ou seja: foi cedido um espaço de
+memória para eles, mas esse espaço não foi zerado, então se a última ação em um
+dos bytes que foram cedidos foi escrever um &quot;5&quot; nele, esse 5 estará lá no meio
+da sua instância (a menos que você use um <code>calloc</code>). Não há uma ideia de &quot;o que
+acontece quando sou inicializado?&quot;, que é chamado de <strong>construtor</strong>. Em OO você
+possui construtores, para os quais você pode passar parâmetros que dirão como o
+objeto será inicializado. Ou seja, em C, para você inicializar uma estrutura:</p>
+<pre><code class="language-c">typedef struct {
+    int first_value;
+    int second_value;
+    char third_value;
+} my_struct;
+
+int main(void) {
+    my_struct instance = {
+        .first_value = 5,
+        .second_value = -1,
+        .third_value = 'a',
+    };
+
+    // ...
+}
+</code></pre>
+<p>Em Orientação a Objetos, quando esses valores precisam já estar designados
+antes do objeto estar pronto para uso (por exemplo, já ter uma ID, e que o
+programador não pode esquecer de dar o valor a ela), você possui construtores.</p>
+<p><em>OBS: Construtores não servem apenas para definir o valor dos atributos. Um
+construtor de uma janela por exemplo pode também colocar cor de fundo padrão,
+conectar botões às funções que serão executadas ao clicar neles, etc.</em></p>
+<p>No caso de C#, my_struct poderia ser implementado da seguinte forma:</p>
+<pre><code class="language-cs">class MyStruct {
+    int firstValue;
+    int secondValue;
+    char thirdValue;
+
+    // Construtores são definidos como funções sem retorno e com nome igual ao
+    // da classe
+    public MyStruct(int firstValue, int secondValue) {
+        this.firstValue = firstValue;
+        this.secondValue = secondValue;
+        this.thirdValue = 'a'; // Supondo que o padrão de thirdValue seja 'a'
+    }
+}
+
+public class Example {
+    public static void Main() {
+        // `instance` é inicializada como uma MyStruct com `firstValue` = 5,
+        // `secondValue` = -1 e `thirdValue` = 'a'.
+        var instance = new MyStruct(5, -1);
+    }
+}
+</code></pre>
+<p>Perceba que, em C#, objetos são criados utilizando o operador <code>new</code>. Para
+ReferenceTypes, isso significa fazer uma alocação dinâmica (ou seja, é análogo
+a chamar uma função que dá <code>calloc</code> e inicializa os valores da <code>struct</code>
+conforme conveniente). Em outras palavras, o construtor de <code>MyStruct</code> seria
+equivalente a, em C, ter uma função de inicialização para <code>struct my_struct</code>:</p>
+<pre><code class="language-c">my_struct* new_my_struct(int first_value, int second_value) {
+    my_struct* obj = calloc(1, sizeof(my_struct));
+
+    *obj = (my_struct){
+        .first_value = first_value,
+        .second_value = second_value,
+        .third_value = 'a',
+    }
+
+    return obj;
+}
+</code></pre>
+<p>C# ainda tem um &quot;jeito C# de fazer as coisas&quot;, que nada mais é do que, em vez
+de utilizar um construtor para setar os valores iniciais da classe, utilizar o
+que se chama de Initializer List (também presente em C++).</p>
+<p>Funciona semelhante à inicialização de <code>struct</code>s de C:</p>
+<pre><code class="language-cs">class MyStruct {
+    int firstValue;
+    int secondValue;
+    char thirdValue = 'a'; // É possível já dar o valor padrão de um atributo
+                           // na sua inicialização
+}
+
+public class Example {
+    public static void Main() {
+        MyStruct instance = new MyStruct {
+            firstValue = 5,   // Como em C, é &quot;,&quot; e não &quot;;&quot;
+            secondValue = -1,
+        };
+    }
+}
+</code></pre>
+<p>No caso, suponha que você só dê o valor de <code>firstValue</code>, mas não do
+<code>secondValue</code>. Qual será o valor de secondValue? Em C ele seria inicializado
+com lixo da memória, já em C# ele é inicializado com o valor padrão 0. Esse
+&quot;valor padrão&quot; varia conforme o tipo de dado, conforme na tabela:</p>
+<table><thead><tr><th>Tipo de dado</th><th>Valor padrão</th></tr></thead><tbody>
+<tr><td>Inteiros (<code>int</code>, <code>short</code>, ...)</td><td>0</td></tr>
+<tr><td>Reais (<code>float</code>, <code>double</code>, ...)</td><td>0.0</td></tr>
+<tr><td><code>bool</code></td><td><code>false</code></td></tr>
+<tr><td><code>char</code></td><td><code>'\0'</code></td></tr>
+<tr><td>Objetos</td><td><code>null</code>¹</td></tr>
+</tbody></table>
+<p>¹: <code>null</code> funciona igual ao <code>NULL</code> e quer dizer &quot;não há um valor sendo guardado
+aqui&quot;. Significa que a variável não referencia algum trecho de memória
+alocada. Portanto, para não ter problemas tentando acessar
+atributos/métodos de objetos em cima de <code>null</code>, sempre inicialize seus
+objetos! i.e. dê <code>variable = new Algo(...)</code>). Se você tem uma variável com
+valor <code>null</code> e que todos possam acessar, alguma coisa está errada no seu
+programa, pois significa que alguém está em um estado inválido.</p>
+<h1><a class="header" href="#classe-e-objeto" id="classe-e-objeto">Classe e Objeto</a></h1>
+<p>Classe != Objeto. Classe é apenas a definição dela, é o &quot;template&quot; que define
+características de um tipo. Objeto é a instância de uma classe. Ou seja:</p>
+<pre><code class="language-cs">// Isso é uma classe
+class MyClass {}
+
+// Isso é um objeto do tipo MyClass
+new MyClass();
+</code></pre>
+<h1><a class="header" href="#métodos" id="métodos">Métodos</a></h1>
+<p>Métodos (<em>a.k.a.</em> &quot;funções-membro&quot;) são funções de um objeto. Em OO, objetos
+podem definir, além de atributos, funções que operam sobre eles. Por exemplo,
+um objeto do tipo <code>User</code> pode precisar definir qual é o processo de renomear
+tal usuário, por exemplo:</p>
+<pre><code class="language-cs">public class User {
+    string name;
+
+    public void Rename(string name) {
+        // Primeiro, checa-se se o nome é um nome válido
+        if (string.IsNullOrEmpty(name)) {
+            throw new InvalidArgument(&quot;Username cannot be empty or null.&quot;);
+        }
+
+        this.name = name;
+    }
+}
+
+static void Foo() {
+    var user = new User {
+        name = &quot;Josh&quot;,
+    };
+
+    user.Rename(&quot;Carl&quot;);
+
+    Console.WriteLine(user.name); // =&gt; Carl
+
+    user.Rename(&quot;&quot;); // Erro
+}
+</code></pre>
+<h1><a class="header" href="#static" id="static">Static</a></h1>
+<p>Em C, como não há métodos, ter uma função solta é extremamente comum. Porém, em
+C#, tudo precisa estar dentro de uma classe: então como fazer com que uma
+função não dependa seja de um objeto? Para isso serve <code>static</code>:</p>
+<pre><code class="language-cs">public class Math {
+    public static double square(double x) {
+        return x * x;
+    }
+}
+</code></pre>
+<h1><a class="header" href="#herança" id="herança">Herança</a></h1>
+<p>Em OO, você irá constantemente ouvir a respeito de <strong>herança</strong>, isso
+simplesmente é como se denomina quando uma classe A herda todos os métodos e
+atributos de outra, ou seja: se uma classe <code>B</code> herda <code>A</code>, isso significa que
+tudo que <code>A</code> tem, <code>B</code> também tem, mas o contrário não necessariamente é
+verdade.</p>
+<p>Herança em C# pode ser feita com <code>: &lt;classe herdada&gt;</code> entre o nome da classe e
+o <code>{</code>:</p>
+<pre><code class="language-cs">public class A {
+  int x;
+}
+
+public class B : A {
+  int y;
+}
+
+public class Example {
+  public static void Main() {
+    var a = new A();
+    var b = new B();
+    bx = 5;   // =&gt; OK
+    b.y = 10; // =&gt; OK
+    ax = 5;   // =&gt; OK
+    a.y = 10; // =&gt; Erro: A não possui o atributo `y`
+  }
+}
+</code></pre>
+<p>Inclusive, quando se diz que <code>B</code> herda <code>A</code>, também se está dizendo que todo <code>B</code>
+é <strong>também</strong> um <code>A</code>, e portanto toda função que aceita um <code>A</code> aceita também um
+<code>B</code>:</p>
+<pre><code class="language-cs">static void Foo(A a) {
+    // ...
+}
+
+static void Bar(B b) {
+    // ...
+}
+
+static void Test() {
+    var a = new A();
+    var b = new B();
+
+    Foo(a); // OK
+    Foo(b); // OK
+
+    Bar(a); // Erro: `A` não pode ser enviado a algo que pede `B`
+    Bar(b); // OK
+}
+</code></pre>
+<h1><a class="header" href="#modificadores-de-acesso" id="modificadores-de-acesso">Modificadores de acesso</a></h1>
+<p>Para finalizar a parte de orientação a objetos, apenas mostrar para que servem
+<code>public</code>, <code>private</code>, <code>protected</code>, que são os <strong>modificadores de acesso</strong>,
+utilizados na declaração de métodos, atributos e propriedades de objetos:</p>
+<table><thead><tr><th>Modificador</th><th>Ação</th></tr></thead><tbody>
+<tr><td><code>public</code></td><td>Visível para qualquer outra classe externa.</td></tr>
+<tr><td><code>private</code></td><td>Visível apenas para a própria classe. Classes herdeiras não</td></tr>
+<tr><td></td><td>poderão ver o que estiver em private da sua superclasse.</td></tr>
+<tr><td><code>protected</code></td><td>Visível para a própria classe e classes-filhas.</td></tr>
+</tbody></table>
+<h1><a class="header" href="#não-tenho-ponteiros-e-agora" id="não-tenho-ponteiros-e-agora">Não tenho ponteiros. E agora?</a></h1>
+<p>C# até possui ponteiros, mas eles não vão poder ser usados de qualquer maneira
+como em C. Mas no fundo, em qualquer linguagem que não seja C, se você está
+mexendo com ponteiros, de duas uma:</p>
+<ul>
+<li>Você está precisando manipular memória de uma maneira muito específica (como
+implementar um smart_pointer do C++, ou uma Lista_Encadeada, por exemplo, ou
+ainda utilizar uma arquitetura muito específica na qual endereços específicos
+de memória acessam registradores/IO importantes) e deve estar bastante atento
+aos cuidados com isso;</li>
+<li>Você está fazendo algo de errado e essa com certeza não é a melhor forma de
+fazer o que está querendo.</li>
+</ul>
+<p>No caso de C não há algum recurso da linguagem para lidar com referências sem
+explicitamente utilizar ponteiros, então não há outra alternativa. Tenha em
+mente que ponteiros são potencialmente inseguros e podem levar muito facilmente
+a erros, incluindo vazamento de memória ou dupla deleção se você não cuidar da
+forma como manuseia eles (e não é meramente uma questão de &quot;basta ser muito bom
+na linguagem&quot;: ponteiros explícitos são inseguros para <em>todo mundo</em>, um
+profissional vai apenas ter menos problemas explícitos com eles).</p>
+<p>&quot;Referenciar alguma coisa&quot; significa que, em vez de ter uma cópia de outro
+valor, você o acessa indiretamente¹. Uma referência <strong><em>pode</em></strong> ser implementada
+com um ponteiro (há diferença entre &quot;ser um&quot; e &quot;ser implementado com um&quot;), mas
+tudo depende de como o compilador vai tratá-las.</p>
+<p>Para pegar a ideia de referências, segue um exemplo em C (repare nos
+comentários):</p>
+<pre><code class="language-c">int main(void) {
+    int a = 10;
+    int b = a; // `b` é uma cópia de `a`
+    int *c = &amp;a; // `c` guarda o endereço de `a`
+
+    // Neste momento:
+    //        a = 10; b = 10; *c = 10
+
+    a = 5;  // a =  5; b = 10; *c = 5
+    b = 8;  // a =  5; b =  8; *c = 5
+    *c = 9; // a =  9; b =  8; *c = 9
+
+    // ...
+}
+</code></pre>
+<p>No exemplo acima, pode-se dizer que <code>c</code> &quot;referencia&quot; <code>a</code> (na forma de
+ponteiros), então alterações ao valor em <code>c</code> alteram também <code>a</code>.</p>
+<p>No caso de C#, toda variável que guarda um ReferenceType é uma referência,
+enquanto que uma que guarde um ValueType é &quot;sempre&quot; uma cópia (com ressalva de
+quando há a <em>keyword</em> <code>ref</code> antes de sua declaração:</p>
+<pre><code class="language-cs">// Lembre-se de que, em C#, toda `struct` define um ValueType
+public struct Point
+{
+    int x;
+    int y;
+}
+
+
+// Ainda em C#, toda `class` define um ReferenceType
+public class Vertex
+{
+    int x;
+    int y;
+}
+
+
+public static void Change(Point p) {
+    p.x++;
+}
+
+public static void Change(Vertex p) {
+    p.x++;
+}
+
+public static void Change(ref Point p) {
+    p.x++;
+}
+
+public static void Main() {
+    var p = new Point { x = 0, y = 0, };
+    var v = new Vertex { x = 0, y = 0, };
+
+    // Nesse caso, como `Point` é um `ValueType`, é enviada uma *cópia* de p
+    // para a função `Change`.
+    Change(p);
+
+    // Neste momento:
+    //     p: { x = 0, y = 0, }
+    //     v: { x = 0, y = 0, }
+
+    // Já como `Vertex` é um `ReferenceType`, é enviada uma *referência* a v
+    // para a função `Change`. Isso significa que alterações feitas em `p`
+    // também alteram `v`.
+    Change(v);
+
+    // Neste momento:
+    //     p: { x = 0, y = 0, }
+    //     v: { x = 1, y = 0, }
+
+    // Se um `ValueType` precisar ser passado por referência (e a função em
+    // questão aceitar), é possível enviá-lo com a keyword `ref` antes da
+    // variável:
+    Change(ref p);
+
+    // Neste momento:
+    //     p: { x = 1, y = 0, }
+    //     v: { x = 1, y = 0, }
+}
+</code></pre>
+<p>Também vale ressaltar que, como ValueTypes não são referências, eles não podem
+ser <code>null</code> (ou seja, não podem &quot;referenciar ninguém&quot;) a menos que se diga que a
+variável em questão é &quot;Nullable&quot;, o que é feito com um <code>?</code> após o tipo:</p>
+<pre><code class="language-cs">public static void Main() {
+    int i = null;       // Erro: Valuetypes não são &quot;Nullable&quot;
+    int? j = null;      // OK: `j` é Nullable
+    var k = (int?)null; // O mesmo que `j`, porém com inferência de tipo
+}
+</code></pre>
+<p>Quando for necessária uma cópia de um ReferenceType, é possível aproveitar o
+método <code>Clone()</code>, disponível para objetos de algumas classes (especificamente
+as que herdem de <code>Clonable</code>):</p>
+<pre><code class="language-cs">public static void Main() {
+    var v1 = new Vertex { x = 0, y = 0 } ;
+    var v2 = x.Clone();
+
+    v2.x = -1;
+
+    Console.WriteLine(v1.x) // =&gt; 0
+    Console.WriteLine(v2.x) // =&gt; -1
+}
+</code></pre>
+<p>No caso acima, como <code>v2</code> é uma cópia de <code>v1</code>, alterações em <code>v2</code> não alteram
+<code>v1</code> e vice-versa.</p>
+<p>Aproveitando, deve-se tomar cuidado quanto a <code>ValueTypes</code>, pois toda vez que
+eles são atribuídos a outra variável ou enviados como argumentos para funções,
+<strong>sempre</strong> será uma cópia (como dito anteriormente, a menos que dito
+explicitamente via <code>ref</code>). Ou seja, tomar cuidado com situações como:</p>
+<pre><code class="language-cs">public struct Point {
+    int x;
+    int y;
+}
+
+public class Rect {
+    Point p1;
+    Point p2;
+}
+
+public static void Main() {
+    var r = new Rect {
+        p1 = new Point { x = 0, y = 0, },
+        p2 = new Point { x = 5, y = 5, },
+    };
+
+    var p1 = r.p1; // Cuidado! `r.p1` é um ValueType, e portanto será feita uma
+                   // cópia de `r.p1`.
+
+    p1.x = 10;
+
+    Console.WriteLine(r.p1.x); // =&gt; 0
+    Console.WriteLine(p1.x);   // =&gt; 10
+}
+</code></pre>
+<h1><a class="header" href="#c-para-programadores-c-1" id="c-para-programadores-c-1">C# para programadores C++</a></h1>
+<p>Esta seção é para programadores C++ que pretendem aprender C#, e portanto
+precisariam conhecer os recursos de C# análogos aos de C++, ou entender quais
+os padrões em termos de linguagem, por exemplo: qual o padrão para quando
+ocorre cópia, move, etc.</p>
+<p>Caso você não seja um programador C++, pode pular esta seção.</p>
+<h1><a class="header" href="#principais-diferenças" id="principais-diferenças">Principais Diferenças</a></h1>
+<p><em>(OBS: Este tutorial encontra-se bastante incompleto. Se puder, ficaremos
+gratos em receber um <a href="https://github.com/pet-comp-ufsc/tutorials">Pull Request</a>
+seu)</em></p>
+<p>Se você veio de C++, o caminho é bem mais simples quanto
+<a href="from-cpp/../from-c/about.html">se você viesse de C</a>.</p>
+<p>Assim como foi feito com C, segue uma pequena tabela com algumas das diferenças
+entre C# e C++:</p>
+<table><thead><tr><th>Recurso</th><th>C</th><th>C#</th></tr></thead><tbody>
+<tr><td>Ponteiros</td><td>Sim</td><td>Não¹</td></tr>
+<tr><td>Classes/Objetos</td><td>Sim. Não herdam por padrão</td><td>Sim, e definem <strong>ReferenceTypes</strong>². Herdam de Object.</td></tr>
+<tr><td>Structs</td><td>Sim</td><td>Sim, mas definem <strong>ValueTypes</strong>²</td></tr>
+<tr><td>Macros</td><td>Sim</td><td>Sim³</td></tr>
+<tr><td>Namespaces</td><td>Sim</td><td>Sim</td></tr>
+<tr><td>Function-pointer</td><td>Sim</td><td>Possui Delegates e Events</td></tr>
+<tr><td>Herança</td><td>Sim</td><td>Sim</td></tr>
+<tr><td>Interface</td><td>Sim (classes puramente virtuais)</td><td>Sim (com a keyword <code>interface</code>)</td></tr>
+<tr><td>Templates</td><td>Sim</td><td>Possui Generics⁴</td></tr>
+</tbody></table>
+<p>¹: Sim, mas apenas em um bloco <code>unsafe</code>.</p>
+<p>²: <a href="https://msdn.microsoft.com/en-us/library/s1ax56ch.aspx">ValueTypes</a> e
+<a href="https://msdn.microsoft.com/en-us/library/490f96s2.aspx">ReferenceTypes</a> são
+conceitos já conhecidos em C++, mas vale ver em que contextos C# trata um ou
+outro.</p>
+<p>³: C# tem macros, mas não da mesma forma que C: elas apenas definem símbolos
+que podem ser utilizados em <code>#ifndef</code>, por exemplo, mas não servem para
+definir constantes. Também não há a necessidade de <em>include-guards</em>.</p>
+<p>Uma das maiores diferenças que você provavelmente irá notar é que, em C#, tudo
+precisa estar em uma classe, não existe nada “solto” (incluindo o <code>main</code>, que
+fica marcado como um método estático e os argumentos da linha de comando ficam
+em um array de strings).</p>
+<p>No geral não haverão muitas diferenças na forma de modelar o código. Algumas
+nomenclaturas, apesar de iguais, funcionam de forma diferente. São elas:</p>
+<h2><a class="header" href="#using" id="using"><code>using</code></a></h2>
+<ul>
+<li>Um <code>using</code> não pode ser utilizado dentro de qualquer escopo como em C++;</li>
+<li><code>using</code>, em C#, possui três funções:
+<ul>
+<li>Incluir namespaces, como o <code>using</code> do C++ mesmo, porém apenas no escopo
+geral;</li>
+<li>Criar <em>aliases</em> para Namespaces;</li>
+<li>Criar <em>aliases</em> para classes (serve tanto para resolver ambiguidade quanto
+para importar apenas o que precisar de uma determinada namespace).</li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#struct" id="struct"><code>struct</code></a></h2>
+<ul>
+<li>Não há a diferença de modificador de acesso padrão entre Classes (que em C++
+é <code>private</code>) e Structs (que em C++ é <code>public</code>): o padrão de ambos é
+<code>internal</code>;</li>
+<li>Structs, por serem ValueTypes, são sempre recebidas como cópia: não há como
+enviar uma referência de uma struct senão indicando explicitamente com a
+<em>keyword</em> <code>ref</code> (é necessário que a função também defina o parâmetro como
+<code>ref</code>, e nesse caso <em>apenas</em> <code>ref</code>s podem ser passadas para aquele parâmetro
+em específico).</li>
+</ul>
+<h2><a class="header" href="#outras-diferenças-menores" id="outras-diferenças-menores">Outras diferenças menores</a></h2>
+<ul>
+<li>Para acessar um elemento de uma <em>namespace</em> se utiliza <code>namespace.something</code>
+em vez de <code>namespace::something</code>;</li>
+<li><code>++i</code> e <code>i++</code> não possuem diferença de performance;</li>
+<li><em><strong>TODO</strong></em></li>
+</ul>
+<h3><a class="header" href="#stdoptional" id="stdoptional">std::optional</a></h3>
+<p>Em C#, apesar de que ValueTypes não são referências, é possível criar uma
+versão &quot;Nullable&quot; deles utilizanod um <code>?</code> após o tipo. Ela acaba funcionando
+como <code>std::optional</code>, e pode ser vista <a href="from-cpp/some-features.html#nullables">aqui</a>:</p>
+<h1><a class="header" href="#algumas-features-de-c" id="algumas-features-de-c">Algumas Features de C#</a></h1>
+<p>Para se alinhar com o idioma de C#, é interessante conhecer suas features.
+Esta seção apresenta algumas delas, apresentando exemplos de uso e explicações
+do funcionamento de cada uma, bem como quando utilizá-las.</p>
+<h1><a class="header" href="#nullables" id="nullables">Nullables</a></h1>
+<p>Nullables servem para guardar ValueTypes que podem receber o valor <code>null</code>,
+funcionando de forma bem semelhante a <code>std::optional</code> de C++ e <code>Option</code> de
+Rust. Segue um código de exemplo:</p>
+<pre><code class="language-cs">bool foo = true;          // `foo` é um bool normal
+bool? bar = true;         // `bar` é um bool nullable
+var foobar = (bool?)null; // Com inferência de tipo
+
+if (foo &amp;&amp; bar) {}    // true &amp;&amp; false = false: não entra no if
+if (foo &amp;&amp; foobar) {} // true &amp;&amp; ? = ?: entra ou não no if?
+if (bar) {}           // true: entra no if
+if (foobar) {}        // ?
+
+if (bar.GetValueOrDefault(false)) {}    // bar = true, logo entra no if
+if (bar.GetValueOrDefault(true)) {}     // bar = true, logo entra no if
+if (foobar.GetValueOrDefault(false)) {} // foobar = null, logo pega o default,
+                                        // que é falso, e portanto não entra no
+                                        // if
+if (foobar.GetValueOrDefault(true)) {}  // foobar = null, logo pega o default,
+                                        // que é true, e portanto entra no if
+</code></pre>
+<h1><a class="header" href="#properties" id="properties">Properties</a></h1>
+<p>Em linguagens OO, costumam ser padrões as seguintes regras:</p>
+<ul>
+<li>Todo atributo deve ser inacessível às outras classes;</li>
+<li>Se um atributo pode ser lido externamente, essa leitura deve se dar a partir
+de um getter;</li>
+<li>Se um atributo pode ser escrito por elementos externos, essa escrita deve se
+dar a partir de um <strong>setter</strong>.</li>
+</ul>
+<p>Em algumas delas, a forma como isso é feito é extremamente manual, como Java
+por exemplo:</p>
+<pre><code class="language-java">public class A {
+    private int something;
+    private SomeType another;
+
+
+    public int getSomething() {
+        return something;
+    }
+
+    public void setSomething(int value) {
+        something = value;
+    }
+
+    public SomeType getAnother() {
+        return another;
+    }
+
+    public void setAnother(SomeType value) {
+        another = value;
+    }
+}
+</code></pre>
+<p>Em C#, felizmente há uma maneira simples de lidar com <em>getters</em> e <em>setters</em>,
+que é através de <strong>Properties</strong>. Para quem conhece Ruby, é semelhante a
+<code>attr_accessor</code>, <code>attr_reader</code> e <code>attr_writer</code>: eles geram métodos que fazem a
+devida função de <em>getter</em> e <em>setter</em> para você. Para quem conhece Python, é
+como utilizar <code>@property</code>:</p>
+<pre><code class="language-cs">public class A {
+    public int Something {
+        get; set;
+    }
+
+    public SomeType Another {
+        get; set;
+    }
+}
+</code></pre>
+<p>Em alguns casos, é necessário definir como esses métodos são implementados. Por
+exemplo, há momentos em que não é possível expor algum atributo como Property
+diretamente, então é necessário separá-lo como um atributo e utilizar a
+Property para o expor:</p>
+<pre><code class="language-cs">public class A {
+    private Type _somethingThatCantBeAProperty;
+    public Type SomethingThatCantBeAProperty {
+        // get e set são efetivamente métodos, então...podemos simplesmente
+        // utilizar os métodos para retornar os valores que queremos.
+        get
+        {
+            return _somethingThatCantBeAProperty;
+        }
+        set
+        {
+            // Em um setter, o valor passado após o &quot;=&quot; é dado como `value`.
+            _somethingThatCantBeAProperty = value;
+        }
+    }
+}
+
+public class Application {
+    public static void Main(string[] args) {
+        var a = new A();
+
+        // chama o set
+        a.SomethingThatCantBeAProperty = new Type();
+
+        // chama o get
+        Console.WriteLine(a.SomethingThatCantBeAProperty);
+    }
+}
+</code></pre>
+<p><strong>Quando utilizar properties</strong>: sempre que você tiver um atributo público (com
+<em>getter</em> e <em>setter</em>), faça-o como uma property (ou encapsule-o com, caso não
+seja possível ele em si ser uma property). Não utilize properties caso o
+<em>setter</em> ou o <em>getter</em> envolva algum cálculo! Nesse caso, use um método
+explícito, a fim de manter a intuitividade de que o acesso aquele valor não é
+necessariamente trivial/barato.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Java e Linguagens de Programação - Java</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="java-and-langs.html" class="active">Java e Linguagens de Programação</a></li><li class="expanded affix "><a href="tools.html">Ferramentas</a></li><li class="expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introdução a Java</a></li><li><ol class="section"><li class="expanded "><a href="intro/hello-java.html"><strong aria-hidden="true">1.1.</strong> &quot;Hello, world!&quot;</a></li><li class="expanded "><a href="intro/hello-detailed.html"><strong aria-hidden="true">1.2.</strong> &quot;Hello, world! - Explicação detalhada&quot;</a></li><li class="expanded "><a href="intro/errors.html"><strong aria-hidden="true">1.3.</strong> Erros de Compilação e Execução</a></li></ol></li><li class="expanded "><a href="values.html"><strong aria-hidden="true">2.</strong> Armazenando Valores</a></li><li><ol class="section"><li class="expanded "><a href="values/variables.html"><strong aria-hidden="true">2.1.</strong> Variáveis</a></li><li class="expanded "><a href="values/constants.html"><strong aria-hidden="true">2.2.</strong> Constantes</a></li><li class="expanded "><a href="values/types.html"><strong aria-hidden="true">2.3.</strong> Tipos de dados</a></li><li class="expanded "><a href="values/decl.html"><strong aria-hidden="true">2.4.</strong> Declaração e Instanciação</a></li><li class="expanded "><a href="values/naming.html"><strong aria-hidden="true">2.5.</strong> Nomeando adequadamente</a></li><li class="expanded "><a href="values/recommendations.html"><strong aria-hidden="true">2.6.</strong> Recomendações de Leitura</a></li></ol></li><li class="expanded "><a href="if.html"><strong aria-hidden="true">3.</strong> Estrutura condicional If</a></li><li><ol class="section"><li class="expanded "><a href="if/syntax.html"><strong aria-hidden="true">3.1.</strong> Sintaxe de um If</a></li><li class="expanded "><a href="if/else.html"><strong aria-hidden="true">3.2.</strong> If-else</a></li><li class="expanded "><a href="if/playing.html"><strong aria-hidden="true">3.3.</strong> Brincando com o código</a></li></ol></li><li class="expanded "><a href="for-while.html"><strong aria-hidden="true">4.</strong> Estruturas de repetição</a></li><li><ol class="section"><li class="expanded "><a href="for-while/terms.html"><strong aria-hidden="true">4.1.</strong> Termos</a></li><li class="expanded "><a href="for-while/for.html"><strong aria-hidden="true">4.2.</strong> For</a></li><li class="expanded "><a href="for-while/while.html"><strong aria-hidden="true">4.3.</strong> While</a></li><li class="expanded "><a href="for-while/continue.html"><strong aria-hidden="true">4.4.</strong> Pulando uma iteração</a></li></ol></li><li class="expanded "><a href="arrays.html"><strong aria-hidden="true">5.</strong> Coleções: Arrays</a></li><li><ol class="section"><li class="expanded "><a href="arrays/creating.html"><strong aria-hidden="true">5.1.</strong> Criando um array</a></li><li class="expanded "><a href="arrays/accessing.html"><strong aria-hidden="true">5.2.</strong> Acessando elementos de um array</a></li><li class="expanded "><a href="arrays/properties.html"><strong aria-hidden="true">5.3.</strong> Propriedades de Arrays</a></li><li class="expanded "><a href="arrays/for.html"><strong aria-hidden="true">5.4.</strong> Combinando arrays e fors</a></li><li class="expanded "><a href="arrays/foreach.html"><strong aria-hidden="true">5.5.</strong> Estrutura for-each</a></li><li class="expanded "><a href="arrays/recommendations.html"><strong aria-hidden="true">5.6.</strong> Recomendações de leitura</a></li></ol></li><li class="expanded "><a href="functions.html"><strong aria-hidden="true">6.</strong> Criando seus próprios comandos</a></li><li><ol class="section"><li class="expanded "><a href="functions/defining.html"><strong aria-hidden="true">6.1.</strong> Definindo funções</a></li><li class="expanded "><a href="functions/void.html"><strong aria-hidden="true">6.2.</strong> Funções com retorno void</a></li><li class="expanded "><a href="functions/overload.html"><strong aria-hidden="true">6.3.</strong> Sobrecarga de função</a></li><li class="expanded "><a href="functions/signature.html"><strong aria-hidden="true">6.4.</strong> Assinatura de uma função</a></li></ol></li><li class="expanded "><a href="your-own-types.html"><strong aria-hidden="true">7.</strong> Definindo seu próprio tipo</a></li><li class="expanded "><a href="others.html"><strong aria-hidden="true">8.</strong> Outros</a></li><li><ol class="section"><li class="expanded "><a href="others/operators.html"><strong aria-hidden="true">8.1.</strong> Operadores em Java</a></li><li class="expanded "><a href="others/arithmetic-details.html"><strong aria-hidden="true">8.2.</strong> Aritmética - Detalhes</a></li></ol></li><li class="expanded "><a href="recommendations.html">Recomendações de leitura</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Java</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#java-e-linguagens-de-programação" id="java-e-linguagens-de-programação">Java e linguagens de programação</a></h1>
+<h2><a class="header" href="#Índice" id="Índice">Índice</a></h2>
+<ol>
+<li><a href="#introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o">Introdução à Programação</a></li>
+<li><a href="#executando-um-programa-a-partir-de-um-c%C3%B3digo">Executando um programa a partir de um código</a>
+<ol>
+<li><a href="#compila%C3%A7%C3%A3o">Compilação</a></li>
+<li><a href="#interpreta%C3%A7%C3%A3o">Interpretação</a></li>
+</ol>
+</li>
+<li><a href="#o-caso-de-java">O caso de Java</a></li>
+<li><a href="#recomenda%C3%A7%C3%B5es-de-leitura">Recomendações de leitura</a></li>
+</ol>
+<h2><a class="header" href="#introdução-à-programação" id="introdução-à-programação">Introdução à Programação</a></h2>
+<p>Para desenvolver programas utilizamos linguagens de programação, classificadas
+por diferentes
+<a href="https://en.wikipedia.org/wiki/Programming_paradigm">paradigmas</a>. Para termos
+uma noção de como funcionam boa parte dessas linguagens, veja os seguintes
+exemplos:</p>
+<blockquote>
+<h3><a class="header" href="#exemplo-1" id="exemplo-1">Exemplo 1:</a></h3>
+<pre><code class="language-haskell">square :: Integer -&gt; Integer
+square x = x * x
+</code></pre>
+</blockquote>
+<blockquote>
+<h3><a class="header" href="#exemplo-2" id="exemplo-2">Exemplo 2:</a></h3>
+<pre><code class="language-python">n = input('Digite um número positivo:')
+
+while n &lt; 0:
+    print(f'{n} não é positivo!')
+    n = input('Digite um número positivo:')
+
+print(f'Você escolheu o número {n}')
+</code></pre>
+</blockquote>
+<p>No <a href="#exemplo-1">Exemplo 1</a>, temos a definição de uma função (semelhante a
+matemática) chamada &quot;<code>square</code>&quot;.</p>
+<ul>
+<li>Na primeira linha, estamos instruindo que <code>square</code> recebe um número inteiro e
+entrega como resposta outro número inteiro;</li>
+<li>Na segunda linha, indicamos que esse inteiro se chama <code>x</code>, e a resposta de
+square é x multiplicado por ele mesmo (elevando ao quadrado).</li>
+</ul>
+<p>A linguagem utilizada nesse exemplo é <a href="https://haskell.org/">Haskell</a>.</p>
+<p>Já no <a href="#exemplo-2">Exemplo 2</a>, temos um pequeno programa que:</p>
+<ul>
+<li>Pede ao usuário para digitar um número inteiro. Esse pedido é feito pelo
+<code>input('mensagem')</code>.</li>
+<li>Em seguida, enquanto o número for menor que 0 (ou seja, negativo), informamos
+o usuário do erro e pedimos para ele digitar outro número.</li>
+<li>Se o número deixar de ser negativo, então o programa passa para a próxima
+etapa, que é mostrar o número escolhido pelo usuário.</li>
+</ul>
+<p>A linguagem utilizada nesse exemplo é <a href="https://python.org">Python</a>.</p>
+<p>Essas duas linguagens possuem formas completamente diferentes de se descrever
+problemas nelas, visto que a primeira é do que chamamos de paradigma funcional
+(ver a recomendação <a href="#recomenda%C3%A7%C3%B5es-de-leitura">1</a>) e a segunda do paradigma
+imperativo. Java (a linguagem que será vista nas duas primeiras fases do curso
+de Ciência da Computação da UFSC) se encaixa no segundo caso.</p>
+<h2><a class="header" href="#executando-um-programa-a-partir-de-um-código" id="executando-um-programa-a-partir-de-um-código">Executando um programa a partir de um código</a></h2>
+<p>Há diversas formas de se executar um programa a partir de um código. As mais
+comuns são via <strong>Compilação</strong> e <strong>Interpretação</strong>.</p>
+<p>Partindo do exemplo em Haskell abaixo, veremos como esses dois mecanismos podem
+funcionar:</p>
+<blockquote>
+<p>Arquivo &quot;exemplo.hs&quot;:</p>
+<pre><code class="language-haskell">main = do putStrLn &quot;Hello, World!&quot;
+</code></pre>
+</blockquote>
+<h3><a class="header" href="#compilação" id="compilação">Compilação</a></h3>
+<blockquote>
+<p>A partir de um programa escrito em uma linguagem, gerar um programa
+equivalente em outra linguagem.</p>
+</blockquote>
+<p>No caso, a &quot;outra linguagem&quot; quase sempre será a linguagem de máquina, ou seja,
+um código binário que seu processador consiga executar. Cada processador
+implementa uma <a href="https://en.wikipedia.org/wiki/Instruction_set_architecture">ISA (Instruction Set
+Architecture)</a> que
+especifica a forma de executar esse código binário. Por essa razão, um mesmo
+binário que executa em um processador i5 (que implementa a ISA Intel x86_64)
+não executa em um celular com processador ARM Cortex A53 (que implementa a ISA
+ARMv8-A), já que as duas ISA's são incompatíveis.</p>
+<p>Em Haskell, isso é possível de ser feito com o comando:</p>
+<pre><code>$ ghc exemplo.hs
+</code></pre>
+<p>Isso irá compilar o código no arquivo &quot;exemplo.hs&quot;, gerando um arquivo de
+código binário executável &quot;exemplo&quot; (no Linux) ou &quot;exemplo.exe&quot; (no Windows).
+Uma versão humanamente legível desse executável pode ser visto com ferramentas
+como <code>objdump exemplo</code>, mas entender o que ele significa demanda um pouco mais
+de conhecimento. Esse binário, sendo compilado em um processador com ISA x86 ou
+x86_64 (basicamente a maioria dos notebooks e desktops), poderá ser distribuído
+para qualquer outro processador que implemente a mesma ISA (ou seja, qualquer
+outro x86 ou x86_64, respectivamente), o que é uma vantagem. Porém, se
+quisermos fazer esse mesmo programa rodar em um processador ARM, precisamos
+recompilá-lo (instruindo o compilador -- no caso de Haskell, o <code>ghc</code> -- qual a
+ISA alvo), o que dependendo do caso pode demorar muito tempo. Além disso,
+qualquer mudança no código implica também em recompilação de pelo menos parte
+dele (afinal, partes que não mudaram nem sempre precisam ser recompiladas).</p>
+<p>Tendo o executável gerado, ele pode ser executado como qualquer outro, seja por
+um clique duplo ou pelo terminal:</p>
+<pre><code>$ ./exemplo
+Hello, world!
+</code></pre>
+<p>Esse é o mecanismo padrão de compilação, em que o código é compilado <em>antes</em> de
+sua distribuição. Na recomendação <a href="#recomenda%C3%A7%C3%B5es-de-leitura">2</a> são descritos
+outros dois métodos de compilação, inclusive um deles utilizado há bastante
+tempo por Java e outro está para chegar para Java 10 (18.3).</p>
+<h3><a class="header" href="#interpretação" id="interpretação">Interpretação</a></h3>
+<blockquote>
+<p>Executar diretamente um programa escrito em uma linguagem.</p>
+</blockquote>
+<p>Ou seja, em vez de o código ser compilado para um executável, apenas
+distribuímos o próprio código, e ele será executado por um <em>Interpretador</em>.
+Por exemplo, se tivermos um script em Python, salvo em um arquivo &quot;hello.py&quot;:</p>
+<pre><code class="language-python">print(&quot;Hello, world!&quot;)
+</code></pre>
+<p>Podemos simplesmente chamar o comando <code>python</code>, passando o arquivo, e o código
+dele será executado na hora:</p>
+<pre><code>$ python hello.py
+Hello, world!
+</code></pre>
+<p>O mesmo pode ser feito com o código em Haskell, visto no exemplo de compilação.
+Podemos, em vez de chamar o compilador de Haskell (<code>ghc</code>) para gerar um
+executável e então rodá-lo, chamar o interpretador de Haskell (<code>runghc</code>)
+passando o nome do arquivo com o código a ser executado:</p>
+<pre><code class="language-haskell">$ runghc exemplo.hs
+Hello, world!
+</code></pre>
+<p>Uma das vantagens da interpretação (em comparação com a compilação) é o fato de
+que geralmente o processo de compilação acaba sendo lento, e para muitas
+ferramentas é mais importante verificar rapidamente se estão funcionando de
+acordo fazendo diversas alterações em pouco tempo.</p>
+<h2><a class="header" href="#o-caso-de-java" id="o-caso-de-java">O caso de Java</a></h2>
+<blockquote>
+<p>&quot;E Java? É uma linguagem compilada e interpretada?&quot;</p>
+</blockquote>
+<p>No fundo, ser interpretada e ser compilada não é uma característica da
+linguagem. É como perguntar se um parafuso é parafusado com chave de fenda ou
+com uma parafusadeira: não é uma característica do parafuso, é apenas a
+ferramenta que você utiliza no parafuso. Podemos pegar o exemplo de Haskell
+logo acima: perceba que o código é literalmente o mesmo, mas em um momento o
+compilamos com o <code>ghc</code>, e em outro momento o interpretamos com o <code>runghc</code>. E aí
+pergunta-se: Haskell é compilada ou interpretada? A resposta é: você <em>pode</em>
+compilar Haskell e você <em>pode</em> interpretar Haskell. É uma linguagem apenas, o
+que você faz com ela é outra história. Se uma linguagem possui apenas
+interpretador, nada impede alguém de criar um compilador para ela (e
+vice-versa).</p>
+<blockquote>
+<p><strong>Observação</strong>: Apesar do pedantismo, é &quot;socialmente aceito&quot; dizer &quot;a
+linguagem X é compilada&quot; em alguns casos como uma forma de dizer &quot;ninguém
+interpreta ela, apenas em raríssimas exceções, se é que existem&quot;, e
+vice-versa.</p>
+</blockquote>
+<p>Tendo isso em mente, o que podemos falar sobre Java é sobre o seu compilador
+mais amplamente utilizado: o <code>javac</code> (que, por sinal, é feito em Java). <code>javac</code>
+possui uma característica interessante: ele compila Java, mas não para a ISA do
+processador do computador em que o programa irá rodar, e sim para uma linguagem
+intermediária, chamada &quot;bytecode&quot;. Esse bytecode pode ser interpretado
+utilizando o programa <code>java</code> (obs: o programa, não a linguagem!), que nada mais
+nada menos do que simula uma máquina, chamada JVM (<em>Java Virtual Machine</em>), que
+executa esse bytecode.</p>
+<p>Ou seja, basicamente temos um compilador de Java e um interpretador de
+bytecode:</p>
+<pre><code>------------------     ---------     ------------
+| Código em Java | --&gt; | javac | --&gt; | Bytecode |
+------------------     ---------     ------------
+
+------------     --------     -------
+| Bytecode | --&gt; | java | --&gt; | JVM | --&gt; Execução do programa
+------------     --------     -------
+</code></pre>
+<h2><a class="header" href="#recomendações-de-leitura" id="recomendações-de-leitura">Recomendações de leitura</a></h2>
+<ol>
+<li>Paradigmas de programação: Imperativo? Funcional? Lógico?</li>
+<li>Compilação AOT e JIT.</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+                            <a rel="next" href="tools.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+                    <a href="tools.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

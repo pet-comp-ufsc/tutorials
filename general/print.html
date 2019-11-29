@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Assuntos Gerais</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="how-to-study.html">Como estudar programação?</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Assuntos Gerais</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#como-estudar-programação" id="como-estudar-programação">Como estudar programação?</a></h1>
+<p>Quando alguém decide ou precisa aprender a programar, provavelmente uma das
+suas primeiras dúvidas é: &quot;como aprender a programar?&quot;. No fundo, uma pergunta
+difícil de responder, mas pode-se dar algumas sugestões. Seguem então algumas
+ideias a respeito (siga aquelas que lhe servirem).</p>
+<h2><a class="header" href="#pratique-e-leia" id="pratique-e-leia">Pratique <strong>e</strong> leia</a></h2>
+<p>Apenas escrever código é um erro. Apenas ler é um erro. Equilibre: leia a
+respeito do que você irá programar (preferencialmente antes de tentar bater no
+teclado programando no modo
+<a href="https://pt.stackoverflow.com/q/164124/59974">Go-Horse</a>). Tentar concluir as
+coisas por conta própria através de tentativa e erro é altamente suscetível a
+tirar conclusões extremamente erradas, por exemplo: não conhecer a ferramenta
+que você usa e achar que ela é lenta para determinada coisa --- quando na
+verdade é você que está usando da maneira errada ---, ou mesmo achar que
+internamente o seu programa executa de uma maneira, quando na verdade é de
+outra totalmente diferente. Leia, descubra, entenda: nada de conclusões
+precipitadas!</p>
+<h2><a class="header" href="#tenha-um-objetivo-em-mente" id="tenha-um-objetivo-em-mente">Tenha um objetivo em mente</a></h2>
+<p>É bastante frequente que pessoas peguem uma linguagem qualquer (geralmente por
+ver/ouvir a respeito dela em vários lugares) e tentem fazer programas genéricos
+nela. De certa forma é válido, mas podemos otimizar esse aprendizado se
+estabelecermos um objetivo. Ou seja, em vez de genericamente perguntar &quot;como
+aprender a programar?&quot;, podemos perguntar &quot;o que eu quero fazer?&quot;. Por exemplo:</p>
+<ul>
+<li>Como posso criar um site, apenas pela curiosidade?</li>
+<li>Tenho ideia para um jogo, como posso programá-lo?</li>
+<li>Como converter uma planilha Excel para um formato específico?</li>
+<li>Como automatizar determinada coisa?</li>
+</ul>
+<p>Essas perguntas são apenas chutes, mas geralmente quando se vai aprender a
+programar, a pessoa tem algo que a motiva. Claro, nem sempre essa motivação é
+algo tão específico (como um projeto pronto em mente), mas pode ser uma
+curiosidade. Por exemplo, se o interesse da pessoa é saber a respeito de como
+seu computador funciona, por exemplo, às vezes é interessante ter projetos
+relacionados a:</p>
+<ul>
+<li>Microcontroladores; ou</li>
+<li>Otimização de código (aplicar efeitos em imagens, ou compressão de vídeo...);
+ou</li>
+<li>Gerenciamento explícito de memória (em C, por exemplo); etc...</li>
+</ul>
+<p>Dessa forma podemos evitar o efeito &quot;desânimo&quot; causado por não ver objetivo no
+que você está aprendendo. Alguém que quer aprender a fazer jogos provavelmente
+não se sentirá motivada a aprender a programar CRUD's (<em>Create, Read, Update,
+Delete</em> --- são aqueles sistemas de gerenciamento cujas operações giram em
+torno de &quot;cadastrar usuário&quot;, &quot;editar usuário&quot;, &quot;listar usuários&quot;, &quot;filtrar
+usuários por tal critério&quot;, etc. ---), mas ficará bastante motivada de fazer o
+seu primeiro <a href="https://en.wikipedia.org/wiki/Pong">Pong</a>. E por falar em Pong...</p>
+<h2><a class="header" href="#mantenha-a-simplicidade" id="mantenha-a-simplicidade">Mantenha a simplicidade</a></h2>
+<p>É interessante ter projetos em mente, objetivos bem claros, mas é também
+interessante não tentar fazer um prédio porque você aprendeu a martelar um
+prego.
+Ou seja, se você adoraria criar o seu próprio GTA (exemplo obrigatório), é
+bastante provável que partir direto para um jogo com todos os recursos e
+jogabilidade de GTA seja um peso e responsabilidade exagerados para quem acabou
+de começar. Em vez disso, você pode começar com algo mais simples, e
+progressivamente dominar o que precisa para ter algo próximo do seu GTA.
+Perceba o possível trajeto:</p>
+<ol>
+<li>
+<p>Começar com um Pong (humano vs humano) e entender como manipular imagens,
+FPS, botões, sons, etc.;</p>
+</li>
+<li>
+<p>Incrementar o Pong com uma IA simples (para fazer um modo humano vs
+computador) e entender como fazer NPCs ativos;</p>
+</li>
+<li>
+<p>Fazer um jogo simples de labirinto (2D visto de cima) em que o jogador deve
+levar seu personagem à saída, e com isso entender como implementar colisão
+com o cenário de forma mais eficiente;</p>
+</li>
+</ol>
+<p>Perceba que todos eles possuem um tempo de produção muito mais curto do que
+partir direto para o tal GTA e trazem o suficiente para aprender algo que pode
+ser utilizado depois. Outra possibilidade (caso tenha tempo) é pegar alguma
+plataforma que permita fazer algo próximo do que deseja (no exemplo de Jogos,
+um RPG Maker, Game Maker ou Unity).</p>
+<h2><a class="header" href="#termine-seus-projetos" id="termine-seus-projetos">Termine seus projetos</a></h2>
+<p>Não há muito o que dizer, apenas termine seus projetos. Nada de &quot;pausar eles
+por tempo indeterminado&quot;: estabeleça como objetivo terminá-los <strong>mesmo que não
+da maneira mais perfeita que você gostaria</strong>. Se seus projetos nunca são
+terminados, procure formas de ser mais produtivo (o livro <strong>&quot;The Pragmatic
+Programmer&quot;</strong>, de Andrew Hunt e David Thomas, é uma ótima pedida nesse quesito)
+ou veja se você não está tentando montar prédios sabendo apenas martelar.</p>
+<p><strong>Não esqueça: a sensação de terminar um projeto motiva MUITO.</strong></p>
+<h2><a class="header" href="#seu-ctrlc-ctrlv-não-funcionam-portanto-escreva" id="seu-ctrlc-ctrlv-não-funcionam-portanto-escreva">Seu Ctrl+C, Ctrl+V não funcionam, portanto escreva!</a></h2>
+<p>É uma prática bastante comum, no início (aos que perpetuam essa prática: vamos
+lá, vocês podem dar mais de si), ficar ligeiramente perdido (ou tendo erros de
+compilação sem conseguir perceber diferença alguma do seu código para o código
+de exemplo) quanto a um tópico e então decidir copiar e colar códigos de
+exemplo ou soluções da internet. Saiba que essa é uma <strong>péssima</strong> prática para
+o seu aprendizado!</p>
+<p>A solução para ela é bem simples: leia o código e escreva você mesmo, como um
+Ctrl+C Ctrl+V manual. Sempre fique imaginando que esses atalhos não existem: se
+você quiser copiar, precisa escrever caractere por caractere por conta própria.</p>
+<p>Escrever em vez de copiar e colar te dá a grande vantagem de perceber os
+detalhes e as construções da linguagem e abordagem que você está vendo.
+Acredite, faz toda a diferença, inclusive porque uma hora você terá que
+escrever código por conta própria, sem ter auxílio de fora, e se você não se
+acostumou com as construções, começarão a surgir dúvidas como &quot;primeiro vem ()
+ou o nome? primeiro vem o nome do parâmetro ou o tipo? é &amp; ou *?&quot;.</p>
+<h2><a class="header" href="#anote" id="anote">Anote</a></h2>
+<p>Quando estiver aprendendo algo novo (mesmo que seja a primeira coisa que você
+estiver aprendendo), tenha consigo um bloco de anotações/caderno/o que for. Se
+preferir anotar no computador/celular, você pode aproveitar ferramentas como
+OneNote (Microsoft), GoogleKeep (ou Google Docs), que possuem esquemas de
+organização de anotações bastante decente. E não sinta medo de escrever o que
+entendeu para depois ler, encontrar erros, apagar e rabiscar: tudo isso conta,
+e conta muito. Lembre-se: o que você anota é o que você pode rever, mas o que
+você deixa apenas na sua cabeça não. Duvida? Diga o que você aprendeu em uma
+data aleatória no ano passado (por exemplo, na semana do dia 20 de Maio).
+Provavelmente não irá conseguir, mas se você estava estudando algo em Maio,
+pode lembrar que anotou algo a respeito na semana do dia 20. Essas coisas nem
+sempre pegam de uma semana para outra: às vezes você precisa revisar coisas que
+viu há meses ou mesmo anos).</p>
+<h2><a class="header" href="#leia-a-documentação" id="leia-a-documentação">Leia a documentação</a></h2>
+<p>Você provavelmente algum dia já foi até o Google e procurou &quot;How to &lt;sua
+dúvida aqui&gt;&quot;. Esta é uma prática muito comum quando precisamos fazer alguma
+coisa rápida. Geralmente encontramos a resposta facilmente em sites como <a href="https://stackoverflow.com">Stack
+Overflow</a> ou similares e em alguns casos até
+conseguimos boas respostas. O problema é que algumas vezes a pessoa que te deu
+a resposta está te passando uma solução que não é adequada (e ele não está
+fazendo isso por mal, provavelmente, mas sim porque ele também não leu a
+documentação e foi a maneira a qual encontrou para resolver o problema). Por
+isso sempre que tiver tempo, leia a documentação. Cada vez mais as linguagens e
+bibliotecas estão com a documentação muito rica e te dão passo-a-passo do que
+você pode fazer com a ferramenta. Dificilmente você não vai achar o que precisa
+na documentação e quando isso acontecer você mesmo pode contribuir para o
+documento ajudando o registro a ficar ainda mais atualizado e detalhado,
+contribuindo para futuros programadores que tiverem a mesma dúvida que a sua.</p>
+<h1><a class="header" href="#recomendações-de-leitura" id="recomendações-de-leitura">Recomendações de leitura</a></h1>
+<ol>
+<li><a href="https://medium.com/@robotlolita/quero-programar-por-onde-come%C3%A7o-43daeea807b2">Quero programar, por onde começo?</a></li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

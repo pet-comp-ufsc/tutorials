@@ -1,0 +1,457 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>C</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded "><a href="others/defines-are-evil.html"><strong aria-hidden="true">1.</strong> #defines são seguros?</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">C</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#defines-são-seguros" id="defines-são-seguros">#defines são seguros?</a></h1>
+<h2><a class="header" href="#o-que-são-defines" id="o-que-são-defines">O que são #defines?</a></h2>
+<p>Para entender os problemas, vamos primeiramente entender como <code>#define</code>s
+(chamadas de <strong>Macros</strong>) funcionam:</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define NUM_VALUES 30
+#define MAX 100
+
+int main(void) {
+    int values[NUM_VALUES];
+
+    time_t t;
+    srand((unsigned)time(&amp;t));
+    for (int i = 0; i &lt; NUM_VALUES; ++i) {
+        values[i] = rand() % MAX;
+    }
+
+    for (int i = 0; i &lt; NUM_VALUES; ++i) {
+        printf(&quot;values[%d]: %d\n&quot;, i, values[i]);
+    }
+}
+</code></pre>
+<p>O código acima (escrito em C) preenche um vetor de 30 inteiros com valores
+aleatórios de 0 a 100. Mas o que o <code>#define</code> faz? Ele simplesmente serve para
+fazer um &quot;find-replace&quot; durante o pré-processamento, ou seja: <strong>antes de
+compilar seu código C</strong>, os trechos em que há o uso do <code>#define</code> são
+substituídos pelo que ele define, o que é feito pelo <strong>pré-processador</strong>
+(chamado &quot;C Pre-Processor&quot; --- <code>cpp</code>). Ou seja, o código acima, após a passada
+do pré-processador, se torna:</p>
+<pre><code class="language-c">[... código do stdio.h ...]
+[... código do stdlib.h ...]
+
+int main(void) {
+    int values[30];
+
+    time_t t;
+    srand((unsigned)time(&amp;t));
+    for (int i = 0; i &lt; 30; ++i) {
+        values[i] = rand() % 100;
+    }
+
+    for (int i = 0; i &lt; 30; ++i) {
+        printf(&quot;values[%d]: %d\n&quot;, i, values[i]);
+    }
+}
+</code></pre>
+<p>E esse é o código que é efetivamente compilado (na verdade, quase esse). Parece
+um recurso interessante à primeira vista (ao menos para iniciantes), então
+vamos brincar de fazer comandos genéricos!</p>
+<h2><a class="header" href="#problemas" id="problemas">Problemas</a></h2>
+<p>Suponha que você queira fazer uma função que, dados <code>a</code> e <code>b</code>, retorne o maior
+deles. Essa função poderia ser:</p>
+<pre><code class="language-c">int max(int a, int b) {
+    return a &gt; b ? a : b;
+}
+</code></pre>
+<p>É simples, porém não é genérico o suficiente: e se for necessário o maior entre
+dois floats? Ou doubles? Ou shorts? Seria necessário criar uma função nova para
+cada um desses casos, todas elas com os mesmos comandos. Mas <code>#define</code>s não
+exigem tipos explícitos (afinal, são &quot;find-replace&quot;: não fazem parte da
+linguagem, apenas geram código), então um programador ingênuo pensaria em
+utilizá-los:</p>
+<pre><code class="language-c">#define MAX(a, b) a &gt; b ? a : b
+</code></pre>
+<p>Parece um código bastante inocente, mas na verdade é bastante danoso. Por
+exemplo:</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+#define MAX(a, b) a &gt; b ? a : b
+
+int main(void) {
+    printf(&quot;%d\n&quot;, 5 * MAX(2, 3));
+}
+</code></pre>
+<p>Antes de continuar, sem compilar, responda: qual você acredita que será o
+resultado? 15? Ou 10? Ou nenhum dos dois?</p>
+<p>...</p>
+<p>...</p>
+<p>...</p>
+<p>Se você respondeu &quot;15&quot;, você errou. Se você respondeu &quot;10&quot;, você também errou!
+Compilando e executando o código, o resultado é...</p>
+<pre><code class="language-bash">$ gcc max_test.c -o max_test
+$ ./max_test
+2
+</code></pre>
+<p>Isso mesmo, 2! E perceba que não é a linguagem que está quebrada, mas sim foi
+exatamente o que foi descrito no programa. Se você brincar de virar o
+pré-processador, vai perceber que o código ficará:</p>
+<pre><code class="language-c">[... código do stdio.h ...]
+
+int main(void) {
+    printf(&quot;%d\n&quot;, 5 * 2 &gt; 3 ? 2 : 3);
+}
+</code></pre>
+<p>Oras, por razões de intuitividade, faz sentido que em uma comparação do tipo
+<code>(expr) &gt; (expr)</code>, primeiro a expressão inteira de cada lado seja calculada.
+Sendo assim, as duas expressões são <code>5 * 2</code> e <code>3</code>, e portanto a sequência de
+operações é:</p>
+<pre><code>(5 * 2) &gt; (3)
+(10) &gt; (3)
+true
+</code></pre>
+<p>Sendo assim, é então jogado o resultado para o operador ternário (&quot;?&quot;), que no
+código acima indica: se o resultado der verdadeiro, retorne 2, senão, retorne 3.
+Como 10 é maior que 3, o resultado é verdadeiro, e portanto o ternário cai
+no caso &quot;retorne 2&quot;.</p>
+<p>Mas okay, vamos corrigir o <code>MAX</code>. Um programador ingênuo neste momento poderia
+pensar em colocar parênteses ao redor da definição dele:</p>
+<pre><code class="language-c">#define MAX(a, b) (a &gt; b ? a : b)
+</code></pre>
+<p>Também parece um código inocente, e perceba que ele corrige o problema que
+havia antes:</p>
+<pre><code class="language-c">[... código do stdio.h ...]
+
+int main(void) {
+    printf(&quot;%d\n&quot;, 5 * (2 &gt; 3 ? 2 : 3));
+}
+</code></pre>
+<p>Agora garantidamente o ternário será executado <em>antes</em> da multiplicação. Parece
+que não temos mais problemas, mas então vamos mais a fundo:</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+#define MAX(a, b) (a &gt; b ? a : b)
+
+int foo(void) {
+    printf(&quot;foo()\n&quot;);
+    return 10;
+}
+
+int bar(void) {
+    printf(&quot;bar()\n&quot;);
+    return -1;
+}
+
+int main(void) {
+    printf(&quot;%d\n&quot;, MAX(foo(), bar()));
+}
+</code></pre>
+<p>Mais uma vez, outro código inocente. Novamente, antes de compilar e executar,
+qual você acredita ser o resultado desta vez? 10 ou -1?</p>
+<p>...</p>
+<p>...</p>
+<p>...</p>
+<p>Se você acreditou em 10, parabéns, você acertou! Mas...ao executar, perceba o
+que acontece:</p>
+<pre><code class="language-bash">$ gcc max_test.c -o max_test
+$ ./max_test
+foo()
+bar()
+foo()
+10
+</code></pre>
+<p>Você consegue perceber o problema? Consegue perceber que <code>foo()</code> foi chamada
+<strong>duas vezes</strong>? Como dito anteriormente, <code>#define</code> é um &quot;find-replace&quot;, logo
+temos um novo problema:</p>
+<pre><code class="language-c">int main(void) {
+    printf(&quot;%d\n&quot;, MAX(foo(), bar()));
+}
+</code></pre>
+<p>Vira:</p>
+<pre><code class="language-c">int main(void) {
+    printf(&quot;%d\n&quot;, foo() &gt; bar() ? foo() : bar());
+}
+</code></pre>
+<p>Ou seja, em vez de aproveitar o resultado de <code>foo()</code> ou de <code>bar()</code>,
+decididamente uma das duas é chamava uma segunda vez.</p>
+<p>A correção é, no <code>#define</code>, criar um trecho de código que guarda o resultado
+das funções e usa o valor guardado para comparar e retornar (em vez de usar a
+chamada da função):</p>
+<pre><code class="language-c">#define MAX(a, b) \
+    ({ __typeof__ (a) _a = (a); \
+       __typeof__ (b) _b = (b); \
+       _a &gt; _b ? _a : _b; })
+</code></pre>
+<p>Compilando e executando:</p>
+<pre><code class="language-bash">$ gcc max_test.c -o max_test
+$ ./max_test
+foo()
+bar()
+10
+</code></pre>
+<p>Agora sim, sem chamadas extras, mas com uma macro bastante ilegível.</p>
+<h2><a class="header" href="#outro-problema-vírgulas" id="outro-problema-vírgulas">Outro problema: vírgulas</a></h2>
+<p>Conforme registrado pela <a href="https://en.cppreference.com/w/cpp/error/assert">documentação do
+cppreference</a>, em C++ (que
+permite várias construções mais complexas), quando se tenta utilizar algo com
+vírgulas as coisas podem ficar estranhas, por exemplo:</p>
+<pre><code class="language-c++">#include &lt;cassert&gt;
+
+struct Point {
+    int x; int y;
+
+    // Define o operador de == para dois `Point`s.
+    auto operator==(const Point&amp; p) const {
+        return x == p.x and y == p.y;
+    }
+};
+
+int main() {
+    auto p = Point{0, 0};
+    assert(p == Point{0, 0});
+}
+</code></pre>
+<p><code>assert</code> é uma macro que permite fazer validações, por exemplo: naquele caso,
+se quer garantir que <code>p</code> seja igual a <code>{0, 0}</code>, senão o programa irá abortar
+indicando que aquela asserção falhou. Porém, como não há parênteses ao redor de
+<code>{0, 0}</code>, a macro entende que se estão passando 2 argumentos a ela:</p>
+<ol>
+<li><code>p == Point{0</code>;</li>
+<li><code>0}</code>.</li>
+</ol>
+<p>Porém, <code>assert</code> só tem 1 parâmetro, e portanto o programa não compila:</p>
+<pre><code class="language-console">$ g++ assert_example.cpp
+a.cpp:13:28: error: macro &quot;assert&quot; passed 2 arguments, but takes just 1
+   13 |     assert(p == Point{0, 0});
+      |                            ^
+In file included from /usr/include/c++/9.1.0/cassert:44,
+                 from a.cpp:1:
+/usr/include/assert.h:89: note: macro &quot;assert&quot; defined here
+   89 | #  define assert(expr)       \
+      |
+a.cpp: In function ‘int main()’:
+a.cpp:13:5: error: ‘assert’ was not declared in this scope
+   13 |     assert(p == Point{0, 0});
+      |     ^~~~~~
+a.cpp:2:1: note: ‘assert’ is defined in header ‘&lt;cassert&gt;’; did you forget to ‘#include &lt;cassert&gt;’?
+    1 | #include &lt;cassert&gt;
+  +++ |+#include &lt;cassert&gt;
+    2 |
+</code></pre>
+<p>Perceba que o compilador até se perde e acaba acreditando que nem <code>assert</code> foi
+definido nem que <code>&lt;cassert&gt;</code> foi incluído. O correto, nesse caso, seria
+envolver o conteúdo do <code>assert</code> com um parênteses extra:</p>
+<pre><code class="language-c++">    assert((p == Point{0, 0}));
+</code></pre>
+<p>E agora o programa compila normalmente:</p>
+<pre><code class="language-console">$ g++ assert_example.cpp
+</code></pre>
+<h2><a class="header" href="#conclusão" id="conclusão">Conclusão</a></h2>
+<p>Macros de C são inocentes, mas extremamente propensas a erro, exigindo uma
+atenção extra e exagerada do programador. Seu uso também não reflete o esperado
+pelos mecanismos da linguagem, já que não se caracterizam como uma função.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

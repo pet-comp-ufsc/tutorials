@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Sobre C++ - C++</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="/tutorials/css/special-tags.css">
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="about-tutorial.html">Sobre este tutorial</a></li><li class="expanded affix "><a href="about.html" class="active">Sobre C++</a></li><li class="expanded "><a href="intro/about.html"><strong aria-hidden="true">1.</strong> Hello, World</a></li><li><ol class="section"><li class="expanded "><a href="intro/compiling.html"><strong aria-hidden="true">1.1.</strong> Compilando com o g++</a></li><li class="expanded "><a href="intro/short-example.html"><strong aria-hidden="true">1.2.</strong> Explicação do código de exemplo</a></li><li class="expanded "><a href="intro/main-without-return.html"><strong aria-hidden="true">1.3.</strong> Ausência de return no main</a></li><li class="expanded "><a href="intro/args.html"><strong aria-hidden="true">1.4.</strong> &lt;*&gt; Argumentos do programa</a></li><li class="expanded "><a href="intro/comments.html"><strong aria-hidden="true">1.5.</strong> Comentários</a></li></ol></li><li class="expanded "><a href="statements/about.html"><strong aria-hidden="true">2.</strong> Estruturas básicas</a></li><li><ol class="section"><li class="expanded "><a href="statements/if.html"><strong aria-hidden="true">2.1.</strong> &lt;*&gt; If</a></li><li class="expanded "><a href="statements/while.html"><strong aria-hidden="true">2.2.</strong> &lt;*&gt; While</a></li><li class="expanded "><a href="statements/for.html"><strong aria-hidden="true">2.3.</strong> &lt;*&gt; For</a></li><li class="expanded "><a href="statements/switch-case.html"><strong aria-hidden="true">2.4.</strong> &lt;*&gt; Switch-Case</a></li></ol></li><li class="expanded "><a href="functions/about.html"><strong aria-hidden="true">3.</strong> Funções</a></li><li><ol class="section"><li class="expanded "><a href="functions/return.html"><strong aria-hidden="true">3.1.</strong> Retorno de funções</a></li><li class="expanded "><a href="functions/params.html"><strong aria-hidden="true">3.2.</strong> Parâmetros de funções</a></li><li class="expanded "><a href="functions/const.html"><strong aria-hidden="true">3.3.</strong> Parâmetros const</a></li><li class="expanded "><a href="functions/refs.html"><strong aria-hidden="true">3.4.</strong> Argumento por referência</a></li><li class="expanded "><a href="functions/generics.html"><strong aria-hidden="true">3.5.</strong> Funções genéricas</a></li></ol></li><li class="expanded "><a href="classes/about.html"><strong aria-hidden="true">4.</strong> Classes</a></li><li><ol class="section"><li class="expanded "><a href="classes/attrs.html"><strong aria-hidden="true">4.1.</strong> Atributos</a></li><li class="expanded "><a href="classes/methods.html"><strong aria-hidden="true">4.2.</strong> Métodos</a></li><li class="expanded "><a href="classes/access-modifiers.html"><strong aria-hidden="true">4.3.</strong> Modificadores de acesso</a></li><li class="expanded "><a href="classes/structs.html"><strong aria-hidden="true">4.4.</strong> Structs</a></li></ol></li><li class="expanded "><a href="projects/about.html"><strong aria-hidden="true">5.</strong> Organizando projetos em C++</a></li><li><ol class="section"><li class="expanded "><a href="projects/files.html"><strong aria-hidden="true">5.1.</strong> Separando em arquivos</a></li><li class="expanded "><a href="projects/libs.html"><strong aria-hidden="true">5.2.</strong> Linkando bibliotecas</a></li><li class="expanded "><a href="projects/cmake.html"><strong aria-hidden="true">5.3.</strong> CMake</a></li></ol></li><li class="expanded "><a href="others/about.html"><strong aria-hidden="true">6.</strong> Outros</a></li><li><ol class="section"><li class="expanded "><a href="others/operators.html"><strong aria-hidden="true">6.1.</strong> Operadores</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">C++</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#sobre-c" id="sobre-c">Sobre C++</a></h1>
+<ol>
+<li><a href="#por-que-usar-c">Por que usar C++?</a></li>
+<li><a href="#apelo-atualiza%C3%A7%C3%B5es-na-linguagem">Apelo: atualizações na linguagem</a></li>
+<li><a href="#c-%C3%A9-c-com-stdcout">C++ é C com std::cout?</a></li>
+<li><a href="#c-%C3%A9-pr%C3%B3xima-do-hardware-assim-como-c">C++ é baixo-nível, assim como C?</a></li>
+</ol>
+<h2><a class="header" href="#por-que-usar-c" id="por-que-usar-c">Por que usar C++?</a></h2>
+<p>C++ é uma <strong>Linguagem de Propósito Geral</strong> (GPL -- <em>General Purpose Language</em>).
+Ou seja, é projetada para que o programador decida onde será utilizada.
+Por conta de algumas premissas descritas abaixo, há razões para compiladores de
+C++ geralmente prezarem por gerar código otimizado. Em resumo, C++ pode ser
+utilizado em lugares em que façam parte das preocupações do programador:</p>
+<ol>
+<li><strong>Performance</strong> ótima, previsível e garantida, e isso é oferecido pela
+linguagem graças aos seus compiladores principais: <strong>g++</strong>, <strong>clang</strong> e
+<strong>CL</strong> (este último para o Microsoft Visual Studio Community/Ultimate);</li>
+<li><strong>Abstração</strong> de operações, tipos, manipulação de memória, etc., sendo
+possível que operações e manipulações complexas possuam uma interfaces
+simples de se utilizar ou mesmo automatizar o gerenciamento de memória
+dinâmica <strong>sem a necessidade de um Garbage Collector</strong>;</li>
+<li><strong>Compatibilidade de arquitetura</strong>: como o g++ é análogo a um irmão do gcc
+(compilador de C), que possui uma longa data de existência (e portanto mais
+pessoas se dedicaram a portar o compilador para suas plataformas), é
+possível compilar código C++ para arquiteturas diversas, principalmente
+microcontroladores que costumam ser preocupantemente difíceis de se ter um
+compilador de outra linguagem para eles. É possível, por exemplo,
+desenvolver para processadores diversos processadores ARM, mesmo antigos
+como ARM7TDMI (processador do console GameBoyAdvance) ou novos como os
+Cortex (como o dos celulares Android modernos e vários microcontroladores),
+ao mesmo tempo que é possível desenvolver para processadores voltados a
+Desktops e Notebooks, como os Intel/AMD x86 e x86_64;</li>
+<li>Recursos de programação moderna (a partir de C++11), mesmo para programação
+de software de base (como Sistemas Operacionais, <em>Device Drivers</em>, etc.):
+funções lambda, suporte a Threads, dentre outros;</li>
+<li>Necessidade de reimplementação de recursos básicos: é possível implementar
+qualquer recurso da biblioteca padrão da linguagem sem a necessidade de uma
+segunda linguagem, mantendo código eficiente, reutilizável e seguro. Assim,
+é possível ter uma implementação de algumas abstrações de uma forma para um
+sistema limitado em processamento ou memória, e de outra para um sistema em
+que restrições de processamento e memória não sejam um problema.</li>
+<li><strong>Zero-cost Abstractions</strong> (Abstração de custo zero): é possível escrever
+camadas de abstração em C++ (seja para conectar duas interfaces
+não-compatíveis, ou oferecer uma API adequada a partir de outra, ou
+construir uma API completamente nova e independente) sem que isso imponha
+custo adicional. O compilador deve ser capaz de otimizar e eliminar tais
+camadas sempre que possível (por exemplo, uma chamada para função que
+retorne um valor fixo é substituída pelo próprio valor retornado), dentre
+outras otimizações relacionadas a abstração (seja de tipos, operações ou
+arquitetura);</li>
+<li><strong>Semântica de <em>&quot;move&quot;</em></strong>: a linguagem oferece a possibilidade de evitar
+cópias desnecessárias (ou que não devem existir) em contextos diversos.</li>
+</ol>
+<h2><a class="header" href="#apelo-atualizações-na-linguagem" id="apelo-atualizações-na-linguagem">Apelo: atualizações na linguagem</a></h2>
+<p>Um pequeno apelo a ser feito é sempre procurar informações atualizadas a
+respeito da linguagem. O motivo é que, em 2011, um novo padrão da linguagem foi
+aceito e incorporado a ela, chamado de C++11. Esse novo padrão define novos
+recursos que melhoraram a qualidade da linguagem de deixando-a desde mais
+segura e robusta a uma linguagem mais moderna, simplificando bastante a forma
+de se programar nela. Logo, a forma de se programar em C++ pré-11 pode ser dita
+como obsoleta. Inclusive, o advento de C++14 e C++17 (lançados em 2014 e 2017,
+respectivamente), já fazem de C++11 um padrão obsoleto em algumas partes.</p>
+<warn title="Aprenda C++ moderno">
+Não há por que perder tempo aprendendo C++ antigo: boa parte das _toolchains_
+já lidam com C++ moderno, que além de possuir uma biblioteca padrão mais ampla
+e robusta, é repleto de recursos novos que inutilizam boa parte do trabalho
+braçal das antigas versões de C++.
+</warn>
+<p>Como exemplo, o código abaixo exemplifica a criação e iteração por elementos de
+um Map em C++ antigo (pré-C++11):</p>
+<pre><code class="language-c++">std::map&lt;std::string, int&gt; data = std::map&lt;std::string, int&gt;();
+data.insert(std::pair&lt;std::string, int&gt;{&quot;x&quot;, 4});
+data.insert(std::pair&lt;std::string, int&gt;{&quot;y&quot;, 4});
+data.insert(std::pair&lt;std::string, int&gt;{&quot;z&quot;, 12});
+
+for (std::map&lt;std::string, int&gt;::iterator it = data.begin();
+     it != data.end();
+     ++it) {
+    std::cout &lt;&lt; it-&gt;first &lt;&lt; &quot;: &quot; &lt;&lt; it-&gt;second &lt;&lt; &quot;\n&quot;;
+}
+</code></pre>
+<p>O mesmo código, em C++11:</p>
+<pre><code class="language-c++">auto data = std::map&lt;std::string, int&gt;{
+    {&quot;x&quot;, 4},
+    {&quot;y&quot;, 4},
+    {&quot;z&quot;, 12},
+};
+
+for (auto elm: data) {
+    std::cout &lt;&lt; elm.first &lt;&lt; &quot;: &quot; &lt;&lt; elm.second &lt;&lt; &quot;\n&quot;;
+}
+</code></pre>
+<p>E por fim, em C++17:</p>
+<pre><code class="language-c++">auto data = std::map&lt;std::string, int&gt;{
+    {&quot;x&quot;, 4},
+    {&quot;y&quot;, 4},
+    {&quot;z&quot;, 12},
+};
+
+for (auto [key, value]: data) {
+    std::cout &lt;&lt; key &lt;&lt; &quot;: &quot; &lt;&lt; value &lt;&lt; &quot;\n&quot;;
+}
+</code></pre>
+<p>Comparando com um código equivalente em Python:</p>
+<pre><code class="language-python">data = {
+    'x': 4,
+    'y': 4,
+    'z': 12,
+}
+
+for key, value in data:
+    print(f'{key}: {value}')
+</code></pre>
+<p>Isso deve deixar claro por que buscar trabalhar com C++ moderno.</p>
+<h2><a class="header" href="#c-é-c-com-stdcout" id="c-é-c-com-stdcout">C++ é C com std::cout?</a></h2>
+<p>Não, C++ não é C com <code>std::cout</code>. Como C++ surgiu baseada em C (inclusive, suas
+primeiras implementações geravam código C) e sempre prometeu uma certa
+retrocompatibilidade com C, é comum ver construções em ambas as linguagens que
+sejam parecidas, ou mesmo código em C que compile em C++. Por consequência, se
+criam crenças de que entender de C implica em entender de C++ (e vice-versa),
+além de ser comum programadores escreverem código C no meio de código C++. Mas,
+serve de regra:</p>
+<warn title="Não misture C com C++">
+_"C em código C++ é C++ ruim."_ C++ possui suas próprias mecânicas para lidar
+com segurança, memória e algoritmos. Além disso, alguns comandos possuem
+significado diferente em C e em C++.
+</warn>
+<p>Por exemplo:</p>
+<ul>
+<li>Em C é comum e necessário trabalhar com ponteiros explicitamente.  Em C++
+isso é, para praticamente todo caso, um erro (por conta de diversos problemas
+de segurança relacionados a ponteiros, <em>undefined-behaviours</em> não muito
+óbvios ao programador, e por C++ oferecer recursos melhores para
+gerenciá-los).</li>
+<li>O mesmo se aplica ao uso da diretiva <code>#define</code>: para se escrever código
+genérico em C, <code>#define</code> é essencial. Porém C++ possui seu próprio mecanismo
+de código genérico:
+<a href="https://en.cppreference.com/w/cpp/language/templates">Templates</a>, que
+reduzem a possibilidade de erros (veja a <a href="#recomenda%C3%A7%C3%B5es-de-leitura">Recomendação de Leitura
+#1</a>) e aproveitam melhor o sistema de tipos da
+linguagem.</li>
+</ul>
+<h2><a class="header" href="#c-é-baixo-nível-assim-como-c" id="c-é-baixo-nível-assim-como-c">C++ é baixo-nível, assim como C?</a></h2>
+<p>Não, pelos mesmos motivos pelo qual
+<a href="https://queue.acm.org/detail.cfm?id=3212479">C também não é</a>. Mas, é claro,
+várias construções da linguagem são capazes de dar essa ilusão ao programador,
+por exemplo: gerenciamento manual de memória, suporte nativo da linguagem para
+referência explícita de locais na memória, tipos primitivos dependentes da
+arquitetura, o fato de que compiladores de C e C++ costumam gerar código
+nativo, dentre outros.</p>
+<h2><a class="header" href="#documentação-recomendada" id="documentação-recomendada">Documentação Recomendada</a></h2>
+<p>É recomendado procurar a documentação no site
+<a href="https://cppreference.com/">cpp-reference</a>, que costuma estar atualizado,
+conter boas explicações, indicações claras das versões de C++, exemplos de uso,
+e conformidade com o que se espera de código moderno da linguagem.</p>
+<p>Outra documentação frequentemente encontrada é o
+<a href="http://www.cplusplus.com/">C-plus-plus</a>, porém ela costuma dar exemplos pouco
+idiomáticos e muitas vezes misturando código C em exemplos de C++.</p>
+<h2><a class="header" href="#recomendações-de-leitura" id="recomendações-de-leitura">Recomendações de Leitura</a></h2>
+<ol>
+<li><a href="../c/others/defines-are-evil.html">#define's são seguros?</a></li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="about-tutorial.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="intro/about.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="about-tutorial.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="intro/about.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="/tutorials/js/special-tags.js"></script>
+        
+
+        
+
+    </body>
+</html>

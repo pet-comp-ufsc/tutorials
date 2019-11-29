@@ -1,0 +1,494 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Ferramentas</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded "><a href="recommended/index.html"><strong aria-hidden="true">1.</strong> Ferramentas recomendadas</a></li><li><ol class="section"><li class="expanded "><a href="recommended/git.html"><strong aria-hidden="true">1.1.</strong> Git</a></li></ol></li><li class="expanded "><a href="specific/index.html"><strong aria-hidden="true">2.</strong> Ferramentas específicas</a></li><li><ol class="section"><li class="expanded "><a href="specific/java/index.html"><strong aria-hidden="true">2.1.</strong> Java</a></li><li><ol class="section"><li class="expanded "><a href="specific/java/jdk.html"><strong aria-hidden="true">2.1.1.</strong> JDK</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Ferramentas</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#ferramentas-recomendadas" id="ferramentas-recomendadas">Ferramentas recomendadas</a></h1>
+<p>Ferramentas recomendadas são aquelas que muitos desenvolvedores,
+independentemente de linguagem, plataforma ou aplicação, deveriam aprender.</p>
+<p>Escolha, no índice, a ferramenta que você procura.</p>
+<h1><a class="header" href="#sistema-de-versionamento-git" id="sistema-de-versionamento-git">Sistema de Versionamento Git</a></h1>
+<h2><a class="header" href="#sobre" id="sobre">Sobre</a></h2>
+<p>Este não é um tutorial para você <strong>aprender</strong> Git. Caso seu objetivo seja
+aprender, siga o <a href="https://git-scm.com/book/en/v2">Git Book</a> (não se assuste com
+o tamanho dele: leia com carinho e atenção, é um livro muito bom que irá
+ensiná-lo a utilizar Git corretamente).</p>
+<p>Para que este tutorial então? Para servir de consulta rápida dos comandos do
+Git, tendo pequenos exemplos e pequenas descrições do que você possivelmente
+quer fazer.</p>
+<h2><a class="header" href="#comandos-básicos" id="comandos-básicos">Comandos básicos</a></h2>
+<p>Inicializar uma pasta como repositório Git:</p>
+<pre><code class="language-bash">git init
+</code></pre>
+<p>Checar o estado atual das alterações do repositório:</p>
+<pre><code class="language-bash">git status
+</code></pre>
+<p>Adicionar um espelho remoto:</p>
+<pre><code class="language-bash">git remote add nome link
+</code></pre>
+<p>Atualizar repositório local a partir do remoto:</p>
+<pre><code class="language-bash">git pull
+</code></pre>
+<p>Atualizar repositório remoto a partir do local:</p>
+<pre><code class="language-bash">git push nome-do-remoto branch-remoto
+</code></pre>
+<p>Relacionar <em>branch</em> atual com um <em>branch</em> remoto (para atualizar com <code>git push</code>/<code>git pull</code> sem precisar especificar o remoto e <em>branch</em>):</p>
+<pre><code class="language-bash">git push --set-upstream nome-do-remoto branch-remoto
+</code></pre>
+<p>Adicionar alterações de um arquivo ao próximo <em>commit</em> (<em>OBS: também
+utilizado para indicar que foi removido</em>):</p>
+<pre><code class="language-bash">git add arquivo1 arquivo2 ...
+</code></pre>
+<p>Criar <em>commit</em> com as alterações adicionadas:</p>
+<pre><code class="language-bash">git commit -m &quot;Mensagem do commit&quot;
+</code></pre>
+<p>Identificar autor dos commits apenas no repositório atual:</p>
+<pre><code class="language-bash">git config user.name &quot;Nome do autor&quot;
+git config user.email &quot;E-mail do autor&quot;
+</code></pre>
+<p>Identificar autor dos commits para todos os repositórios do usuário logado no
+computador:</p>
+<pre><code class="language-bash">git config --global user.name &quot;Nome do autor&quot;
+git config --global user.email &quot;E-mail do autor&quot;
+</code></pre>
+<h2><a class="header" href="#exemplos" id="exemplos">Exemplos</a></h2>
+<h3><a class="header" href="#inicializar-repositório-a-partir-do-zero" id="inicializar-repositório-a-partir-do-zero">Inicializar repositório a partir do zero</a></h3>
+<p>Sendo &quot;~/&quot; a pasta do usuário atual:</p>
+<pre><code class="language-bash">~/ $ mkdir example
+~/ $ cd example
+~/example $ git init
+Initialized empty Git repository in /home/user/example
+~/example $ git remote add origin https://github.com/pet-comp-ufsc/git-example
+~/example $ git push --set-upstream origin master
+</code></pre>
+<h3><a class="header" href="#inicializar-repositório-a-partir-de-um-remoto" id="inicializar-repositório-a-partir-de-um-remoto">Inicializar repositório a partir de um remoto</a></h3>
+<h4><a class="header" href="#método-1" id="método-1">Método 1</a></h4>
+<p>Para quando:</p>
+<ul>
+<li>Você não tem o projeto localmente; e</li>
+<li>Você quer que o nome da pasta seja o mesmo do repositório.</li>
+</ul>
+<pre><code class="language-bash">~/ $ git clone https://github.com/pet-comp-ufsc/git-example
+~/ $ cd git-example
+~/git-example $
+</code></pre>
+<h4><a class="header" href="#método-2" id="método-2">Método 2</a></h4>
+<p>Para quando:</p>
+<ul>
+<li>Você não tem o projeto localmente; e</li>
+<li>Você quer dar um nome específico para a pasta do projeto.</li>
+</ul>
+<pre><code class="language-bash">~/ $ git clone https://github.com/pet-comp-ufsc/git-example example
+~/ $ cd example
+~/example $
+</code></pre>
+<p>Para quando:</p>
+<ul>
+<li>Você <strong>tem</strong> o projeto localmente; e</li>
+<li>Você quer relacioná-lo ao remoto.</li>
+</ul>
+<pre><code class="language-bash">~/ $ cd example
+~/example $ git init
+Initialized empty Git repository in /home/user/example
+~/example $ git remote add origin https://github.com/pet-comp-ufsc/git-example
+~/example $ git pull origin master
+</code></pre>
+<h1><a class="header" href="#ferramentas-específicas" id="ferramentas-específicas">Ferramentas específicas</a></h1>
+<h1><a class="header" href="#java" id="java">Java</a></h1>
+<ul>
+<li><a href="specific/java/./jdk.html">JDK</a></li>
+</ul>
+<h1><a class="header" href="#jdk" id="jdk">JDK</a></h1>
+<h2><a class="header" href="#Índice" id="Índice">Índice</a></h2>
+<ol>
+<li><a href="specific/java/jdk.html#sobre">Sobre</a></li>
+<li><a href="specific/java/jdk.html#instala%C3%A7%C3%A3o">Instalação</a>
+<ol>
+<li><a href="specific/java/jdk.html#instalar-no-windows">Windows</a></li>
+<li><a href="specific/java/jdk.html#instalar-no-linux">Linux</a>
+<ol>
+<li><a href="specific/java/jdk.html#ubuntu">Ubuntu</a></li>
+<li><a href="specific/java/jdk.html#archlinux">ArchLinux</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="specific/java/jdk.html#como-utilizar">Como utilizar</a>
+<ol>
+<li><a href="specific/java/jdk.html#compilar">Compilar</a></li>
+<li><a href="specific/java/jdk.html#executar-um-c%C3%B3digo-compilado">Executar um código compilado</a></li>
+<li><a href="specific/java/jdk.html#alterar-para-onde-v%C3%A3o-os-arquivos-class">Alterar para onde vão os arquivos .class</a></li>
+<li><a href="specific/java/jdk.html#gerar-jar">Gerar .jar</a></li>
+</ol>
+</li>
+</ol>
+<h2><a class="header" href="#sobre-1" id="sobre-1">Sobre</a></h2>
+<p>O <a href="http://www.oracle.com/technetwork/java/javase/overview/index.html">JDK</a>
+(<em>Java Development Kit</em>) é um conjunto de programas para desenvolvedores
+poderem compilar, depurar e analisar códigos escritos em Java. Trata-se das
+ferramentas oficiais da linguagem para desenvolvimento, atualmente desenvolvida
+pela Oracle.</p>
+<h2><a class="header" href="#instalação" id="instalação">Instalação</a></h2>
+<h3><a class="header" href="#informações-gerais" id="informações-gerais">Informações gerais</a></h3>
+<p><strong>Versão sugerida</strong>: OpenJDK-10 (mais recente)</p>
+<h3><a class="header" href="#instalar-no-windows" id="instalar-no-windows">Instalar no Windows</a></h3>
+<ol>
+<li>
+<p>Siga para a <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">página de download oficial da
+Oracle</a>
+e clique no botão &quot;Download&quot; com o ícone de Java 10.</p>
+</li>
+<li>
+<p>Na seção cinza com o título &quot;Java SE Development Kit <em>&lt;Versão&gt;</em>&quot;, marque
+&quot;<strong>Accept License Agreement</strong>&quot;;</p>
+</li>
+<li>
+<p>Clique no link de download para Windows (que termina em &quot;.exe).</p>
+</li>
+<li>
+<p>Execute o arquivo baixado.</p>
+</li>
+<li>
+<p><a href="specific/java/jdk.html#como-utilizar">Teste</a> se a ferramenta está no PATH.</p>
+</li>
+</ol>
+<h3><a class="header" href="#instalar-no-linux" id="instalar-no-linux">Instalar no Linux</a></h3>
+<h4><a class="header" href="#ubuntu" id="ubuntu">Ubuntu</a></h4>
+<p>Siga as instruções <a href="https://stackoverflow.com/a/14788468/3326309">nesta
+resposta</a>, porém considere a
+versão sugerida acima no lugar.</p>
+<h4><a class="header" href="#archlinux" id="archlinux">ArchLinux</a></h4>
+<p>Execute o comando:</p>
+<pre><code class="language-bash">pacman -S jdk10-openjdk
+</code></pre>
+<h2><a class="header" href="#como-utilizar" id="como-utilizar">Como utilizar</a></h2>
+<h3><a class="header" href="#compilar" id="compilar">Compilar</a></h3>
+<p><em>(OBS: Se as classes que você irá compilar estão em um <code>package</code>, veja o
+tutorial <a href="specific/java//langs/java/xx-packages.html">Como trabalhar com pacotes</a> para saber
+como compilá-los da maneira correta)</em></p>
+<h4><a class="header" href="#compilar-no-windows" id="compilar-no-windows">Compilar no Windows</a></h4>
+<p>Para compilar um arquivo de código Java:</p>
+<ol>
+<li>
+<p>Abra um <code>cmd</code> na pasta em que se encontra o arquivo de código. Isso pode ser
+feito de duas formas:</p>
+<ol>
+<li>
+<p>(Windows 8 e 10) Abrindo a pasta pelo Windows Explorer, indo em &quot;Arquivo&quot;
+e &quot;Abrir prompt de comando aqui&quot;;</p>
+</li>
+<li>
+<p>Abrindo um <code>cmd</code> (tecle <code>Windows+R</code>, digite &quot;cmd&quot; e dê um Enter) e
+inserindo o comando:</p>
+<pre><code class="language-bat">&gt; cd &quot;Pasta em que está o arquivo&quot;
+</code></pre>
+<p><strong>Exemplo</strong>: se o arquivo está na pasta &quot;Testes com Java&quot; em &quot;Documentos&quot;:</p>
+<pre><code class="language-bat">&gt; cd &quot;Documentos/Testes com Java&quot;
+</code></pre>
+<p><strong>Exemplo 2</strong>: se o arquivo está em um <strong>pendrive</strong> na unidade &quot;E:&quot;, na
+pasta &quot;E:/dev/java&quot;:</p>
+<pre><code class="language-bat">&gt; E:
+&gt; cd dev/java
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Execute o comando <code>javac &lt;nome do arquivo&gt;.java</code>:</p>
+<p><strong>Exemplo</strong>: se o arquivo se chama &quot;HelloWorld.java&quot;:</p>
+<pre><code class="language-bat">&gt; javac HelloWorld.java
+</code></pre>
+</li>
+</ol>
+<h4><a class="header" href="#compilar-no-linux" id="compilar-no-linux">Compilar no Linux</a></h4>
+<p>Para compilar um arquivo de código Java, execute:</p>
+<pre><code class="language-bash">cd &quot;pasta/em/que/está/o/arquivo/de/código&quot;
+javac NomeDoArquivo.java
+</code></pre>
+<p><strong>Exemplo</strong>: se o arquivo &quot;HelloWorld.java&quot; está na pasta &quot;~/dev/java/learn/&quot;:</p>
+<pre><code class="language-bash">cd ~/dev/java/learn
+javac HelloWorld.java
+</code></pre>
+<h3><a class="header" href="#executar-um-código-compilado" id="executar-um-código-compilado">Executar um código compilado</a></h3>
+<p>Primeiramente, é necessário ter o JRE instalado. Os passos de instalação são os
+mesmos que o do JDK, porém trocando &quot;JRE&quot; por &quot;JDK&quot; (exceto na instalação para
+Ubuntu).</p>
+<p>Apenas vá até a pasta em que se encontra o código e execute:</p>
+<pre><code class="language-bash">java NomeDaClasseComOMain
+</code></pre>
+<p><strong>Exemplo</strong>: Se o arquivo compilado foi &quot;HelloWorld.java&quot;, ele terá gerado um
+&quot;HelloWorld.class&quot;, sendo assim, basta executar:</p>
+<pre><code class="language-bash">java HelloWorld
+</code></pre>
+<p>Se a classe se encontra em um <code>package</code>, é necessário ir até a pasta <strong>antes</strong>
+do pacote e executar <code>java pacote.Classe</code>.</p>
+<p><strong>Exemplo</strong>: Supondo a estrutura de pastas:</p>
+<pre><code class="language-text">`- myproject
+   `- src
+      `- mypackage
+         `- MyClass.java
+</code></pre>
+<p>Teríamos que ir até a pasta &quot;myproject/src&quot; e executar:</p>
+<pre><code class="language-bash">javac mypackage/MyClass.java
+</code></pre>
+<p>Isso irá criar um arquivo &quot;MyClass.class&quot; dentro de &quot;mypackage&quot; (caso queira,
+veja como <a href="specific/java/jdk.html#alterar-para-onde-v%C3%A3o-os-arquivos-.class">Alterar para onde vão os arquivos
+.class</a>):</p>
+<pre><code class="language-text">`- myproject
+   `- src
+      `- mypackage
+         |- MyClass.class
+         `- MyClass.java
+</code></pre>
+<p>Sendo assim, bastaria executar:</p>
+<pre><code class="language-bash">java mypackage.MyClass
+</code></pre>
+<h3><a class="header" href="#alterar-para-onde-vão-os-arquivos-class" id="alterar-para-onde-vão-os-arquivos-class">Alterar para onde vão os arquivos .class</a></h3>
+<p><em><strong>(TODO)</strong></em></p>
+<h3><a class="header" href="#gerar-jar" id="gerar-jar">Gerar .jar</a></h3>
+<p>Arquivos .jar são como .zip, porém feitos para conter bytecode Java. Podem ser
+utilizados tanto para ter programas executáveis (instruindo qual classe
+contendo o método <code>main</code> será chamada ao executar) quanto para oferecer
+bibliotecas para outros programadores.</p>
+<p>Para gerar um arquivo .jar a partir de arquivos .class, basta utilizar o
+comando:</p>
+<pre><code class="language-bash">jar --create --file NomeDoArquivo.jar --no-manifest Arquivo1.class Arquivo2.class ...
+</code></pre>
+<p>O comando acima irá criar um arquivo novo com o nome especificado, sendo que:</p>
+<ul>
+<li><code>--create</code>: Indica que o arquivo será criado. A flag <code>--update</code> pode ser
+utilizada no lugar para atualizar um .jar já existente.</li>
+<li><code>--file</code>: Indica que o argumento que virá na sequência é o nome do arquivo
+.jar. Por exemplo: <code>--file Hello.jar</code> irá indicar que a operação será feita
+em um arquivo chamado &quot;Hello.jar&quot;.</li>
+<li><code>--no-manifest</code>: Indica que não há um arquivo Manifest dando instruções
+sobre o .jar (como qual classe contém o <code>main</code>).</li>
+</ul>
+<p>Tendo o arquivo &quot;NomeDoArquivo.jar&quot; criado, ele pode ser incluído no
+ClassPath de outros programas em Java para ser utilizado como biblioteca, por
+exemplo:</p>
+<pre><code class="language-bash">javac -cp $CLASSPATH:NomeDoArquivo.jar OutroArquivo.java
+</code></pre>
+<p>Quanto ao arquivo Manifest, é possível criar um arquivo com nome
+&quot;manifest.txt&quot; (por exemplo) contendo:</p>
+<pre><code class="language-txt">Main-Class: pacote.Classe;
+</code></pre>
+<p>E, com ele, chamar <code>jar</code> com a <em>flag</em> <code>--manifest</code> com seu nome:</p>
+<pre><code class="language-bash">jar --create --file Arquivo.jar --manifest manifest.txt Classe.class
+</code></pre>
+<p>E, com isso, é estabilizada como classe principal a <code>pacote.Classe</code>. Assim, ao se executar o .jar:</p>
+<pre><code class="language-bash">java -jar Arquivo.jar
+</code></pre>
+<p>E assim o método <code>main</code> da classe indicada em <code>Main-Class</code> (no exemplo:
+<code>pacote.Classe</code>) será chamado.</p>
+<p>Na documentação da Oracle sobre <a href="https://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html">Arquivos
+Manifest</a>
+é possível encontrar mais informações a respeito.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

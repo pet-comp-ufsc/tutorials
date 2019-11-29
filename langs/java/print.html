@@ -1,0 +1,1660 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Java</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="java-and-langs.html">Java e Linguagens de Programação</a></li><li class="expanded affix "><a href="tools.html">Ferramentas</a></li><li class="expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introdução a Java</a></li><li><ol class="section"><li class="expanded "><a href="intro/hello-java.html"><strong aria-hidden="true">1.1.</strong> &quot;Hello, world!&quot;</a></li><li class="expanded "><a href="intro/hello-detailed.html"><strong aria-hidden="true">1.2.</strong> &quot;Hello, world! - Explicação detalhada&quot;</a></li><li class="expanded "><a href="intro/errors.html"><strong aria-hidden="true">1.3.</strong> Erros de Compilação e Execução</a></li></ol></li><li class="expanded "><a href="values.html"><strong aria-hidden="true">2.</strong> Armazenando Valores</a></li><li><ol class="section"><li class="expanded "><a href="values/variables.html"><strong aria-hidden="true">2.1.</strong> Variáveis</a></li><li class="expanded "><a href="values/constants.html"><strong aria-hidden="true">2.2.</strong> Constantes</a></li><li class="expanded "><a href="values/types.html"><strong aria-hidden="true">2.3.</strong> Tipos de dados</a></li><li class="expanded "><a href="values/decl.html"><strong aria-hidden="true">2.4.</strong> Declaração e Instanciação</a></li><li class="expanded "><a href="values/naming.html"><strong aria-hidden="true">2.5.</strong> Nomeando adequadamente</a></li><li class="expanded "><a href="values/recommendations.html"><strong aria-hidden="true">2.6.</strong> Recomendações de Leitura</a></li></ol></li><li class="expanded "><a href="if.html"><strong aria-hidden="true">3.</strong> Estrutura condicional If</a></li><li><ol class="section"><li class="expanded "><a href="if/syntax.html"><strong aria-hidden="true">3.1.</strong> Sintaxe de um If</a></li><li class="expanded "><a href="if/else.html"><strong aria-hidden="true">3.2.</strong> If-else</a></li><li class="expanded "><a href="if/playing.html"><strong aria-hidden="true">3.3.</strong> Brincando com o código</a></li></ol></li><li class="expanded "><a href="for-while.html"><strong aria-hidden="true">4.</strong> Estruturas de repetição</a></li><li><ol class="section"><li class="expanded "><a href="for-while/terms.html"><strong aria-hidden="true">4.1.</strong> Termos</a></li><li class="expanded "><a href="for-while/for.html"><strong aria-hidden="true">4.2.</strong> For</a></li><li class="expanded "><a href="for-while/while.html"><strong aria-hidden="true">4.3.</strong> While</a></li><li class="expanded "><a href="for-while/continue.html"><strong aria-hidden="true">4.4.</strong> Pulando uma iteração</a></li></ol></li><li class="expanded "><a href="arrays.html"><strong aria-hidden="true">5.</strong> Coleções: Arrays</a></li><li><ol class="section"><li class="expanded "><a href="arrays/creating.html"><strong aria-hidden="true">5.1.</strong> Criando um array</a></li><li class="expanded "><a href="arrays/accessing.html"><strong aria-hidden="true">5.2.</strong> Acessando elementos de um array</a></li><li class="expanded "><a href="arrays/properties.html"><strong aria-hidden="true">5.3.</strong> Propriedades de Arrays</a></li><li class="expanded "><a href="arrays/for.html"><strong aria-hidden="true">5.4.</strong> Combinando arrays e fors</a></li><li class="expanded "><a href="arrays/foreach.html"><strong aria-hidden="true">5.5.</strong> Estrutura for-each</a></li><li class="expanded "><a href="arrays/recommendations.html"><strong aria-hidden="true">5.6.</strong> Recomendações de leitura</a></li></ol></li><li class="expanded "><a href="functions.html"><strong aria-hidden="true">6.</strong> Criando seus próprios comandos</a></li><li><ol class="section"><li class="expanded "><a href="functions/defining.html"><strong aria-hidden="true">6.1.</strong> Definindo funções</a></li><li class="expanded "><a href="functions/void.html"><strong aria-hidden="true">6.2.</strong> Funções com retorno void</a></li><li class="expanded "><a href="functions/overload.html"><strong aria-hidden="true">6.3.</strong> Sobrecarga de função</a></li><li class="expanded "><a href="functions/signature.html"><strong aria-hidden="true">6.4.</strong> Assinatura de uma função</a></li></ol></li><li class="expanded "><a href="your-own-types.html"><strong aria-hidden="true">7.</strong> Definindo seu próprio tipo</a></li><li class="expanded "><a href="others.html"><strong aria-hidden="true">8.</strong> Outros</a></li><li><ol class="section"><li class="expanded "><a href="others/operators.html"><strong aria-hidden="true">8.1.</strong> Operadores em Java</a></li><li class="expanded "><a href="others/arithmetic-details.html"><strong aria-hidden="true">8.2.</strong> Aritmética - Detalhes</a></li></ol></li><li class="expanded "><a href="recommendations.html">Recomendações de leitura</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Java</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#java-e-linguagens-de-programação" id="java-e-linguagens-de-programação">Java e linguagens de programação</a></h1>
+<h2><a class="header" href="#Índice" id="Índice">Índice</a></h2>
+<ol>
+<li><a href="java-and-langs.html#introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o">Introdução à Programação</a></li>
+<li><a href="java-and-langs.html#executando-um-programa-a-partir-de-um-c%C3%B3digo">Executando um programa a partir de um código</a>
+<ol>
+<li><a href="java-and-langs.html#compila%C3%A7%C3%A3o">Compilação</a></li>
+<li><a href="java-and-langs.html#interpreta%C3%A7%C3%A3o">Interpretação</a></li>
+</ol>
+</li>
+<li><a href="java-and-langs.html#o-caso-de-java">O caso de Java</a></li>
+<li><a href="java-and-langs.html#recomenda%C3%A7%C3%B5es-de-leitura">Recomendações de leitura</a></li>
+</ol>
+<h2><a class="header" href="#introdução-à-programação" id="introdução-à-programação">Introdução à Programação</a></h2>
+<p>Para desenvolver programas utilizamos linguagens de programação, classificadas
+por diferentes
+<a href="https://en.wikipedia.org/wiki/Programming_paradigm">paradigmas</a>. Para termos
+uma noção de como funcionam boa parte dessas linguagens, veja os seguintes
+exemplos:</p>
+<blockquote>
+<h3><a class="header" href="#exemplo-1" id="exemplo-1">Exemplo 1:</a></h3>
+<pre><code class="language-haskell">square :: Integer -&gt; Integer
+square x = x * x
+</code></pre>
+</blockquote>
+<blockquote>
+<h3><a class="header" href="#exemplo-2" id="exemplo-2">Exemplo 2:</a></h3>
+<pre><code class="language-python">n = input('Digite um número positivo:')
+
+while n &lt; 0:
+    print(f'{n} não é positivo!')
+    n = input('Digite um número positivo:')
+
+print(f'Você escolheu o número {n}')
+</code></pre>
+</blockquote>
+<p>No <a href="java-and-langs.html#exemplo-1">Exemplo 1</a>, temos a definição de uma função (semelhante a
+matemática) chamada &quot;<code>square</code>&quot;.</p>
+<ul>
+<li>Na primeira linha, estamos instruindo que <code>square</code> recebe um número inteiro e
+entrega como resposta outro número inteiro;</li>
+<li>Na segunda linha, indicamos que esse inteiro se chama <code>x</code>, e a resposta de
+square é x multiplicado por ele mesmo (elevando ao quadrado).</li>
+</ul>
+<p>A linguagem utilizada nesse exemplo é <a href="https://haskell.org/">Haskell</a>.</p>
+<p>Já no <a href="java-and-langs.html#exemplo-2">Exemplo 2</a>, temos um pequeno programa que:</p>
+<ul>
+<li>Pede ao usuário para digitar um número inteiro. Esse pedido é feito pelo
+<code>input('mensagem')</code>.</li>
+<li>Em seguida, enquanto o número for menor que 0 (ou seja, negativo), informamos
+o usuário do erro e pedimos para ele digitar outro número.</li>
+<li>Se o número deixar de ser negativo, então o programa passa para a próxima
+etapa, que é mostrar o número escolhido pelo usuário.</li>
+</ul>
+<p>A linguagem utilizada nesse exemplo é <a href="https://python.org">Python</a>.</p>
+<p>Essas duas linguagens possuem formas completamente diferentes de se descrever
+problemas nelas, visto que a primeira é do que chamamos de paradigma funcional
+(ver a recomendação <a href="java-and-langs.html#recomenda%C3%A7%C3%B5es-de-leitura">1</a>) e a segunda do paradigma
+imperativo. Java (a linguagem que será vista nas duas primeiras fases do curso
+de Ciência da Computação da UFSC) se encaixa no segundo caso.</p>
+<h2><a class="header" href="#executando-um-programa-a-partir-de-um-código" id="executando-um-programa-a-partir-de-um-código">Executando um programa a partir de um código</a></h2>
+<p>Há diversas formas de se executar um programa a partir de um código. As mais
+comuns são via <strong>Compilação</strong> e <strong>Interpretação</strong>.</p>
+<p>Partindo do exemplo em Haskell abaixo, veremos como esses dois mecanismos podem
+funcionar:</p>
+<blockquote>
+<p>Arquivo &quot;exemplo.hs&quot;:</p>
+<pre><code class="language-haskell">main = do putStrLn &quot;Hello, World!&quot;
+</code></pre>
+</blockquote>
+<h3><a class="header" href="#compilação" id="compilação">Compilação</a></h3>
+<blockquote>
+<p>A partir de um programa escrito em uma linguagem, gerar um programa
+equivalente em outra linguagem.</p>
+</blockquote>
+<p>No caso, a &quot;outra linguagem&quot; quase sempre será a linguagem de máquina, ou seja,
+um código binário que seu processador consiga executar. Cada processador
+implementa uma <a href="https://en.wikipedia.org/wiki/Instruction_set_architecture">ISA (Instruction Set
+Architecture)</a> que
+especifica a forma de executar esse código binário. Por essa razão, um mesmo
+binário que executa em um processador i5 (que implementa a ISA Intel x86_64)
+não executa em um celular com processador ARM Cortex A53 (que implementa a ISA
+ARMv8-A), já que as duas ISA's são incompatíveis.</p>
+<p>Em Haskell, isso é possível de ser feito com o comando:</p>
+<pre><code>$ ghc exemplo.hs
+</code></pre>
+<p>Isso irá compilar o código no arquivo &quot;exemplo.hs&quot;, gerando um arquivo de
+código binário executável &quot;exemplo&quot; (no Linux) ou &quot;exemplo.exe&quot; (no Windows).
+Uma versão humanamente legível desse executável pode ser visto com ferramentas
+como <code>objdump exemplo</code>, mas entender o que ele significa demanda um pouco mais
+de conhecimento. Esse binário, sendo compilado em um processador com ISA x86 ou
+x86_64 (basicamente a maioria dos notebooks e desktops), poderá ser distribuído
+para qualquer outro processador que implemente a mesma ISA (ou seja, qualquer
+outro x86 ou x86_64, respectivamente), o que é uma vantagem. Porém, se
+quisermos fazer esse mesmo programa rodar em um processador ARM, precisamos
+recompilá-lo (instruindo o compilador -- no caso de Haskell, o <code>ghc</code> -- qual a
+ISA alvo), o que dependendo do caso pode demorar muito tempo. Além disso,
+qualquer mudança no código implica também em recompilação de pelo menos parte
+dele (afinal, partes que não mudaram nem sempre precisam ser recompiladas).</p>
+<p>Tendo o executável gerado, ele pode ser executado como qualquer outro, seja por
+um clique duplo ou pelo terminal:</p>
+<pre><code>$ ./exemplo
+Hello, world!
+</code></pre>
+<p>Esse é o mecanismo padrão de compilação, em que o código é compilado <em>antes</em> de
+sua distribuição. Na recomendação <a href="java-and-langs.html#recomenda%C3%A7%C3%B5es-de-leitura">2</a> são descritos
+outros dois métodos de compilação, inclusive um deles utilizado há bastante
+tempo por Java e outro está para chegar para Java 10 (18.3).</p>
+<h3><a class="header" href="#interpretação" id="interpretação">Interpretação</a></h3>
+<blockquote>
+<p>Executar diretamente um programa escrito em uma linguagem.</p>
+</blockquote>
+<p>Ou seja, em vez de o código ser compilado para um executável, apenas
+distribuímos o próprio código, e ele será executado por um <em>Interpretador</em>.
+Por exemplo, se tivermos um script em Python, salvo em um arquivo &quot;hello.py&quot;:</p>
+<pre><code class="language-python">print(&quot;Hello, world!&quot;)
+</code></pre>
+<p>Podemos simplesmente chamar o comando <code>python</code>, passando o arquivo, e o código
+dele será executado na hora:</p>
+<pre><code>$ python hello.py
+Hello, world!
+</code></pre>
+<p>O mesmo pode ser feito com o código em Haskell, visto no exemplo de compilação.
+Podemos, em vez de chamar o compilador de Haskell (<code>ghc</code>) para gerar um
+executável e então rodá-lo, chamar o interpretador de Haskell (<code>runghc</code>)
+passando o nome do arquivo com o código a ser executado:</p>
+<pre><code class="language-haskell">$ runghc exemplo.hs
+Hello, world!
+</code></pre>
+<p>Uma das vantagens da interpretação (em comparação com a compilação) é o fato de
+que geralmente o processo de compilação acaba sendo lento, e para muitas
+ferramentas é mais importante verificar rapidamente se estão funcionando de
+acordo fazendo diversas alterações em pouco tempo.</p>
+<h2><a class="header" href="#o-caso-de-java" id="o-caso-de-java">O caso de Java</a></h2>
+<blockquote>
+<p>&quot;E Java? É uma linguagem compilada e interpretada?&quot;</p>
+</blockquote>
+<p>No fundo, ser interpretada e ser compilada não é uma característica da
+linguagem. É como perguntar se um parafuso é parafusado com chave de fenda ou
+com uma parafusadeira: não é uma característica do parafuso, é apenas a
+ferramenta que você utiliza no parafuso. Podemos pegar o exemplo de Haskell
+logo acima: perceba que o código é literalmente o mesmo, mas em um momento o
+compilamos com o <code>ghc</code>, e em outro momento o interpretamos com o <code>runghc</code>. E aí
+pergunta-se: Haskell é compilada ou interpretada? A resposta é: você <em>pode</em>
+compilar Haskell e você <em>pode</em> interpretar Haskell. É uma linguagem apenas, o
+que você faz com ela é outra história. Se uma linguagem possui apenas
+interpretador, nada impede alguém de criar um compilador para ela (e
+vice-versa).</p>
+<blockquote>
+<p><strong>Observação</strong>: Apesar do pedantismo, é &quot;socialmente aceito&quot; dizer &quot;a
+linguagem X é compilada&quot; em alguns casos como uma forma de dizer &quot;ninguém
+interpreta ela, apenas em raríssimas exceções, se é que existem&quot;, e
+vice-versa.</p>
+</blockquote>
+<p>Tendo isso em mente, o que podemos falar sobre Java é sobre o seu compilador
+mais amplamente utilizado: o <code>javac</code> (que, por sinal, é feito em Java). <code>javac</code>
+possui uma característica interessante: ele compila Java, mas não para a ISA do
+processador do computador em que o programa irá rodar, e sim para uma linguagem
+intermediária, chamada &quot;bytecode&quot;. Esse bytecode pode ser interpretado
+utilizando o programa <code>java</code> (obs: o programa, não a linguagem!), que nada mais
+nada menos do que simula uma máquina, chamada JVM (<em>Java Virtual Machine</em>), que
+executa esse bytecode.</p>
+<p>Ou seja, basicamente temos um compilador de Java e um interpretador de
+bytecode:</p>
+<pre><code>------------------     ---------     ------------
+| Código em Java | --&gt; | javac | --&gt; | Bytecode |
+------------------     ---------     ------------
+
+------------     --------     -------
+| Bytecode | --&gt; | java | --&gt; | JVM | --&gt; Execução do programa
+------------     --------     -------
+</code></pre>
+<h2><a class="header" href="#recomendações-de-leitura" id="recomendações-de-leitura">Recomendações de leitura</a></h2>
+<ol>
+<li>Paradigmas de programação: Imperativo? Funcional? Lógico?</li>
+<li>Compilação AOT e JIT.</li>
+</ol>
+<h1><a class="header" href="#ferramentas" id="ferramentas">Ferramentas</a></h1>
+<h2><a class="header" href="#development-kit" id="development-kit">Development Kit</a></h2>
+<p>Para poder desenvolver programas em Java, o <em>Java Development Kit</em> trás consigo
+ferramentas como compilador, depurador (para obter detalhes de um programa em
+execução, como valores na memória, resultados de comandos, etc.), e outros.</p>
+<p><a href="/tools/jdk.html">Clique aqui</a> para ver como instalar e utilizar o JDK.</p>
+<h2><a class="header" href="#eclipse" id="eclipse">Eclipse</a></h2>
+<p>É comum, ao desenvolver programas, utilizar IDEs (Integrated Development
+Environment). IDEs nada mais são do que:</p>
+<ul>
+<li>Um editor de código;</li>
+<li>Um sistema de projetos;</li>
+<li>Um conjunto de módulos que chama o compilador, interpretador e depurador
+conforme o programador precisar.</li>
+</ul>
+<p>Uma das IDEs mais conhecidas de Java é o Eclipse, cujo tutorial de instalação
+se encontra <a href="/tools/eclipse.html">aqui</a>.</p>
+<h2><a class="header" href="#outras-ferramentas-recomendadas" id="outras-ferramentas-recomendadas">Outras ferramentas recomendadas</a></h2>
+<p>Caso você queira buscar outras ferramentas que não sejam o Eclipse, seguem
+algumas alternativas bem interessantes.</p>
+<h3><a class="header" href="#editores-de-texto" id="editores-de-texto">Editores de texto</a></h3>
+<p>OBS: Todos os editores de texto abaixo, através de plugins, podem se comportar
+como IDEs.</p>
+<ul>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a>: Tem se mostrado um
+editor bastante leve e muito competente. Plugins são fáceis de instalar, o
+visual é simples e satisfatório, os recursos disponíveis são bastante
+flexíveis, configuráveis, fáceis de usar, intuitivos, etc., e é extremamente
+fácil de conseguir suporte à sua linguagem favorita. Fortemente recomendado.</li>
+<li><a href="https://www.sublimetext.com/">Sublime Text</a>: Durante algum tempo foi minha
+recomendação mais forte (mas perdeu seu posto para o VSCode). É mais rápido
+do que o VSCode no geral, mas tem menos suporte nativo, alguns recursos não
+são tão robustos, mas ainda assim é um editor bastante potente, com diversos
+plugins fáceis de instalar/usar, configurações tão flexíveis quanto às do
+VSCode, dentre outras vantagens. Infelizmente, a cada 10 vezes que um arquivo
+é salvo, uma mensagem aparece perguntando se você não quer doar um dinheiro à
+equipe do Sublime (isso deixa de acontecer depois que você faz a doação).</li>
+<li><a href="https://atom.io/">Atom</a>: É outro editor bastante potente, mas não tão leve
+quanto o Sublime Text ou o VSCode. Ao menos possui um visual simples e
+atrativo, plugins, então caso não consiga se acostumar com os outros dois,
+ainda há o Atom.</li>
+</ul>
+<h3><a class="header" href="#ides" id="ides">IDEs</a></h3>
+<ul>
+<li><a href="https://www.jetbrains.com/idea/">IntelliJ</a>: De longe a IDE mais poderosa de
+Java. O único motivo que não recomendaria é por ter o costume de ocupar muita
+RAM e disco, então quem não tem um computador com 8GB de RAM pode sofrer. Mas
+é bastante versátil, tem comandos muito bons para fazer o que você nem
+consegue imaginar que seria possível, além de ser extremamente organizada
+(como diz o slogan dela: &quot;Ergonomic and Capable IDE&quot;). Tem suporte a
+desenvolvimento para Android na versão gratuita.</li>
+</ul>
+<h1><a class="header" href="#sobre-java" id="sobre-java">Sobre Java</a></h1>
+<p><em><strong>TODO</strong></em></p>
+<h1><a class="header" href="#hello-java" id="hello-java">&quot;Hello, Java!&quot;</a></h1>
+<h2><a class="header" href="#primeiro-programa-em-java" id="primeiro-programa-em-java">Primeiro programa em Java</a></h2>
+<h3><a class="header" href="#exemplo-direto" id="exemplo-direto">Exemplo direto</a></h3>
+<p><em>(Obs: antes de seguir, certifique-se de que você possui a JDK instalada e que
+a pasta dela está configurada na variável de ambiente &quot;path&quot; - veja como fazer
+isso na <a href="intro/hello-java.html#ferramentas">Ferramenta 1</a>)</em></p>
+<p>Primeiramente vamos dar uma olhada em um simples código em Java:</p>
+<pre><code class="language-java">public class HelloWorld {
+    public static void main(String... args) {
+        System.out.println(&quot;Hello, world!&quot;);
+    }
+}
+</code></pre>
+<p>Esse primeiro exemplo, salvo num arquivo &quot;HelloWorld.java&quot;, faz nada mais nada
+menos do que mostrar um texto (&quot;Hello, world!&quot;) na tela. Uma maneira de rodá-lo
+é <a href="intro/../java-and-langs.html">compilando</a> com o comando <code>javac</code> e então executando
+com o comando <code>java</code>:</p>
+<p><em>(Obs: &quot;~/dev/java&quot; é a pasta em que o terminal está trabalhando - e onde o
+código acima foi salvo -; o &quot;$&quot; é meramente para separar o que são os comandos
+(à direita do $) e o que são outras informações (à esquerda do $))</em></p>
+<p><em>(Obs2: <code>ls</code> é o comando para mostrar o conteúdo da pasta em que o terminal
+está trabalhando)</em></p>
+<pre><code>~/dev/java $ ls
+HelloWorld.java
+
+~/dev/java $ javac HelloWorld.java
+~/dev/java $ java HelloWorld
+Hello, world!
+~/dev/java $
+</code></pre>
+<p>Caso prefira rodar de outra maneira, cheque a seção de
+<a href="intro/./tools.html">Ferramentas</a> como executar na sua ferramenta favorita. Mas,
+enquanto acompanha os tutoriais, é recomendado manter-se no compilador sozinho.
+Utilize outra ferramenta apenas se não conseguir seguir pelo compilador no
+terminal/CMD do Windows.</p>
+<h1><a class="header" href="#hello-world-explicação-detalhada" id="hello-world-explicação-detalhada">&quot;Hello, world!&quot;: Explicação detalhada</a></h1>
+<p>Veremos de dentro para fora como funciona esse programa de exemplo:</p>
+<ul>
+<li>
+<p><code>System.out.println(...)</code>:
+Esse comando serve para mostrar um texto na tela e em seguida pular uma
+linha. Existe um comando parecido que não pula a linha no final, chamado
+<code>System.out.print</code>. Para fins de comparação, o código abaixo:</p>
+<pre><code class="language-java">System.out.print(&quot;Hello,&quot;);
+System.out.print(&quot; &quot;);
+System.out.print(&quot;world&quot;);
+System.out.print(&quot;!&quot;);
+
+System.out.println(&quot;Good&quot;);
+System.out.println(&quot;bye&quot;);
+System.out.println(&quot;,&quot;);
+System.out.println(&quot; world...&quot;);
+</code></pre>
+<p>Ao ser executado, mostraria:</p>
+<pre><code>Hello, world!Good
+bye
+,
+ world...
+</code></pre>
+<p>Inclusive, com isso podemos notar uma coisa: o programa é executado <strong>passo a
+passo</strong>, <strong>na ordem que você definiu</strong>. Portanto, se algo saiu errado,
+lembre-se de que em quase todas as vezes em que o programa não executa como
+planejado, o erro foi seu :) (acredite isso é ligeiramente motivacional).</p>
+</li>
+<li>
+<p><code>public static void main(String... args)</code>:</p>
+<p>Cada palavra dessas envolve uma série de conceitos os quais não convém
+explicar logo agora, mas ao menos para que entenda para que serve essa linha:
+quando você executa <code>java AlgumaCoisa</code>, o que o programa faz é procurar por
+esse nosso colega chamado &quot;main&quot;. Ou seja, é a partir dele que nosso programa
+começa a executar.</p>
+<p>Você pode fazer, por exemplo:</p>
+<pre><code class="language-java">public class OtherThanMain {
+    public static void foo(String... args) {
+        System.out.println(&quot;Executando foo...&quot;);
+    }
+
+    public static void main(String... args) {
+        System.out.println(&quot;Executando main...&quot;);
+    }
+
+    public static void bar(String... args) {
+        System.out.println(&quot;Executando bar...&quot;);
+    }
+}
+</code></pre>
+<p>E, ao executar, o que irá acontecer é:</p>
+<pre><code>$ java OtherThanMain
+Executando main...
+</code></pre>
+<p>Em contrapartida, se tivermos:</p>
+<pre><code class="language-java">public class WithoutMain {
+    public static void thisIsNotMain(String... args) {
+        System.out.println(&quot;Hey, this is not main!&quot;);
+    }
+}
+</code></pre>
+<p>Ao tentar executar, tomaríamos um erro:</p>
+<pre><code class="language-java">$ java WithoutMain
+Error: Main method not found in class Foo, please define the main method as:
+    public static void main(String[] args)
+or a JavaFX application class must extend javafx.application.Application
+</code></pre>
+<p>Esse erro está simplesmente nos dizendo &quot;não encontrei o <code>main</code>, por favor,
+se for executar essa classe, defina o <code>main</code> nela&quot;, o que demonstra que
+efetivamente o <code>main</code> é o que Java procura para executar.</p>
+<p>Perceba que os comandos executados são apenas os que estão entre chaves (&quot;{&quot;
+e &quot;}&quot;). Isso se dá porque as chaves delimitam o início e fim de um escopo, o
+que será visto mais adiante na <a href="intro/../if.html">aula 3</a>, mas por
+enquanto entenda como &quot;o início e fim do <code>main</code>&quot;.</p>
+<p>Quanto aos args, trata-se dos argumentos ao executar o programa, que podem
+ser acessados como um vetor/array, o que será explicado na <a href="intro/../arrays.html">aula
+5</a>.</p>
+</li>
+<li>
+<p><code>public class HelloWorld</code>:</p>
+<p>Em Java, <strong>tudo</strong> precisa estar dentro de uma classe, incluindo o <code>main</code>.
+Nesse caso, nossa classe se chama &quot;HelloWorld&quot; e as chaves (&quot;{&quot; e &quot;}&quot;), assim
+como no <code>main</code>, indicam onde começa e termina a implementação dela.</p>
+<p>Uma classe nada mais nada menos do que simboliza um modelo e um tipo de dado,
+o que será melhor explicado na <a href="intro/../your-own-types.html">aula 7</a>.</p>
+</li>
+<li>
+<p>O nome do arquivo: &quot;HelloWorld.java&quot;:</p>
+<p>Java possui uma característica bastante única quanto ao nome dos arquivos:
+<strong>obrigatoriamente</strong> o nome do arquivo deve ser o mesmo que o nome da
+principal classe implementada nele. Assim, se tivéssemos:</p>
+<pre><code class="language-java">public class AnotherName {}
+</code></pre>
+<p>Nosso arquivo precisaria se chamar &quot;AnotherName.java&quot;.</p>
+</li>
+</ul>
+<h1><a class="header" href="#erros-de-compilação-e-execução" id="erros-de-compilação-e-execução">Erros de Compilação e Execução</a></h1>
+<h2><a class="header" href="#Índice-1" id="Índice-1">Índice</a></h2>
+<ol>
+<li><a href="intro/errors.html#compreendendo-erros-de-compila%C3%A7%C3%A3o">Compreendendo erros de compilação</a></li>
+<li><a href="intro/errors.html#compreendendo-erros-de-execu%C3%A7%C3%A3o">Compreendendo erros de execução</a></li>
+</ol>
+<h2><a class="header" href="#compreendendo-erros-de-compilação" id="compreendendo-erros-de-compilação">Compreendendo erros de compilação</a></h2>
+<h3><a class="header" href="#erros-lançados-pelo-javac" id="erros-lançados-pelo-javac">Erros lançados pelo <code>javac</code></a></h3>
+<p>Os erros que o <code>javac</code> mostra costumam estar no seguinte formato:</p>
+<pre><code class="language-text">[arquivo]:[linha]: error: [mensagem]
+
+[código]
+
+[nº total de erros encontrados]
+</code></pre>
+<p>Em alguns casos, no lugar de <code>error</code> estará escrito <code>warning</code>. Warning não são
+erros efetivamente (mas devem ser tratados como se fossem!), mas sim coisas que
+o compilador percebem que podem gerar problemas futuramente. Por exemplo, se
+você está utilizando um comando que está marcado como &quot;Deprecated&quot; (ou seja,
+não é aconselhável utilizá-lo pois ou é inseguro ou será removido futuramente),
+o seu programa não contém erros de código em si, mas o compilador irá avisá-lo
+de que está utilizando o tal comando não-aconselhável.</p>
+<p><strong>Erros de Sintaxe</strong> (SintaxError): Ocorrem quando o código escrito não confere
+com a gramática da linguagem, por exemplo:</p>
+<pre><code class="language-java">public class {
+}
+</code></pre>
+<p>O código acima, ao se tentar compilá-lo, o compilador acusará um erro de
+sintaxe:</p>
+<pre><code class="language-text">Example.java:1: error: &lt;identifier&gt; expected
+public class {
+            ^
+1 error
+</code></pre>
+<p>O erro se dá porque o formato esperado para uma declaração de classe é:</p>
+<pre><code class="language-java">[modificador de acesso] class &lt;Nome da classe&gt; {
+    [declarações]
+}
+</code></pre>
+<p>Ou seja, <code>public class Example {}</code> é válido, porém <code>public class {}</code> (sem o
+<strong>identificador</strong> para o nome da classe) não.</p>
+<h2><a class="header" href="#compreendendo-erros-de-execução" id="compreendendo-erros-de-execução">Compreendendo erros de execução</a></h2>
+<p>Erros de execução costumam ser assustadores, afinal você, um aprendiz muito
+contente com seus novos conhecimentos, inocentemente executa o programa:</p>
+<pre><code class="language-java">public class Example {
+    public static void main(String[] args) {
+        var name = &quot;Nice Guy&quot;;
+        System.out.println(&quot;Hello, Mr. &quot; + name.charAt(9) + &quot;!&quot;);
+    }
+}
+</code></pre>
+<p>E é bombardeado com uma mensagem de erro enorme:</p>
+<pre><code class="language-text">Exception in thread &quot;main&quot; java.lang.StringIndexOutOfBoundsException: String index out of range: 9
+        at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:44)
+        at java.base/java.lang.String.charAt(String.java:692)
+        at Example.main(Example.java:4)
+</code></pre>
+<p>Apesar de poder assustar um pouco, é simples entender o que essas mensagens
+estão dizendo:</p>
+<ul>
+<li><em>&quot;Exception in thread &quot;main&quot;&quot;</em>: Apenas quer dizer que um erro aconteceu
+durante a execução do programa. &quot;Exception&quot; se dá pelo mecanismo de
+tratamento de erros de Java (que se chamam &quot;Exceptions&quot;). &quot;main&quot; é a linha de
+execução (<em>thread</em>) do programa em que ocorreu o erro, mas o conceito de
+<em>threads</em> só se vê em programação concorrente. Para os seus programas, a
+única <em>thread</em> é a &quot;main&quot;.</li>
+<li><code>java.lang.StringIndexOutOfBoundsException&quot;: É o nome do erro. </code>java.lang`
+indica que é um erro reconhecido pela biblioteca padrão de Java, e o resto é
+possível tentar deduzir: tentou-se acessar uma string (texto) em um índice
+inválido (por exemplo, o 5º caractere do texto &quot;.</li>
+<li>&quot;String index ouf of range: 9&quot;: Significa que se tentou acessar o 10º
+caractere (índices começam em 0, portanto 9 é o 10º índice) do texto.</li>
+</ul>
+<p>O resto é a ordem de qual comando executou qual subcomando até acontecer o
+erro:</p>
+<ol>
+<li>Primeiro se executou <code>main</code>;</li>
+<li><code>main</code> na linha 4 executou o comando <code>String.charAt</code>;</li>
+<li><code>String.charAt, na linha 692 chamou o comando </code>StringLatin1.charAt`;</li>
+<li><code>StringLatin1.charAt</code> percebeu que o índice era inválido e, na linha 44, o
+erro foi acusado (o que, para o caso de Exceptions, se chama &quot;lançar uma
+Exception&quot;).</li>
+</ol>
+<h1><a class="header" href="#armazenando-valores" id="armazenando-valores">Armazenando Valores</a></h1>
+<p>Em nossos programas, não iremos querer apenas mostrar textos. Em praticamente
+100% dos casos iremos trabalhar com dados, como por exemplo: dados de usuários
+(nome, e-mail, ...), medições (temperatura, distâncias, ...), ou mesmo
+elementos mais abstratos, como posição do mouse na tela, coordenadas dos
+vértices de um objeto 3D, cores dos pixeis de uma imagem, e por aí vai.</p>
+<p>Para isso, precisamos de uma maneira de referenciar esses dados para poder
+trabalhar com eles, além de poder saber qual tipo de dado estamos trabalhando e
+realizar operações em cima deles. Nesse quesito, temos o que chamamos de
+<strong>variáveis</strong> e <strong>constantes</strong>. Uma variável/constante é uma forma de sabermos
+<strong>o estado atual</strong> de um dado. Veremos a seguir como trabalhar com elas.</p>
+<h1><a class="header" href="#variáveis" id="variáveis">Variáveis</a></h1>
+<h2><a class="header" href="#pequeno-exemplo" id="pequeno-exemplo">Pequeno Exemplo</a></h2>
+<p>O exemplo abaixo ilustra um pequeno programa que cria variáveis e mostra o
+valor de cada uma delas:</p>
+<pre><code class="language-java">public class VariablesExample {
+    public static void main(String... args) {
+        int x = 0;
+        int y = 3;
+
+        double z = 10.0;
+
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);
+    }
+}
+</code></pre>
+<p>Nesse exemplo, foram criadas três variáveis: duas representando números
+inteiros (simbolizado pelo <code>int</code> antes do nome delas) e outra representando um
+número real (simbolizado pelo <code>double</code>). Perceba que essas variáveis recebem
+nomes: <code>x</code>, <code>y</code> e <code>z</code>. Esse nome é chamado de <strong>identificador</strong>, e serve para
+referenciar ou guardar um dado (veremos mais adiante quanto ao conceito de
+referência). Executando o exemplo:</p>
+<pre><code>$ javac VariablesExample.java
+$ java VariablesExample
+0
+3
+10
+</code></pre>
+<p>Para criar uma variável, deve-se seguir o padrão:</p>
+<pre><code class="language-java">tipo identificador = valor;
+</code></pre>
+<ul>
+<li>
+<p><strong>Tipo</strong>: O tipo de dado a ser guardado ou referenciado pela variável. Veja
+em <a href="values/variables.html#tipos-de-dados">Tipos de dados</a> para ver o que se pode utilizar.</p>
+</li>
+<li>
+<p><strong>Identificador</strong>: O nome que utilizaremos para a variável.
+Podemos nos referir a uma variável através de seu identificador, como visto no
+pequeno exemplo. Podemos, inclusive, utilizar uma variável para dar valor a
+outra:</p>
+<pre><code class="language-java">int x = 10;
+int y = x;
+</code></pre>
+<p>Nesse caso, tanto x quanto y guardam o valor 10. Se fizermos, porém:</p>
+<pre><code class="language-java">int x = 10;
+int y = x;
+x = 4;
+</code></pre>
+<p>A variável <code>x</code> terá mudado de valor para 4, porém <code>y</code> manterá o valor 10.
+Inclusive, o fato de podermos mudar o valor de <code>x</code> é o que caracteriza a ideia
+de variáveis: o valor delas <strong>pode variar</strong> durante o programa (se algum
+programador disser que o valor dela será alterado, como no caso de <code>x</code>).</p>
+</li>
+</ul>
+<h1><a class="header" href="#constantes" id="constantes">Constantes</a></h1>
+<p>Como visto no tópico anterior, &quot;variáveis&quot; possuem esse nome pois é possível
+alterar qual valor elas guardam. No caso de constantes, isso não pode acontecer
+mesmo que o programador tente. Isso é útil para agilizar o compilador quanto a
+otimizações, uma vez que ele pode se aproveitar do fato de que aquele valor
+garantidamente nunca irá mudar.</p>
+<p>Para fazer com que um identificador seja uma constante, basta utilizar <code>final</code>
+logo antes de sua declaração:</p>
+<pre><code class="language-java">final int x = 10;
+int y = x; // o valor de x é copiado para y
+x = 4; // Erro de compilação: não se pode alterar o valor de uma constante
+</code></pre>
+<p>Quando utilizar constantes? Sempre que o valor não for feito para ser alterado
+no contexto em que é utilizado.</p>
+<h1><a class="header" href="#tipos-de-dados" id="tipos-de-dados">Tipos de dados</a></h1>
+<p>Os tipos de dados guardados por variáveis e constantes são separados entre
+&quot;primitivos&quot; e &quot;compostos&quot;.</p>
+<h3><a class="header" href="#primitivos" id="primitivos">Primitivos</a></h3>
+<p>Os tipos primitivos são os que guardam a menor unidade possível de dado. São
+eles:</p>
+<table><thead><tr><th>Tipo</th><th>Significado</th><th>Tamanho</th><th>Valores possíveis</th></tr></thead><tbody>
+<tr><td><code>byte</code></td><td>Número inteiro</td><td>1 byte</td><td>-128 a 127</td></tr>
+<tr><td><code>short</code></td><td>Número inteiro</td><td>2 bytes</td><td>-65536 a 65535</td></tr>
+<tr><td><code>int</code></td><td>Número inteiro</td><td>4 bytes</td><td>-2³² a 2³² - 1</td></tr>
+<tr><td><code>long</code></td><td>Número inteiro</td><td>8 bytes</td><td>-2⁶⁴ a 2⁶⁴ - 1</td></tr>
+<tr><td>-----------</td><td>-----------------</td><td>---------</td><td>----------------------</td></tr>
+<tr><td><code>float</code></td><td>Número real</td><td>4 bytes</td><td>[1]</td></tr>
+<tr><td><code>double</code></td><td>Número real</td><td>8 bytes</td><td>[1]</td></tr>
+<tr><td>-----------</td><td>-----------------</td><td>---------</td><td>----------------------</td></tr>
+<tr><td><code>boolean</code></td><td>Valor lógico</td><td>1 byte</td><td>Falso e Verdadeiro</td></tr>
+<tr><td>-----------</td><td>-----------------</td><td>---------</td><td>----------------------</td></tr>
+<tr><td><code>char</code></td><td>Um caractere</td><td>2 bytes</td><td>[2]</td></tr>
+</tbody></table>
+<p>[1]: Definir os valores possíveis para números reais não é uma tarefa tão
+simples à primeira vista. Números reais utilizam um padrão de armazenamento
+chamado
+<a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">Ponto Flutuante</a> (por
+isso o nome <code>float</code>), em que temos uma mantissa, uma base e um expoente, e o
+valor de um número nesse padrão é dado por <code>mantissa * base ^ expoente</code>.  Por
+conta disso (aliado ao fato de que, em computadores, a base e o número de bits
+da mantissa e do expoente são fixos), <em>floats</em> conseguem maior precisão em
+valores entre -1 e 1, porém a medida em que os valores ficam mais distantes de
+0, os números representados com esse padrão começam a ficar mais esparços
+(mantendo-se o mesmo tamanho para a mantissa).</p>
+<p>Quanto ao nome <code>double</code>, a ideia vem de &quot;Double Precision&quot;, pelo fato de que
+ocupa o dobro de espaço em memória (e portanto diz-se ter o dobro de precisão).
+Quanto a quais variáveis utilizar, recomenda-se double (salvo raras exceções,
+como ambientes em que o consumo de memória por floats seja o gargalo -- por
+exemplo, ambientes com objetos 3D compostos de absurdamente muitos vértices
+--).</p>
+<p><em>(OBS: <strong>NÃO</strong> utilize <code>float</code> nem <code>double</code> para armazenar dados sensíveis
+(como, por exemplo, dinheiro). Veja na <a href="values/./recommendations.html">recomendação de leitura
+#4</a> o porquê disso.)</em></p>
+<p>[2]: Textos, dentro do mundo da computação, possuem codificações específicas
+para indicar o que é cada caractere. Essencialmente, um caractere não passa de
+um número inteiro. Por exemplo:</p>
+<pre><code class="language-java">char a = 97;
+char b = 98;
+char c = 65;
+char d = 33;
+
+System.out.println(a);
+System.out.println(b);
+System.out.println(c);
+System.out.println(d);
+</code></pre>
+<p>O código acima mostrará:</p>
+<pre><code>a
+b
+A
+!
+</code></pre>
+<p>Pois, pelo padrão de codificação <a href="https://unicode-table.com/en/">Unicode</a>, que
+é o que Java também utiliza (especificamente, Java utiliza o formato
+<a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a>, que engloba caracteres
+não-ocidentais, e, como o nome diz: ocupa 16 bits por caractere), 97 é o valor
+que simboliza a letra &quot;a&quot; (minúsculo), enquanto 98 simboliza &quot;b&quot;, 65 a letra
+&quot;A&quot; (maiúsculo) e 33 simboliza &quot;!&quot;. Porém, texto em computação não
+necessariamente é apenas letras (a-z, A-Z), acentos e pontuações (&quot;!&quot;, &quot;`&quot;,
+&quot;~&quot;, ...), mas também elementos especiais como quebra de linha. Por exemplo:</p>
+<pre><code class="language-java">char lineBreak = 13;
+
+System.out.print(&quot;Hello, &quot;);
+System.out.print(lineBreak);
+System.out.print(&quot;World!&quot;);
+</code></pre>
+<p>Perceba que executando o código acima, mesmo não tendo um <code>println</code> (e sim
+apenas <code>print</code>, que não pula linha), aparecerá:</p>
+<pre><code>Hello,
+World!
+</code></pre>
+<p>Pois &quot;13&quot; é o código que simboliza quebra de linha (em SO's baseados em Unix;
+em Windows, uma quebra de linha é o caractere 13 seguido do caractere 10).</p>
+<h3><a class="header" href="#compostos" id="compostos">Compostos</a></h3>
+<p>Os tipos compostos são, em resumo, todos os que não são primitivos. Por exemplo:</p>
+<ul>
+<li><code>String</code>;</li>
+<li><code>Object</code>;</li>
+<li><code>ArrayList</code>;</li>
+<li>Arrays (demarcados com um <code>[]</code>, visto <a href="values/../arrays.html">mais à frente</a>).</li>
+</ul>
+<p><a href="values/../your-own-types.html">Em uma aula mais a frente</a>, aprenderemos a criar nossos
+próprios tipos compostos.</p>
+<h1><a class="header" href="#declaração-e-instanciação" id="declaração-e-instanciação">Declaração e instanciação</a></h1>
+<p>Três conceitos que serão vistos frequentemente em programação imperativa:</p>
+<h2><a class="header" href="#declaração" id="declaração">Declaração</a></h2>
+<p>Trata-se de &quot;dizer que uma variável existe&quot;. Em código:</p>
+<pre><code class="language-java">int x;
+String name;
+double thing;
+</code></pre>
+<p>Perceba que essas variáveis não foram inicializadas: o que foi feito é uma
+<strong>declaração</strong> sem que houvesse uma inicialização, ou seja: dissemos que elas
+existem, mas não demos um valor.</p>
+<p>Porém:</p>
+<pre><code class="language-java">int x = 0;
+</code></pre>
+<p>Estamos declarando <code>x</code> <strong>e</strong> inicializando.</p>
+<h2><a class="header" href="#instanciação" id="instanciação">Instanciação</a></h2>
+<p>Instanciar é criar um valor novo, a grosso modo. Por exemplo:</p>
+<pre><code class="language-java">int x = 0;  // Instanciamos o valor 0, que é um número inteiro
+int y = 10; // Instanciamos o valor 10, que é um número inteiro
+int z = x;  // Instanciamos um valor novo que é uma *cópia* do valor de `x`
+
+String name = &quot;Alice&quot;; // Instanciamos uma String com o texto &quot;Alice&quot;
+String fullname = &quot;Alice&quot; + &quot; &quot; + &quot;Cooper&quot;;
+</code></pre>
+<p>Na última linha, instanciamos 5 <code>String</code>'s, respectivamente:</p>
+<ul>
+<li>Uma contendo o texto &quot;Alice&quot;;</li>
+<li>Outra contendo o texto &quot; &quot; (apenas um espaço em branco);</li>
+<li>Outra contendo o texto &quot;Cooper&quot;;</li>
+<li>Outra sendo a concatenação de &quot;Alice&quot; e &quot; &quot;, que gera uma instância contendo
+&quot;Alice &quot;;</li>
+<li>Por fim, outra sendo a concatenação de &quot;Alice &quot; e &quot;Cooper', que gera uma
+instância contendo o texto &quot;Alice Cooper&quot;.</li>
+</ul>
+<p>Porém, foi declarada apenas uma variável: <code>fullname</code>. Uma situação semelhante
+pode ser vista em:</p>
+<pre><code class="language-java">int x = 0;
+x = 3;
+</code></pre>
+<p>Ainda temos apenas uma única variável declarada (<code>x</code>), porém inicialmente
+instanciamos o valor 0 e, em seguida, o valor 3.</p>
+<h1><a class="header" href="#nomeando-adequadamente" id="nomeando-adequadamente">Nomeando adequadamente</a></h1>
+<p>É sempre importante lembrar que você irá reler seu código várias vezes (e
+outras pessoas, principalmente, mesmo que você jure que não - e uma delas pode
+ser você mesmo daqui a 10 meses). Então, trate de dar nomes <strong>suficiente
+significativos</strong> para suas variáveis.</p>
+<p>Veja o trecho código abaixo:</p>
+<pre><code class="language-java">var a = 75.5;
+var b = 1.84;
+
+var c = a + b * b;
+</code></pre>
+<p>O que significam <code>a</code>, <code>b</code> e <code>c</code>? Tente o 2º exemplo:</p>
+<pre><code class="language-java">var w = 75.5;
+var h = 1.84;
+
+var i = w + h * h;
+</code></pre>
+<p>Você pode até decifrar pelo que o código está fazendo e pelas variáveis terem
+uma letra mais próxima do que significam, mas:</p>
+<pre><code class="language-java">var weight = 75.5;
+var height = 1.84;
+
+var bmi = weight + height * height;
+</code></pre>
+<p>É bem mais direto e, apenas lendo o código (dado o conhecimento da sintaxe), é
+possível entender do que se trata: é um cálculo de IMC. Perceba que apenas
+<code>weight</code> e <code>height</code> foram suficientes para entender que se tratam de peso e
+altura da pessoa, e <code>bmi</code> é ao menos a sigla BMI (<em>Body Mass Index</em>), que é uma
+sigla bem estabelecida (para qualquer brasileiro, por exemplo, se você falar
+IMC em vez de &quot;Índice de Massa Corporal&quot;, ele irá saber do que se trata).</p>
+<p>Vale ressaltar que nomes podem acabar sendo descritivos <strong>em excesso</strong>, e
+portanto cuide! Veja:</p>
+<pre><code class="language-java">var personWeightInKilograms = 75.5;
+var personHeightInMeters = 1.84;
+
+var bodyMassIndex = personWeightInKilograms + personHeightInMeters * personHeightInMeters;
+</code></pre>
+<p>Perceba que o código não ficou mais legível (pelo contrário, agora há muito
+ruído visual). Então não descreva muito e nem deixe de descrever: faça <strong>o
+suficiente</strong>.</p>
+<p>(OBS: Para lidar com diferentes unidades de medida, há formas mais adequadas do
+que explicitando no identificador, aproveitando tipos compostos, mas isso é
+algo para se ver mais à frente.)</p>
+<h2><a class="header" href="#padrão-de-nomenclatura-de-variáveis" id="padrão-de-nomenclatura-de-variáveis">Padrão de nomenclatura de variáveis</a></h2>
+<p>Em Java, o nome/identificador das variáveis segue o padrão <strong>camelCase</strong>: a
+primeira letra do nome é minúscula, todas as palavras são juntas e a primeira
+letra de cada palavra é maiúscula (que é exatamente da mesma forma como foi
+escrito), por exemplo:</p>
+<pre><code class="language-java">int value;
+int anotherValue;
+int aValueWithAReallyBigName;
+</code></pre>
+<p><strong>Caso especial: <em>Siglas</em></strong>. No caso de siglas, é preferível que variáveis
+sigam padrões no estilo:</p>
+<pre><code class="language-java">String cpf;          // Todo o nome é uma sigla
+DvdPlayer dvdPlayer; // O nome começa com uma sigla
+int userId;          // O nome termina com uma sigla (ou ela está no meio)
+</code></pre>
+<h2><a class="header" href="#padrão-de-nomenclatura-de-variáveis-1" id="padrão-de-nomenclatura-de-variáveis-1">Padrão de nomenclatura de variáveis</a></h2>
+<p>O padrão de nomenclatura para constantes é <strong>SCREAMING_SNAKE_CASE</strong>: todas as
+letras em maiúsculo, palavras separadas por um <em>underscore</em>/<em>underline</em> (&quot;_&quot;).
+Por exemplo:</p>
+<pre><code class="language-java">final double PI = 3.1415926535897932384626433;
+final int NUM_THREADS = 4;
+</code></pre>
+<h2><a class="header" href="#recomendações-de-leitura-1" id="recomendações-de-leitura-1">Recomendações de Leitura</a></h2>
+<ol>
+<li>&quot;Por que meu <code>==</code> não funciona para String?&quot;</li>
+<li>Cópia e &quot;move&quot;</li>
+<li><a href="values//langs/java/operators.html">Operadores em Java</a></li>
+<li><a href="https://stackoverflow.com/a/3730040/3326309">Por que não utilizar float e double para representar dinheiro?</a></li>
+<li><a href="values//langs/java/arithmetic-details.html">Aritmética - Detalhes</a></li>
+</ol>
+<h1><a class="header" href="#estrutura-condicional-if" id="estrutura-condicional-if">Estrutura condicional <code>If</code></a></h1>
+<p>Os programas precisam tomar decisões uma hora ou outra. Por exemplo, não é
+sempre que determinados comandos serão executados, como: se o usuário escolhe
+pagar no cartão, o código que faz o pagamento em dinheiro não será executado.
+Para esse comportamento (executar um trecho de código apenas se uma condição
+for verdadeira), em Java há a estrutura <code>if</code>.</p>
+<h1><a class="header" href="#sintaxe-de-um-if" id="sintaxe-de-um-if">Sintaxe de um If</a></h1>
+<p>Um <code>if</code> é definido como:</p>
+<pre><code class="language-java">if (condicao) {
+    // sequência de comandos
+}
+</code></pre>
+<p>Em <code>condicao</code>, pode ser colocado qualquer valor do tipo <code>boolean</code>. Por exemplo:</p>
+<pre><code class="language-java">if (true) {
+    System.out.println(&quot;Entrou no if&quot;);
+}
+
+System.out.println(&quot;Após o if&quot;);
+</code></pre>
+<p>Se a sequência acima for executada, o resultado será:</p>
+<pre><code class="language-text">Entrou no if
+Após o if
+</code></pre>
+<p>Mudando um pouco o código:</p>
+<pre><code class="language-java">if (false) {
+    System.out.println(&quot;Entrou no if&quot;);
+}
+
+System.out.println(&quot;Após o if&quot;);
+</code></pre>
+<p>O resultado agora será:</p>
+<pre><code class="language-text">Após o if
+</code></pre>
+<p>Perceba que como a condição era falsa, o trecho dentro do <code>if</code> não executou.</p>
+<p>Pode-se estender isso para comparações com variáveis:</p>
+<pre><code class="language-java">var x = 10;
+var y = 20;
+
+if (x &lt; y) {
+    System.out.println(&quot;x é menor que y&quot;);
+}
+</code></pre>
+<h1><a class="header" href="#if-else" id="if-else">If-else</a></h1>
+<p>É possível definir o que o programa fará quando a condição do <code>if</code> <strong>não</strong> for
+verdadeira utilizando <code>if-else</code>, por exemplo:</p>
+<pre><code class="language-java">if (true) {
+    System.out.println(&quot;Entrou no if&quot;);
+} else {
+    System.out.println(&quot;Entrou no else&quot;);
+}
+
+System.out.println(&quot;Após o if&quot;);
+</code></pre>
+<p>Executando o trecho acima:</p>
+<pre><code class="language-text">Entrou no if
+Após o if
+</code></pre>
+<p>Alterando o trecho para:</p>
+<pre><code class="language-java">if (false) {
+    System.out.println(&quot;Entrou no if&quot;);
+} else {
+    System.out.println(&quot;Entrou no else&quot;);
+}
+
+System.out.println(&quot;Após o if&quot;);
+</code></pre>
+<p>E executando:</p>
+<pre><code class="language-text">Entrou no else
+Após o if
+</code></pre>
+<p>Perceba que, como a condição do <code>if</code> era falsa, foi executado o comando
+presente no <code>else</code>.</p>
+<h2><a class="header" href="#brincando-com-o-código" id="brincando-com-o-código">Brincando com o código</a></h2>
+<p>Salve o código abaixo como &quot;PlayWithIf.java&quot; e altere-o da forma que quiser,
+compilando e vendo como o programa se comporta:</p>
+<pre><code class="language-java">public class PlayWithIf {
+    public static void main(String[] args) {
+        var x = 0;
+        var y = 10;
+
+        if (x &lt; y) {
+            System.out.println(x + &quot; is less than &quot; + y);
+        } else if (x &gt; y) {
+            System.out.println(x + &quot; is greater than &quot; + y);
+        } else {
+            System.out.println(x + &quot; and &quot; + y + &quot; are equal&quot;);
+        }
+
+        var student1 = &quot;Arthur&quot;;
+        var student2 = &quot;arthur&quot;;
+
+        if (student1.equals(student2)) {
+            System.out.println(&quot;Both students have the same name&quot;);
+        } else {
+            System.out.println(&quot;Something is different with these students.&quot;);
+            if (student1.equalsIgnoreCase(student2)) {
+                System.out.println(&quot;Oh yeah, they have different cases.&quot;);
+            } else {
+                System.out.println(&quot;And it's mostly everything.&quot;);
+            }
+        }
+    }
+}
+</code></pre>
+<p>Tente, por exemplo, ver o que acontece quando a ordem dos <code>if</code>s é alterada, ou
+alterar as condições, ou mesmo quebrar os <code>if-else</code> em vários <code>if</code>s separados.</p>
+<h1><a class="header" href="#estruturas-de-repetição-for-e-while" id="estruturas-de-repetição-for-e-while">Estruturas de repetição <code>for</code> e <code>while</code></a></h1>
+<p>Em dados momentos de um programa, é necessário repetir uma mesma sequência de
+comandos em seu programa. Algumas dessas repetições serão porque há uma
+condição a ser quebrada, por exemplo: atualizar o jogo enquanto ele estiver
+rodando, e parar de atualizar quando ele for finalizado. Em outras, a
+preocupação é executar N passos, guardando a informação de qual passo está
+sendo executado no momento. Para o primeiro caso, existe o laço <code>while</code>. Para o
+segundo, existe o laço <code>for</code>.</p>
+<h1><a class="header" href="#termos" id="termos">Termos</a></h1>
+<ul>
+<li><strong>Loop</strong>: significa &quot;laço&quot;, se referindo ao fato de que o fim de um laço é o
+início dele próprio (dando a ideia de repetição).  Na prática, loops são
+trechos de código que, por algum motivo, se repetem várias vezes.</li>
+<li><strong>Iteração</strong>: significa &quot;ciclo&quot;. Uma iteração é executar um ciclos de um
+laço. Por exemplo, se o seu programa faz a mesma coisa para todo <code>i</code> de 0 a
+10, há uma iteração para <code>i = 0</code>, outra para <code>i = 1</code>, etc., totalizando 11
+iterações;</li>
+<li><strong>Iterar</strong>: é fazer uma iteração. Pode-se dizer &quot;iterar sobre X&quot; (em que X é
+uma coleção de dados) para significar &quot;fazer a mesma ação para cada dado em
+X&quot;.</li>
+</ul>
+<h1><a class="header" href="#estrutura-for" id="estrutura-for">Estrutura <code>for</code></a></h1>
+<p>Suponha o clássico exemplo de listar números pares de 0 a 10. Podemos concordar
+que o código abaixo faz o que se espera:</p>
+<pre><code class="language-java">System.out.println(0);
+System.out.println(2);
+System.out.println(4);
+System.out.println(6);
+System.out.println(8);
+System.out.println(10);
+</code></pre>
+<p>Porém, se for necessário listar até 100, o estilo de código acima fica
+inviável. E ficará ainda mais inviável se considerarmos de o usuário dizer qual
+o número máximo: como fazer um programa que liste números pares até um número
+qualquer que o usuário quem vai dizer qual é?</p>
+<h3><a class="header" href="#sintaxe-de-um-for" id="sintaxe-de-um-for">Sintaxe de um <code>for</code></a></h3>
+<p>Nesse caso, em uma linguagem imperativa, vale mais a pena utilizar uma
+estrutura de repetição como <code>for</code>. A estrutura do <code>for</code> é dada como:</p>
+<pre><code class="language-java">for (inicio; condição; passo) {
+    // sequência de comandos
+}
+</code></pre>
+<p>E seu funcionamento é:</p>
+<ol>
+<li>Primeiramente, é executado o que está em <code>inicio</code>;</li>
+<li>Então, repete-se:
+<ol>
+<li>Verifica-se se o resultado de <code>condição</code>;</li>
+<li>Se for <code>false</code>, interrompe a repetição e segue o código após o <code>for</code>;</li>
+<li>Se for <code>true</code>, executa a sequência de comandos no escopo do <code>for</code>;</li>
+<li>Depois de executar a sequência de comandos, executa o que estiver no passo.</li>
+</ol>
+</li>
+</ol>
+<h3><a class="header" href="#funcionamento-detalhado-passo-a-passo" id="funcionamento-detalhado-passo-a-passo">Funcionamento detalhado (passo a passo)</a></h3>
+<p>É bastante comum que esse <code>for</code> seja feito da forma:</p>
+<pre><code class="language-java">for (var i = 0; i &lt; x; i++) {
+    // sequência de comandos
+}
+</code></pre>
+<p>A ideia, nesse caso, é executar a mesma sequência de comandos <code>x</code> vezes (ou
+seja, para todo <code>i</code> de <code>0</code> a <code>x - 1</code>). Por exemplo:</p>
+<pre><code class="language-java">for (var i = 0; i &lt; 3; i++) {
+    System.out.printf(&quot;Mostrando %d\n&quot;, i);
+}
+System.out.println(&quot;Fim do programa.&quot;);
+</code></pre>
+<p>Nesse caso, o que o programa fará é:</p>
+<ol>
+<li>O valor de <code>i</code> começa como 0;</li>
+<li><code>i</code> é menor que 3? Ou seja: 0 é menor que 3? Sim, então executa o que
+estiver no escopo;</li>
+<li>Mostra o texto &quot;Mostrando 0&quot; (pulando linha);</li>
+<li>Executa <code>i++</code> (ou seja, <code>i</code> agora é <code>0 + 1</code>, e portanto <code>i = 1</code>);</li>
+<li><code>i</code> é menor que 3? Ou seja: 1 é menor que 3? Sim;</li>
+<li>Mostra o texto &quot;Mostrando 1&quot;;</li>
+<li>Executa <code>i++</code> (agora <code>i</code> é 2);</li>
+<li><code>i</code> é menor que 3? Ou seja: 2 é menor que 3? Sim;</li>
+<li>Mostra o texto &quot;Mostrando 2&quot;;</li>
+<li>Executa <code>i++</code> (agora <code>i</code> é 3);</li>
+<li><code>i</code> é menor que 3? Ou seja: 3 é menor que 3? Não, e portanto said do <code>for</code>;</li>
+<li>Mostra o texto &quot;Fim do programa.&quot;.</li>
+</ol>
+<p>Visualizando como uma tabela:</p>
+<table><thead><tr><th>Instrução</th><th><code>i</code></th><th>Resultado</th></tr></thead><tbody>
+<tr><td><code>var i = 0</code></td><td><code>0</code></td><td>-</td></tr>
+<tr><td><code>i &lt; 3</code></td><td><code>0</code></td><td><code>true</code></td></tr>
+<tr><td><code>System.out.printf(&quot;Mostrando %d\n&quot;, i);</code></td><td><code>0</code></td><td>Console: <code>Mostrando 0</code></td></tr>
+<tr><td><code>i++</code></td><td><code>1</code></td><td>-</td></tr>
+<tr><td><code>i &lt; 3</code></td><td><code>1</code></td><td><code>true</code></td></tr>
+<tr><td><code>System.out.printf(&quot;Mostrando %d\n&quot;, i);</code></td><td><code>1</code></td><td>Console: <code>Mostrando 1</code></td></tr>
+<tr><td><code>i++</code></td><td><code>2</code></td><td>-</td></tr>
+<tr><td><code>i &lt; 3</code></td><td><code>2</code></td><td><code>true</code></td></tr>
+<tr><td><code>System.out.printf(&quot;Mostrando %d\n&quot;, i);</code></td><td><code>2</code></td><td>Console: <code>Mostrando 2</code></td></tr>
+<tr><td><code>i++</code></td><td><code>3</code></td><td>-</td></tr>
+<tr><td><code>i &lt; 3</code></td><td><code>3</code></td><td><code>false</code> (sai do <code>for</code>)</td></tr>
+<tr><td><code>System.out.println(&quot;Fim do programa.&quot;);</code></td><td>*</td><td>Console: <code>Fim do programa</code></td></tr>
+</tbody></table>
+<p>*: Vale lembrar que, após a execução do <code>for</code>, como <code>i</code> foi declarado no
+<code>for</code>, então <code>i</code> já não existe mais quando o <code>for</code> terminar de executar.</p>
+<h3><a class="header" href="#adaptando-para-a-listagem-de-pares-de-0-a-10" id="adaptando-para-a-listagem-de-pares-de-0-a-10">Adaptando para a listagem de pares de 0 a 10</a></h3>
+<p>Listar números de 0 a 10 pode ser, então, feito da seguinte forma:</p>
+<pre><code class="language-java">for (var i = 0; i &lt;= 10; i++) {
+    if (i % 2 == 0) {
+        System.out.println(i);
+    }
+}
+</code></pre>
+<p>Nesse caso, se aproveita o fato de que <code>%</code> simboliza o resto de uma divisão, e
+inteiros pares são os em que a divisão por 2 tem resto 0.</p>
+<p>Ou ainda pulando <code>i</code> de 2 em 2:</p>
+<pre><code class="language-java">for (var i = 0; i &lt;= 10; i += 2) {
+    System.out.println(i);
+}
+</code></pre>
+<p><a href="for-while/../arrays.html">No tutorial seguinte</a>, será visto o quanto <code>for</code>
+pode ser facilmente combinado para aumentar o potencial de <code>array</code>s.</p>
+<h2><a class="header" href="#estrutura-while" id="estrutura-while">Estrutura <code>while</code></a></h2>
+<h3><a class="header" href="#sintaxe-de-um-while" id="sintaxe-de-um-while">Sintaxe de um <code>while</code></a></h3>
+<p>A estrutura <code>while</code> é dada da forma:</p>
+<pre><code class="language-java">while (condição) {
+    // Sequência de comando
+}
+</code></pre>
+<p>Bastante semelhante a um <code>if</code>, porém o <code>if</code> executa apenas uma vez, enquanto o
+<code>while</code> executa enquanto <code>condição</code> for <code>true</code>. É possível, por exemplo, fazer
+um <code>while</code> que executa eternamente entregando <code>true</code> como condição:</p>
+<pre><code class="language-java">while (true) {
+    System.out.println(&quot;Looooop!&quot;);
+}
+</code></pre>
+<p>Geralmente, o objetivo é executar a sequência de comandos até que algo se torne
+falso. Por exemplo, o programa abaixo pede números ao usuário até que o número
+esteja dentro dos limites que o programa exige:</p>
+<pre><code class="language-java">var console = System.console();
+
+System.out.print(&quot;Insira um número de 0 a 10:&quot;);
+var input = Integer.parseInt(console.readLine());
+
+while (input &gt; 10 || input &lt; 0) {
+    System.out.println(&quot;Número inválido! Ele deve ser de 0 a 10!&quot;);
+    System.out.print(&quot;Insira um número de 0 a 10:&quot;);
+    input = Integer.parseInt(console.readLine());
+}
+
+System.out.println(&quot;Número válido.&quot;);
+</code></pre>
+<p>Perceba que, diferente do <code>for</code>, não se tem a ideia de &quot;N passos&quot;, mas sim de
+&quot;até que X seja falso&quot;.</p>
+<h3><a class="header" href="#exemplo-de-while-calcular-raíz-quadrada" id="exemplo-de-while-calcular-raíz-quadrada">Exemplo de <code>while</code>: calcular raíz quadrada</a></h3>
+<p>Um exemplo envolvendo cálculo numérico é o de cálculo de raiz quadrada de <code>x</code>:</p>
+<pre><code class="language-java">var x = 10.0;
+
+var old = 0.0;
+var guess = 100.0;  // can be any double != x
+
+while (guess != old) {
+    old = guess;
+    guess = (guess + x / guess) / 2;
+}
+
+System.out.printf(&quot;Raiz de %f: %f\n&quot;, x, guess);
+</code></pre>
+<p>A técnica utilizada é a do
+<a href="https://en.wikipedia.org/wiki/Newton%27s_method">Método de Newton para Cálculo de Raízes de Função</a>,
+que consiste em ir de pouco em pouco convergindo para a raiz aproveitando a
+derivada da função (conceito visto em Cálculo) a cada passo. Não é importante
+aqui saber como o método funciona, mas sim prestar atenção em um detalhe: o
+objetivo não é executar N passos, mas sim continuar executando até que o valor
+de <code>guess</code> pare de mudar, e isso varia de <code>x</code> para <code>x</code> (alguns precisarão de
+mais passos, outros de menos).</p>
+<h2><a class="header" href="#interrompendo-estruturas-de-repetição" id="interrompendo-estruturas-de-repetição">Interrompendo estruturas de repetição</a></h2>
+<p>É possível parar a execução de uma estrutura de repetição utilizando o comando
+<code>break</code>:</p>
+<pre><code class="language-java">while (true) {
+    System.out.printf(&quot;Write \&quot;end\&quot; to quit: &quot;);
+    var input = System.console().readLine();
+
+    if (input.equals(&quot;end&quot;)) {
+        break;
+    }
+    System.out.println(&quot;Not quitting.&quot;);
+}
+
+System.out.println(&quot;The end.&quot;);
+</code></pre>
+<p>Nesse caso, a partir do momento que o usuário digitar &quot;end&quot;, o <code>break</code> será
+executado e o <code>while</code> irá parar de executar (indo para o print de &quot;The end.&quot;).</p>
+<h2><a class="header" href="#pulando-uma-iteração" id="pulando-uma-iteração">Pulando uma iteração</a></h2>
+<p>Em outros casos, é possível pular a iteração atual para a próxima utilizando
+<code>continue</code>. Por exemplo, no caso da listagem de pares:</p>
+<pre><code class="language-java">for (var i = 0; i &lt;= 10; i++) {
+    if (i % 2 != 0) {
+        continue;
+    }
+    System.out.println(i);
+}
+</code></pre>
+<p>Nesse caso, será pulada toda iteração em que <code>i</code> não for par.</p>
+<h1><a class="header" href="#arrays" id="arrays">Arrays</a></h1>
+<p>É comum precisar de listas de valores em programas. Por exemplo, é necessário
+lidar com listas de alunos ou professores em uma escola, jogadores e inimigos
+em um jogo, e por aí vai. Para isso, existem &quot;Arrays&quot; (ou &quot;Vetores&quot;), que são
+sequências de valores.</p>
+<h1><a class="header" href="#criando-um-array" id="criando-um-array">Criando um array</a></h1>
+<p>Há algumas formas de se criar um array.</p>
+<h3><a class="header" href="#quando-se-tem-um-tamanho-específico" id="quando-se-tem-um-tamanho-específico">Quando se tem um tamanho específico</a></h3>
+<pre><code class="language-java">// Em Java 9 ou anterior:
+T[] array = new T[10];
+// Em Java 10+:
+var array = new T[10];
+</code></pre>
+<p>Em que <code>T</code> é o tipo de dado dos elementos do array. Por exemplo, se for um
+array de <code>int</code>:</p>
+<pre><code class="language-java">// Em Java 9 ou anterior:
+int[] array = new int[10];
+// Em Java 10+:
+var array = new int[10];
+</code></pre>
+<p>Com isso, <code>array</code> será um array de 10 inteiros, todos eles com o valor &quot;0&quot;
+(valor padrão para inteiros, floats, doubles, etc.).
+Ou se for <code>String</code>:</p>
+<pre><code class="language-java">// Em Java 9 ou anterior:
+String[] array = new String[10];
+// Em Java 10+:
+var array = new String[10];
+</code></pre>
+<p>Porém, vale lembrar que, como <code>String</code> não é um tipo primitivo, então os
+elementos do <code>array</code> não serão Strings vazia, mas sim <code>null</code> (a grosso modo,
+significa ausência de informação, o que é diferente de um texto com 0
+caracteres). Então tome cuidado quando criar vetores de tipos não-primitivos,
+principalmente quando tentar acessar propriedades deles:</p>
+<pre><code class="language-java">var array = new String[3];
+
+var isAda = array[0].equals(&quot;Ada&quot;); // error: NullPointerException
+
+array[0] = &quot;Bob&quot;;
+
+var isAda = array[0].equals(&quot;Ada&quot;); // idAda = false
+var isBob = array[0].equals(&quot;Bob&quot;); // idAda = true
+</code></pre>
+<h3><a class="header" href="#quando-se-quer-uma-lista-de-elementos-pré-definidos" id="quando-se-quer-uma-lista-de-elementos-pré-definidos">Quando se quer uma lista de elementos pré-definidos</a></h3>
+<p>É possível criar arrays já colocando os elementos que estarão nele:</p>
+<pre><code class="language-java">T[] array = {value1, value2, value3, ...,};
+// Ou...
+var array = new T[] {value1, value2, value3, ...,};
+</code></pre>
+<p>Por exemplo:</p>
+<pre><code class="language-java">// Em Java 9 ou anterior:
+int[] array = {1, 2, 3, 4, 5};
+// Em Java 10+:
+var array = new int[] {1, 2, 3, 4, 5};
+</code></pre>
+<p>Nesse caso, <code>array</code>terá 5 elementos, sendo eles, na ordem: 1, 2, 3, 4 e 5.</p>
+<h1><a class="header" href="#acessando-elementos-de-um-array" id="acessando-elementos-de-um-array">Acessando elementos de um array</a></h1>
+<p>É possível acessar elementos de um array utilizando <code>array[indice]</code>, em que
+<code>indice</code> vai de 0..N-1 (sendo N o tamanho do array):</p>
+<pre><code class="language-java">var array = new int[] {25, 19, -12};
+
+var first = array[0]; // first = 25
+var second = array[1]; // first = 18
+var third = array[2]; // first = -12
+</code></pre>
+<p>Perceba que não se pode acessar <code>array[3]</code> para um array de 3 elementos, já que
+o primeiro elemento está no índice 0, e não 1. <code>array[3]</code> seria, então, o &quot;4º
+elemento&quot;, que não existe em um array de 3 elementos.</p>
+<p>Vale apontar também que, caso se tente acessar um índice inválido, o programa
+irá fechar com o erro <code>ArrayIndexOutOfBounds</code>:</p>
+<pre><code class="language-java">var array = new int[] {25, 19, -12};
+
+var nonexistent = array[-1]; // error: ArrayIndexOutOfBounds
+var nonexistent = array[3]; // error: ArrayIndexOutOfBounds
+var nonexistent = array[20]; // error: ArrayIndexOutOfBounds
+</code></pre>
+<p>É possível alterar os elementos de um array da mesma forma que se altera uma
+variável:</p>
+<pre><code class="language-java">var array = new int[] {25, 19, -12};
+
+array[0] = 0;
+
+System.out.println(array[0]); // =&gt; 0
+System.out.println(array[1]); // =&gt; 19
+System.out.println(array[2]); // =&gt; -12
+</code></pre>
+<h1><a class="header" href="#propriedades-de-arrays" id="propriedades-de-arrays">Propriedades de Arrays</a></h1>
+<h2><a class="header" href="#como-acessar-propriedades" id="como-acessar-propriedades">Como acessar propriedades</a></h2>
+<p>Toda propriedade de um valor, em Java, pode ser acessada com <code>.</code>, no formato:
+<code>valor.propriedade</code>. Por exemplo, a propriedade <a href="arrays/properties.html#length"><code>length</code></a> de um array
+qualquer armazenado em uma variável chamada <code>seuarray</code> pode ser acessada como
+<code>seuarray.length</code>.</p>
+<p>Vale apontar que valores de tipos primitivos não possuem propriedades.</p>
+<h2><a class="header" href="#length" id="length"><code>length</code></a></h2>
+<p>É possível saber o tamanho/comprimento de um array utilizando a propriedade
+<code>length</code>:</p>
+<pre><code class="language-java">var array = new int[] {25, 19, -12};
+
+System.out.printf(&quot;array has %d elements\n&quot;, array.length); // =&gt; array has 3 elements
+</code></pre>
+<h2><a class="header" href="#combinando-arrays-e-fors" id="combinando-arrays-e-fors">Combinando arrays e <code>for</code>s</a></h2>
+<p>É possível aproveitar a repetição de passos do <code>for</code> para, por exemplo,
+percorrer arrays:</p>
+<pre><code class="language-java">var array = new int[] {25, 19, -12};
+
+for (var i = 0; i &lt; array.length; i++) {
+    System.out.println(array[i]);
+}
+</code></pre>
+<p>Perceba como tudo se encaixa: o passo inicial é o primeiro índice do vetor, a
+cada passo o índice é incrementado, e é executado o <code>for</code> até que <code>i</code> chegue a
+<code>array.length - 1</code>. Com isso, conseguimos executar a mesma ação para todos os
+elementos de um vetor. Inclusive, <code>array[i]</code> pode ser lido como &quot;o i-ésimo
+elemento de <code>array</code>&quot;.</p>
+<h2><a class="header" href="#estrutura-for-each" id="estrutura-for-each">Estrutura <code>for-each</code></a></h2>
+<p>Semelhante a um <code>for</code> normal, existe uma estrutura específica para iterar por
+uma coleção (por exemplo, um vetor). Essa estrutura possui a seguinte sintaxe:</p>
+<pre><code class="language-java">for (T nome: coleção) {
+    // Sequência de comandos
+}
+</code></pre>
+<p>Em que <code>T</code> é o tipo de cada item da coleção (<code>var</code> é permitido), <code>nome</code> é o
+nome da variável que guardará cada item da coleção. Para ver melhor como ele
+funciona:</p>
+<pre><code class="language-java">var array = new int[] {25, 19, -12};
+
+for (var item: array) {
+    System.out.println(item);
+}
+</code></pre>
+<p>O programa acima, ao ser executado, mostrará:</p>
+<pre><code class="language-text">25
+19
+-12
+</code></pre>
+<p>Ou seja, a cada iteração, <code>item</code> guarda um dos itens de <code>array</code>. Esse <code>for</code> é
+util quando o índice do elemento não é importante (no exemplo acima, o que
+importa é acessar os elementos em ordem, mas efetivamente qual o índice deles
+não é importante). O código é equivalente (perceba: equivalente, mas não
+igual!) a:</p>
+<pre><code class="language-java">var array = new int[] {25, 19, -12};
+
+for (var i = 0; i &lt; array.length; i++) {
+    var item = array[i];
+    System.out.println(item);
+}
+</code></pre>
+<p>No fundo, o que o <code>for-each</code> faz é aproveitar a interface
+<a href="https://docs.oracle.com/javase/10/docs/api/java/lang/Iterable.html">Iterable</a>
+dos padrões da linguagem, mas isso será visto noutro tutorial.</p>
+<h2><a class="header" href="#recomendações-de-leitura-2" id="recomendações-de-leitura-2">Recomendações de leitura</a></h2>
+<ol>
+<li>Como representar matrizes adequadamente</li>
+</ol>
+<h1><a class="header" href="#criando-seus-próprios-comandos" id="criando-seus-próprios-comandos">Criando seus próprios comandos</a></h1>
+<p>Na maioria dos casos em programação imperativa, criar seus próprios comandos
+significa criar sua própria <strong>função</strong>. Funções são trechos de código que podem
+ser executados eventualmente. Geralmente se pode executar esses trechos
+utilizando o identificador dessa função.</p>
+<p>Funções são também ótimas para se ter <strong>reuso</strong> e <strong>legibilidade</strong>, palavras
+que você irá ouvir bastante enquanto programador.</p>
+<p>Funções fazem com que tenhamos apenas um lugar para consertar um erro quando
+ele existir. Por exemplo: imagine que você fez um código que pede a senha para
+o usuário, mas percebe que esqueceu de não mostrar a senha na tela.  Se o mesmo
+código estiver espalhado pelo programa, ele terá que ser consertado em cada um
+dos lugares. Porém, se em vez disso tivermos uma função <code>askPassword</code>, teremos
+que corrigir apenas um único lugar (que é na implementação dessa função), e
+então todo lugar que a chamar já estará consertado.</p>
+<h1><a class="header" href="#definindo-funções" id="definindo-funções">Definindo funções</a></h1>
+<h2><a class="header" href="#o-que-compõe-uma-função" id="o-que-compõe-uma-função">O que compõe uma função</a></h2>
+<p>Em Java, uma função é composta por <strong>tipo de retorno</strong>, <strong>nome</strong>,
+<strong>parâmetros</strong> e <strong>implementação</strong>:</p>
+<ul>
+<li><strong>Tipo de Retorno</strong>: Indica qual é o tipo de dado que é entregue como
+resposta pela função. Pode ser qualquer tipo de dado utilizado na declaração
+de uma variável, salvo o tipo <code>void</code>, que é responsável por indicar que a
+função apenas executa o seu código mas não entrega uma resposta.</li>
+<li><strong>Nome</strong>: Utilizado para referenciar a função posteriormente.</li>
+<li><strong>Parâmetros</strong>: Indicam quais informações devem ser entregues à função para
+que ela execute. Por exemplo, a função <code>square</code>, que eleva um número ao
+quadrado, necessita saber <em>qual</em> número será elevado ao quadrado.</li>
+<li><strong>Implementação</strong>: Define a sequência de código que será executada ao se
+chamar a função. &quot;Chamar&quot; uma função significa pedir para que sua
+implementação seja executada.</li>
+</ul>
+<h2><a class="header" href="#pequeno-exemplo-1" id="pequeno-exemplo-1">Pequeno exemplo</a></h2>
+<p>Um pequeno exemplo de uma função poderia ser o próprio <code>square</code> mencionado
+anteriormente:</p>
+<pre><code class="language-java">int square(int x) {
+    return x * x;
+}
+</code></pre>
+<p>Descrevendo os elementos dessa função:</p>
+<ul>
+<li><strong>Tipo de Retorno</strong>: <code>int</code>. Ou seja, essa função pode ser utilizada em
+qualquer ponto em que se possa utilizar um <code>int</code>, inclusive para enviar como
+parâmetro a outra função.</li>
+<li><strong>Nome</strong>: <code>square</code>.</li>
+<li><strong>Parâmetros</strong>: <code>int x</code>. Ou seja, essa função exige que seja enviado um valor
+do tipo <code>int</code> como primeiro parâmetro, e internamente ele será chamado de
+<code>x</code>.</li>
+<li><strong>Implementação</strong>: A implementação apenas significa &quot;retorne a execução para
+quem chamou a função e entregue <code>x * x</code> como resposta&quot;.</li>
+</ul>
+<p>Tendo essas definições, o código dessa função pode ser executado a partir do
+seu nome, por exemplo:</p>
+<pre><code class="language-java">System.out.println(square(3)); // =&gt; 9
+System.out.println(square(-1)); // =&gt; 1
+
+var x = 10;
+System.out.println(square(x)); // =&gt; 100
+
+var y = square(2);
+System.out.println(y); // =&gt; 4
+
+String err = square(9); // Erro: &quot;int&quot; não pode ser convertido para &quot;String&quot;.
+</code></pre>
+<h2><a class="header" href="#funções-com-retorno-void" id="funções-com-retorno-void">Funções com retorno &quot;void&quot;</a></h2>
+<p>Em alguns momentos, serão criadas funções para apenas para facilitar a
+manutenção (minimizando a quantidade de responsabilidades de uma função maior)
+ou não repetir o mesmo código ao longo do projeto, sem a intenção de dar uma
+resposta. Nesses casos, utilizamos o tipo <code>void</code> no retorno:</p>
+<pre><code class="language-java">void doSomething() {
+    for (var i = 0; i &lt; 3; i++) {
+        System.out.println(&quot;I'm doing something important...&quot;);
+    }
+}
+</code></pre>
+<p>Nessa função, estamos criando uma função (chamada <code>doSomething</code>) que não recebe
+parâmetros e também não entrega uma resposta, apenas executa comandos.</p>
+<p>Inclusive, até o momento vimos uma função com retorno <code>void</code>: a função <code>main</code>.</p>
+<h1><a class="header" href="#sobrecarga" id="sobrecarga">Sobrecarga</a></h1>
+<p>É possível, em várias linguagens de programação, definir duas ou mais funções
+de mesmo nome, porém com os tipos dos parâmetros diferentes. Assim, o
+compilador olha quais valores foram passados por parâmetro para uma função para
+descobrir qual deve ser chamada. Por exemplo:</p>
+<pre><code class="language-java">void foo() {
+    System.out.println(&quot;Calling foo()...&quot;);
+}
+
+void foo(int x) {
+    System.out.printf(&quot;Calling foo(%d)...\n&quot;, x);
+}
+
+void foo(String s) {
+    System.out.printf(&quot;Calling foo(%s)...\n&quot;, s);
+}
+
+void foo(String s, int x) {
+    System.out.printf(&quot;Calling foo(%s, %d)...\n&quot;, s, x);
+}
+
+
+void main(String[] args) {
+    foo();          // =&gt; Calling foo()...
+    foo(3);         // =&gt; Calling foo(3)...
+    foo(&quot;Hey&quot;, 2);  // =&gt; Calling foo(Hey, 2)...
+    foo(&quot;Dude&quot;);    // =&gt; Calling foo(Dude)...
+}
+</code></pre>
+<p>Esse mecanismo (de poder ter funções com mesmo nome, porém tipos dos parâmetros
+diferentes) se chama &quot;Sobrecarga de função&quot;. Perceba que é essencial que as
+funções mantenham uma <strong>assinatura</strong> diferente.</p>
+<h1><a class="header" href="#assinatura-de-uma-função" id="assinatura-de-uma-função">Assinatura de uma função</a></h1>
+<p>Uma função é identificada pela sua <strong>assinatura</strong>. A assinatura de uma função é
+composta pelo <strong>nome e tipos dos parâmetros</strong> (observe que <strong>o tipo de retorno
+<em>NÃO</em> faz parte da assinatura</strong>). Assim, o compilador é capaz de diferenciar
+duas funções apenas analisando a assinatura delas. Por exemplo:</p>
+<pre><code class="language-java">void foo() { ... }
+void foo(int x) { ... } // OK, outra função
+void foo(int otherParamName) { ... } // Erro: foo(int) já foi definida
+int foo() { ... } // Erro: foo() já foi definida
+int foo(int x) { ... } // Erro: foo(int) já foi definida
+</code></pre>
+<h1><a class="header" href="#definindo-seu-próprio-tipo" id="definindo-seu-próprio-tipo">Definindo seu próprio tipo</a></h1>
+<p><em><strong>TODO</strong></em></p>
+<h1><a class="header" href="#outros" id="outros">Outros</a></h1>
+<h1><a class="header" href="#operadores-para-tipos-primitivos" id="operadores-para-tipos-primitivos">Operadores para tipos primitivos</a></h1>
+<h2><a class="header" href="#Índice-2" id="Índice-2">Índice</a></h2>
+<ol>
+<li><a href="others/operators.html#operadores-aritm%C3%A9ticos">Operadores aritméticos</a></li>
+<li><a href="others/operators.html#operadores-relacionais">Operadores relacionais</a></li>
+<li><a href="others/operators.html#operadores-un%C3%A1rios">Operadores unários</a></li>
+<li><a href="others/operators.html#outros-operadores">Outros operadores</a></li>
+</ol>
+<h2><a class="header" href="#operadores-aritméticos" id="operadores-aritméticos">Operadores aritméticos</a></h2>
+<p>Operadores aritméticos servem para fazer manipulações algébricas. Efetivamente,
+somar, dividir, etc.</p>
+<table><thead><tr><th>Operador</th><th>Sintaxe</th></tr></thead><tbody>
+<tr><td>Soma</td><td><code>x + y</code></td></tr>
+<tr><td>Subtração</td><td><code>x - y</code></td></tr>
+<tr><td>Multiplicação</td><td><code>x * y</code></td></tr>
+<tr><td>Divisão</td><td><code>x / y</code></td></tr>
+<tr><td>Resto*</td><td><code>x % y</code></td></tr>
+</tbody></table>
+<p>* É comum encontrar documentações descrevendo o operador <code>%</code> como &quot;Módulo&quot;. O
+problema é que <code>%</code> faz <strong>resto da divisão, e não módulo</strong>. A diferença entre
+eles é visível nos números negativos:</p>
+<pre><code class="language-text">x:          | -5 | -4 | -3 | -2 | -1 |  0 |  1 |  2 |  3 |  4 |  5 |
+x resto 3:  | -2 | -1 |  0 | -2 | -1 |  0 |  1 |  2 |  0 |  1 |  2 |
+x módulo 3: |  1 |  2 |  0 |  1 |  2 |  0 |  1 |  2 |  0 |  1 |  2 |
+</code></pre>
+<p>Perceba que, diferente do resto da divisão, o &quot;módulo&quot; sempre repete os valores
+[0..N), em que, para a tabela de cima, N seria 3.</p>
+<h2><a class="header" href="#operadores-relacionais" id="operadores-relacionais">Operadores relacionais</a></h2>
+<p>Operadores relacionais servem para verificar se alguma relação entre dois
+elementos é verdadeira (ou seja, sempre retornarão <code>true</code> ou <code>false</code>).</p>
+<table><thead><tr><th>Operador</th><th>Sintaxe</th></tr></thead><tbody>
+<tr><td>Igualdade</td><td><code>x == y</code></td></tr>
+<tr><td>Diferença</td><td><code>x != y</code></td></tr>
+<tr><td>Menor que</td><td><code>x &lt; y</code></td></tr>
+<tr><td>Maior que</td><td><code>x &gt; y</code></td></tr>
+<tr><td>Menor ou igual</td><td><code>x &lt;= y</code></td></tr>
+<tr><td>Maior ou igual</td><td><code>x &gt;= y</code></td></tr>
+</tbody></table>
+<h2><a class="header" href="#operadores-unários" id="operadores-unários">Operadores unários</a></h2>
+<p>Operadores unários são aqueles que operam por apenas um único dado.</p>
+<table><thead><tr><th>Operador</th><th>Sintaxe</th></tr></thead><tbody>
+<tr><td>Negação (para números)</td><td><code>-x</code></td></tr>
+<tr><td>Incremento</td><td><code>++x</code></td></tr>
+<tr><td>Decremento</td><td><code>--x</code></td></tr>
+<tr><td>Complemento lógico*</td><td><code>!x</code></td></tr>
+</tbody></table>
+<p>*: O complemento lógico serve para retornar o inverso de um booleano. Ou seja,
+se <code>thing</code> era verdadeiro, <code>!thing</code> é falso.</p>
+<h2><a class="header" href="#outros-operadores" id="outros-operadores">Outros operadores</a></h2>
+<p>Neste tutorial estão listados apenas os operadores mais usuais.
+Uma lista completa de operadores pode ser vista
+<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html">na documentação da Oracle</a>.</p>
+<h1><a class="header" href="#aritmética---detalhes" id="aritmética---detalhes">Aritmética - Detalhes</a></h1>
+<h2><a class="header" href="#Índice-3" id="Índice-3">Índice</a></h2>
+<ol>
+<li><a href="others/arithmetic-details.html#prioridade-de-operadores">Prioridade de operadores</a></li>
+<li><a href="others/arithmetic-details.html#aritm%C3%A9tica-entre-inteiros">Aritmética entre inteiros</a></li>
+<li><a href="others/arithmetic-details.html#aritm%C3%A9tica-entre-tipos-diferentes">Aritmética entre tipos diferentes</a></li>
+</ol>
+<h2><a class="header" href="#prioridade-de-operadores" id="prioridade-de-operadores">Prioridade de operadores</a></h2>
+<p>Suponha o seguinte trecho de código:</p>
+<pre><code class="language-java">var x = 16 / 8 * (4 / 2);
+</code></pre>
+<p>Qual será o valor de <code>x</code> após executá-lo? Será 2 ou 1? Que operação é feita
+primeiro?</p>
+<p>Em Java, a ordem pela qual as operações são resolvidas é:</p>
+<ol>
+<li>Parênteses;</li>
+<li>Multiplicações e Divisões, na ordem em que aparecerem;</li>
+<li>Somas e subtrações, na ordem em que aparecerem.</li>
+<li>Operações relacionais (<code>&gt;</code>, <code>&lt;</code>, <code>==</code>, <code>!=</code>, <code>&lt;=</code>, <code>&gt;=</code>);</li>
+</ol>
+<p>No caso do trecho acima, a sequência seria:</p>
+<ol>
+<li><code>16 / 8</code> (= 2, ficando <code>2 * (4 / 2)</code>);</li>
+<li><code>(4 / 2)</code> (= 2, ficando <code>2 * 2</code>);</li>
+<li><code>2 * 2</code> (= 4).</li>
+</ol>
+<p>Ou seja, o valor final de x é 4.</p>
+<p>Para aninhar operações, é necessário colocar mais parênteses internamente. Por
+exemplo:</p>
+<pre><code class="language-java">var y = 2 + (4 * (2 - 8));
+</code></pre>
+<p>Assim, <code>2 - 8</code> será executado antes de <code>4 * ...</code>, que será executado antes de
+<code>2 + ...</code>.</p>
+<p>Quanto a operadores relacionais, para serem intuitivos, eles possuem menor
+prioridade para serem resolvidos. Ou seja, se for escrito:</p>
+<pre><code class="language-java">var z = x - 2 &gt; 1;
+</code></pre>
+<p>O valor de <code>z</code> será calculado na ordem:</p>
+<ol>
+<li><code>x - 2</code>;</li>
+<li><code>&gt; 3</code>.</li>
+</ol>
+<p>Assim, a comparação fica intuitiva: <code>x - 2</code> é maior que 1? Considerando <code>x = 4</code>
+como anteriormente, o valor de <code>z</code> será <code>true</code>.</p>
+<h2><a class="header" href="#aritmética-entre-inteiros" id="aritmética-entre-inteiros">Aritmética entre inteiros</a></h2>
+<p>Tratando-se de operações entre dois inteiros, boa parte dos operadores é
+intuitivo. Porém, qual será o resultado quando é feito <code>5 / 7</code>, por exemplo? É
+<code>0.714...</code>?</p>
+<p>Para responder a isso, devemos saber que <strong>operações entre inteiros sempre
+resultam em inteiros</strong>. Ou seja, não é possível que <code>5</code> (que é um inteiro)
+divido por <code>7</code> (que é outro inteiro) resulte em <code>0.714...</code>, que é um número
+real! O que se faz, na prática, é contar quantas vezes é necessário multiplicar
+<code>7</code> para se chegar em pelo menos <code>5</code>. Como <code>7</code> já é maior que <code>5</code>, então é
+necessário multiplicar um total de <code>0</code> vezes. No final, isso é equivalente a
+ignorar os números após a vírgula, que é o que chamamos de <strong>truncar</strong>.</p>
+<p>Sendo assim, <code>5 / 7</code> é <code>0</code> (ignora-se o <code>.714...</code>), <code>3 / 2</code> é <code>1</code> (ignora-se o
+<code>.5</code>), e por aí vai.</p>
+<h2><a class="header" href="#aritmética-entre-tipos-diferentes" id="aritmética-entre-tipos-diferentes">Aritmética entre tipos diferentes</a></h2>
+<p>Considerando o caso visto acima em
+<a href="others/arithmetic-details.html#aritm%C3%A9tica-entre-inteiros">Aritmética entre inteiros</a>, e se for necessário
+que o resultado seja um número real? Para isso, basta que <strong>pelo menos um dos
+operandos</strong> seja um número real (ou seja, <code>float</code> ou <code>double</code>).</p>
+<p>Sendo assim, basta fazer <code>5.0 / 7</code> ou <code>5 / 7.0</code>. Isso se dá porque a
+preferência é sempre converter os valores para o tipo mais abrangente. Nesse
+caso, consideramos do menos abrangente ao mais abrangente:</p>
+<ol>
+<li>Byte;</li>
+<li>Short;</li>
+<li>Int;</li>
+<li>Long;</li>
+<li>Float;</li>
+<li>Double.</li>
+</ol>
+<h2><a class="header" href="#recomendações-de-leitura-3" id="recomendações-de-leitura-3">Recomendações de Leitura</a></h2>
+<ol>
+<li><a href="others//langs/java/operators.html">Operadores em Java</a></li>
+<li><a href="https://stackoverflow.com/a/3730040/3326309">Por que não utilizar float e double para representar dinheiro?</a></li>
+</ol>
+<h2><a class="header" href="#recomendações-de-leitura-4" id="recomendações-de-leitura-4">Recomendações de leitura</a></h2>
+<ol>
+<li><a href="../../general/how-to-study.html">Como estudar programação</a></li>
+<li>Paradigmas de programação: Imperativo? Funcional? Lógico?</li>
+<li>Java: orientada a objetos ou não?</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

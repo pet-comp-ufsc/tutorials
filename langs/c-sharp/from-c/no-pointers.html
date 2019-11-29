@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Não tenho ponteiros. E agora? - C#</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="../about.html">Sobre C#</a></li><li class="expanded "><a href="../from-c/about.html"><strong aria-hidden="true">1.</strong> C# para programadores C</a></li><li><ol class="section"><li class="expanded "><a href="../from-c/basics.html"><strong aria-hidden="true">1.1.</strong> Básicos</a></li><li class="expanded "><a href="../from-c/oo.html"><strong aria-hidden="true">1.2.</strong> Orientação a Objetos: Novidades em relação a C</a></li><li class="expanded "><a href="../from-c/classes.html"><strong aria-hidden="true">1.3.</strong> Classe e Objeto</a></li><li class="expanded "><a href="../from-c/methods.html"><strong aria-hidden="true">1.4.</strong> Métodos</a></li><li class="expanded "><a href="../from-c/static.html"><strong aria-hidden="true">1.5.</strong> Static</a></li><li class="expanded "><a href="../from-c/inherit.html"><strong aria-hidden="true">1.6.</strong> Herança</a></li><li class="expanded "><a href="../from-c/access-mod.html"><strong aria-hidden="true">1.7.</strong> Modificadores de acesso</a></li><li class="expanded "><a href="../from-c/no-pointers.html" class="active"><strong aria-hidden="true">1.8.</strong> Não tenho ponteiros. E agora?</a></li></ol></li><li class="expanded "><a href="../from-cpp/about.html"><strong aria-hidden="true">2.</strong> C# para programadores C++</a></li><li><ol class="section"><li class="expanded "><a href="../from-cpp/main-diff.html"><strong aria-hidden="true">2.1.</strong> Principais Diferenças</a></li></ol></li><li class="expanded "><a href="../feats/about.html"><strong aria-hidden="true">3.</strong> Algumas Features de C#</a></li><li><ol class="section"><li class="expanded "><a href="../feats/nullables.html"><strong aria-hidden="true">3.1.</strong> Nullables</a></li><li class="expanded "><a href="../feats/properties.html"><strong aria-hidden="true">3.2.</strong> Properties</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">C#</h1>
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#não-tenho-ponteiros-e-agora" id="não-tenho-ponteiros-e-agora">Não tenho ponteiros. E agora?</a></h1>
+<p>C# até possui ponteiros, mas eles não vão poder ser usados de qualquer maneira
+como em C. Mas no fundo, em qualquer linguagem que não seja C, se você está
+mexendo com ponteiros, de duas uma:</p>
+<ul>
+<li>Você está precisando manipular memória de uma maneira muito específica (como
+implementar um smart_pointer do C++, ou uma Lista_Encadeada, por exemplo, ou
+ainda utilizar uma arquitetura muito específica na qual endereços específicos
+de memória acessam registradores/IO importantes) e deve estar bastante atento
+aos cuidados com isso;</li>
+<li>Você está fazendo algo de errado e essa com certeza não é a melhor forma de
+fazer o que está querendo.</li>
+</ul>
+<p>No caso de C não há algum recurso da linguagem para lidar com referências sem
+explicitamente utilizar ponteiros, então não há outra alternativa. Tenha em
+mente que ponteiros são potencialmente inseguros e podem levar muito facilmente
+a erros, incluindo vazamento de memória ou dupla deleção se você não cuidar da
+forma como manuseia eles (e não é meramente uma questão de &quot;basta ser muito bom
+na linguagem&quot;: ponteiros explícitos são inseguros para <em>todo mundo</em>, um
+profissional vai apenas ter menos problemas explícitos com eles).</p>
+<p>&quot;Referenciar alguma coisa&quot; significa que, em vez de ter uma cópia de outro
+valor, você o acessa indiretamente¹. Uma referência <strong><em>pode</em></strong> ser implementada
+com um ponteiro (há diferença entre &quot;ser um&quot; e &quot;ser implementado com um&quot;), mas
+tudo depende de como o compilador vai tratá-las.</p>
+<p>Para pegar a ideia de referências, segue um exemplo em C (repare nos
+comentários):</p>
+<pre><code class="language-c">int main(void) {
+    int a = 10;
+    int b = a; // `b` é uma cópia de `a`
+    int *c = &amp;a; // `c` guarda o endereço de `a`
+
+    // Neste momento:
+    //        a = 10; b = 10; *c = 10
+
+    a = 5;  // a =  5; b = 10; *c = 5
+    b = 8;  // a =  5; b =  8; *c = 5
+    *c = 9; // a =  9; b =  8; *c = 9
+
+    // ...
+}
+</code></pre>
+<p>No exemplo acima, pode-se dizer que <code>c</code> &quot;referencia&quot; <code>a</code> (na forma de
+ponteiros), então alterações ao valor em <code>c</code> alteram também <code>a</code>.</p>
+<p>No caso de C#, toda variável que guarda um ReferenceType é uma referência,
+enquanto que uma que guarde um ValueType é &quot;sempre&quot; uma cópia (com ressalva de
+quando há a <em>keyword</em> <code>ref</code> antes de sua declaração:</p>
+<pre><code class="language-cs">// Lembre-se de que, em C#, toda `struct` define um ValueType
+public struct Point
+{
+    int x;
+    int y;
+}
+
+
+// Ainda em C#, toda `class` define um ReferenceType
+public class Vertex
+{
+    int x;
+    int y;
+}
+
+
+public static void Change(Point p) {
+    p.x++;
+}
+
+public static void Change(Vertex p) {
+    p.x++;
+}
+
+public static void Change(ref Point p) {
+    p.x++;
+}
+
+public static void Main() {
+    var p = new Point { x = 0, y = 0, };
+    var v = new Vertex { x = 0, y = 0, };
+
+    // Nesse caso, como `Point` é um `ValueType`, é enviada uma *cópia* de p
+    // para a função `Change`.
+    Change(p);
+
+    // Neste momento:
+    //     p: { x = 0, y = 0, }
+    //     v: { x = 0, y = 0, }
+
+    // Já como `Vertex` é um `ReferenceType`, é enviada uma *referência* a v
+    // para a função `Change`. Isso significa que alterações feitas em `p`
+    // também alteram `v`.
+    Change(v);
+
+    // Neste momento:
+    //     p: { x = 0, y = 0, }
+    //     v: { x = 1, y = 0, }
+
+    // Se um `ValueType` precisar ser passado por referência (e a função em
+    // questão aceitar), é possível enviá-lo com a keyword `ref` antes da
+    // variável:
+    Change(ref p);
+
+    // Neste momento:
+    //     p: { x = 1, y = 0, }
+    //     v: { x = 1, y = 0, }
+}
+</code></pre>
+<p>Também vale ressaltar que, como ValueTypes não são referências, eles não podem
+ser <code>null</code> (ou seja, não podem &quot;referenciar ninguém&quot;) a menos que se diga que a
+variável em questão é &quot;Nullable&quot;, o que é feito com um <code>?</code> após o tipo:</p>
+<pre><code class="language-cs">public static void Main() {
+    int i = null;       // Erro: Valuetypes não são &quot;Nullable&quot;
+    int? j = null;      // OK: `j` é Nullable
+    var k = (int?)null; // O mesmo que `j`, porém com inferência de tipo
+}
+</code></pre>
+<p>Quando for necessária uma cópia de um ReferenceType, é possível aproveitar o
+método <code>Clone()</code>, disponível para objetos de algumas classes (especificamente
+as que herdem de <code>Clonable</code>):</p>
+<pre><code class="language-cs">public static void Main() {
+    var v1 = new Vertex { x = 0, y = 0 } ;
+    var v2 = x.Clone();
+
+    v2.x = -1;
+
+    Console.WriteLine(v1.x) // =&gt; 0
+    Console.WriteLine(v2.x) // =&gt; -1
+}
+</code></pre>
+<p>No caso acima, como <code>v2</code> é uma cópia de <code>v1</code>, alterações em <code>v2</code> não alteram
+<code>v1</code> e vice-versa.</p>
+<p>Aproveitando, deve-se tomar cuidado quanto a <code>ValueTypes</code>, pois toda vez que
+eles são atribuídos a outra variável ou enviados como argumentos para funções,
+<strong>sempre</strong> será uma cópia (como dito anteriormente, a menos que dito
+explicitamente via <code>ref</code>). Ou seja, tomar cuidado com situações como:</p>
+<pre><code class="language-cs">public struct Point {
+    int x;
+    int y;
+}
+
+public class Rect {
+    Point p1;
+    Point p2;
+}
+
+public static void Main() {
+    var r = new Rect {
+        p1 = new Point { x = 0, y = 0, },
+        p2 = new Point { x = 5, y = 5, },
+    };
+
+    var p1 = r.p1; // Cuidado! `r.p1` é um ValueType, e portanto será feita uma
+                   // cópia de `r.p1`.
+
+    p1.x = 10;
+
+    Console.WriteLine(r.p1.x); // =&gt; 0
+    Console.WriteLine(p1.x);   // =&gt; 10
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../from-c/access-mod.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../from-cpp/about.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../from-c/access-mod.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../from-cpp/about.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

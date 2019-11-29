@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Ferramentas e documentação - LaTeX</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="/tutorials/css/special-tags.css">
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="why.html">Por que utilizar LaTeX</a></li><li class="expanded affix "><a href="tools.html" class="active">Ferramentas e documentação</a></li><li class="expanded "><a href="first/about.html"><strong aria-hidden="true">1.</strong> Meu primeiro documento</a></li><li><ol class="section"><li class="expanded "><a href="first/general-structure.html"><strong aria-hidden="true">1.1.</strong> Estrutura geral e classes</a></li><li class="expanded "><a href="first/preamble.html"><strong aria-hidden="true">1.2.</strong> Preâmbulo: autor, título e data</a></li><li class="expanded "><a href="first/text-formatting.html"><strong aria-hidden="true">1.3.</strong> Formatação de texto</a></li><li class="expanded "><a href="first/lists.html"><strong aria-hidden="true">1.4.</strong> Listagem</a></li><li class="expanded "><a href="first/images.html"><strong aria-hidden="true">1.5.</strong> Inserindo imagens</a></li><li class="expanded "><a href="first/references.html"><strong aria-hidden="true">1.6.</strong> Referências com BibTeX</a></li><li class="expanded "><a href="first/presentations.html"><strong aria-hidden="true">1.7.</strong> Apresentações de slides</a></li></ol></li><li class="expanded "><a href="tables/about.html"><strong aria-hidden="true">2.</strong> Tabelas</a></li><li><ol class="section"><li class="expanded "><a href="tables/basics.html"><strong aria-hidden="true">2.1.</strong> Básico</a></li><li class="expanded "><a href="tables/lines.html"><strong aria-hidden="true">2.2.</strong> Linhas horizontais e verticais</a></li><li class="expanded "><a href="tables/color.html"><strong aria-hidden="true">2.3.</strong> Colorir células, colunas e linhas</a></li></ol></li><li class="expanded "><a href="macros/about.html"><strong aria-hidden="true">3.</strong> Macros</a></li><li><ol class="section"><li class="expanded "><a href="macros/vars.html"><strong aria-hidden="true">3.1.</strong> Definindo variáveis</a></li><li class="expanded "><a href="macros/environ.html"><strong aria-hidden="true">3.2.</strong> Definindo ambientes</a></li></ol></li><li class="expanded "><a href="specific/about.html"><strong aria-hidden="true">4.</strong> Aplicações específicas</a></li><li class="expanded "><a href="source-code/about.html"><strong aria-hidden="true">5.</strong> Código-fonte com minted</a></li><li><ol class="section"><li class="expanded "><a href="source-code/basics.html"><strong aria-hidden="true">5.1.</strong> Inserindo código-fonte</a></li><li class="expanded "><a href="source-code/escape.html"><strong aria-hidden="true">5.2.</strong> Escapar código</a></li><li class="expanded "><a href="source-code/slides.html"><strong aria-hidden="true">5.3.</strong> Código-fonte em slides</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">LaTeX</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#ferramentas-e-documentação" id="ferramentas-e-documentação">Ferramentas e documentação</a></h1>
+<p>Para começar a utilizar LaTeX, você pode utilizar o
+<a href="https://overleaf.com">Overleaf</a> (uma espécie de Google Docs para LaTeX) ou
+editar a partir do seu próprio computador.</p>
+<p>No caso do Overleaf, é questão de criar uma conta, criar um projeto e começar a
+brincar.</p>
+<p>No caso do seu computador, é necessário:</p>
+<ul>
+<li>Instalar alguma distribuição LaTeX;</li>
+<li>Escrever um arquivo de .tex como arquivo principal do documento;</li>
+<li>Compilar para gerar o .pdf (ou corrigir os erros apontados pelo compilador).</li>
+</ul>
+<p>Você pode checar a seção <a href="#editores">Editores</a> nesta página para ver quais as
+possibilidades de aplicativos para editar LaTeX.</p>
+<h2><a class="header" href="#distribuições" id="distribuições">Distribuições</a></h2>
+<p>LaTeX vem em pacotes de ferramentas chamados de distribuições. Um resumo
+retirado da documentação do Overleaf:</p>
+<ul>
+<li><strong>MiKTeX</strong>: para Windows;</li>
+<li><strong>proTeXt</strong>: também para Windows, baseado no MiKTeX;</li>
+<li><strong>TeX Live</strong>: para Linux e outros sistemas Unix (ex: BSD);</li>
+<li><strong>MacTeX</strong>: redistribuição do TeX Live para MacOS.</li>
+</ul>
+<p>Para usuários de Windows, a distribuição <strong>proTeXt</strong> já inclui o MiKTeX, bem
+como o editor TeXStudio, feito para LaTeX e outras ferramentas menores. O
+MikTeX sozinho tem pouco menos de 200MB, enquanto o proTeXt chega a mais de
+1GB. Sendo assim, decidir entre um e outro é avaliar o <em>tradeoff</em> Armazenamento
+x Recursos.</p>
+<p>Independente de sua decisão de distribuição, é bem provável que você vá querer
+ter o TeX Live, visto que é o mais ativo e preferido na comunidade, mas como
+instalar em outro SO que não seja Unix é com você, portanto recomendo deixar
+isso para mais tarde se parecer complicado e primeiro ter seu início no mundo
+LaTeX.</p>
+<h2><a class="header" href="#compiladores" id="compiladores">Compiladores</a></h2>
+<p>Se tratando de LaTeX, o compilador é um programa que irá pegar o seu código
+LaTeX e gerar o documento em questão. Existem alguns compiladores mais
+conhecidos, sendo eles:</p>
+<ul>
+<li>
+<p><code>latex</code>: Compilador mais simples, porém aceita apenas imagens nos formatos
+.eps e .ps.</p>
+</li>
+<li>
+<p><a href="https://www.tug.org/applications/pdftex/">pdfLaTeX</a>: Suporta formatos mais
+comuns de imagem, como PNG, JPG, e mesmo outros PDFs.</p>
+</li>
+<li>
+<p><a href="https://www.overleaf.com/learn/latex/XeLaTeX">XeLaTeX</a>: Suporta, além das
+mesmas coisas que o pdfLaTeX, UTF-8 nativamente e permite utilizar fontes TTF
+e OTF.</p>
+</li>
+<li>
+<p><a href="http://www.luatex.org/">LuaTex</a>: Suporta, além das mesmas coisas que o
+XeLaTeX (com exceção de PostScript, uma linguagem feita para definição de
+layout de página para impressão - não significa que ela é obrigatória para
+gerar ou imprimir os PDFs), criar seus próprios comandos na linguagem Lua (em
+vez de LaTeX puro).</p>
+</li>
+</ul>
+<p>Mais informações sobre compiladores de LaTeX podem ser encontradas na
+<a href="https://www.overleaf.com/learn/latex/Choosing_a_LaTeX_Compiler">documentação do Overleaf sobre
+compiladores</a></p>
+<h2><a class="header" href="#editores" id="editores">Editores</a></h2>
+<p>Documentos LaTeX nada mais são do que arquivos de texto, padronizados com a
+extensão &quot;.tex&quot;. Então no fundo qualquer editor de texto serve, mas vale
+lembrar que vários editores oferecem recursos que facilitam sua vida.</p>
+<p>Editores específicos:</p>
+<ul>
+<li>
+<p><a href="https://overleaf.com">Overleaf</a>: Como apontado antes, é como um Google Docs
+para LaTeX. Funciona totalmente online, possui atalhos de teclado,
+compiladores, visualizador de PDF e etc. configurados prontamente sem que
+você precise fazer algo adicional. Pode ser ótimo para se aventurar com LaTeX
+sem se preocupar em adquirir ferramentas como TeX Live e semelhantes. Além
+disso, possui um sistema de colaboração em que várias pessoas podem editar o
+mesmo arquivo ao mesmo tempo. Também possui integração com repositórios do
+<a href="https://gitlab.com">GitLab</a>.</p>
+<p><img src="./img/example-overleaf.png" alt="Demonstração do Overleaf" /></p>
+</li>
+<li>
+<p><a href="https://www.texstudio.org/">TeXStudio</a>: Infelizmente não conheço do
+TeXStudio para dizer sobre ele, então sugiro ver a página oficial dele para
+mais detalhes. Se você já conhece o TeXStudio, sinta-se à vontade para fazer
+um Fork do <a href="https://github.com/pet-comp-ufsc/tutorials">repositório de
+tutoriais</a> e enviar um Pull
+Request com suas alterações descrevendo melhor o editor.</p>
+</li>
+</ul>
+<p>Editores independentes:</p>
+<ul>
+<li><a href="https://code.visualstudio.com/">VisualStudio Code</a>: Possui extensões para
+melhor uso de LaTeX, desde poder pré-visualizar seu documento e automatizar a
+compilação até destacar linhas com <em>warnings</em> e erros de compilação. Veja
+imagens e recursos na <a href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">Página da extensão de LaTeX para
+VSCode</a></li>
+</ul>
+<h2><a class="header" href="#documentação-recomendada" id="documentação-recomendada">Documentação recomendada</a></h2>
+<p>Há duas recomendações de documentação para caso precise tirar dúvidas sobre
+LaTeX:</p>
+<ol>
+<li>As documentações do Overleaf (o que inclui um guia de <a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">como aprender LaTeX
+em 30
+minutos</a>);</li>
+<li>As documentações dos pacotes que for utilizar.</li>
+</ol>
+<p><strong>Nota</strong>: No caso do overleaf, perceba o índice à esquerda para ver que há
+vários conteúdos interessantes para iniciantes.</p>
+<p>As documentações dos pacotes costumam ficar disponíveis em PDF no
+<a href="https://ctan.org/">CTAN</a>. Por exemplo, se vier na <a href="https://ctan.org/pkg/booktabs">documentação do
+<code>booktabs</code></a>, poderá ver que a documentação
+principal dele está disponível em 3 línguas diferentes (inglês, francês e
+espanhol). São esses PDFs de documentação que você deverá ler na maioria das
+vezes, que conterão toda a descrição do pacote, seus objetivos, e como fazer
+cada coisa que eles disponibilizam.</p>
+<h2><a class="header" href="#comunidade" id="comunidade">Comunidade</a></h2>
+<p>Por fim, é interessante estar atento à comunidade LaTeX:</p>
+<ul>
+<li>A nível internacional, você pode postar suas dúvidas no <a href="http://tex.stackexchange.com">LaTeX Stack
+Exchange</a>, sempre obedecendo às regras da
+comunidade.</li>
+<li>Ou você pode aproveitar também as comunidades brasileiras, como o
+<a href="https://t.me/latexbr">@latexbr</a> no Telegram, sempre lembrando de ser
+receptivo e manter a ordem e bom convívio social.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="why.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="first/about.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="why.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="first/about.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="/tutorials/js/special-tags.js"></script>
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,670 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>LaTeX</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="/tutorials/css/special-tags.css">
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="why.html">Por que utilizar LaTeX</a></li><li class="expanded affix "><a href="tools.html">Ferramentas e documentação</a></li><li class="expanded "><a href="first/about.html"><strong aria-hidden="true">1.</strong> Meu primeiro documento</a></li><li><ol class="section"><li class="expanded "><a href="first/general-structure.html"><strong aria-hidden="true">1.1.</strong> Estrutura geral e classes</a></li><li class="expanded "><a href="first/preamble.html"><strong aria-hidden="true">1.2.</strong> Preâmbulo: autor, título e data</a></li><li class="expanded "><a href="first/text-formatting.html"><strong aria-hidden="true">1.3.</strong> Formatação de texto</a></li><li class="expanded "><a href="first/lists.html"><strong aria-hidden="true">1.4.</strong> Listagem</a></li><li class="expanded "><a href="first/images.html"><strong aria-hidden="true">1.5.</strong> Inserindo imagens</a></li><li class="expanded "><a href="first/references.html"><strong aria-hidden="true">1.6.</strong> Referências com BibTeX</a></li><li class="expanded "><a href="first/presentations.html"><strong aria-hidden="true">1.7.</strong> Apresentações de slides</a></li></ol></li><li class="expanded "><a href="tables/about.html"><strong aria-hidden="true">2.</strong> Tabelas</a></li><li><ol class="section"><li class="expanded "><a href="tables/basics.html"><strong aria-hidden="true">2.1.</strong> Básico</a></li><li class="expanded "><a href="tables/lines.html"><strong aria-hidden="true">2.2.</strong> Linhas horizontais e verticais</a></li><li class="expanded "><a href="tables/color.html"><strong aria-hidden="true">2.3.</strong> Colorir células, colunas e linhas</a></li></ol></li><li class="expanded "><a href="macros/about.html"><strong aria-hidden="true">3.</strong> Macros</a></li><li><ol class="section"><li class="expanded "><a href="macros/vars.html"><strong aria-hidden="true">3.1.</strong> Definindo variáveis</a></li><li class="expanded "><a href="macros/environ.html"><strong aria-hidden="true">3.2.</strong> Definindo ambientes</a></li></ol></li><li class="expanded "><a href="specific/about.html"><strong aria-hidden="true">4.</strong> Aplicações específicas</a></li><li class="expanded "><a href="source-code/about.html"><strong aria-hidden="true">5.</strong> Código-fonte com minted</a></li><li><ol class="section"><li class="expanded "><a href="source-code/basics.html"><strong aria-hidden="true">5.1.</strong> Inserindo código-fonte</a></li><li class="expanded "><a href="source-code/escape.html"><strong aria-hidden="true">5.2.</strong> Escapar código</a></li><li class="expanded "><a href="source-code/slides.html"><strong aria-hidden="true">5.3.</strong> Código-fonte em slides</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">LaTeX</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#por-que-utilizar-latex" id="por-que-utilizar-latex">Por que utilizar LaTeX</a></h1>
+<p>LaTeX (lê-se: Latek) é uma ferramenta para criação de documentos, podendo ser:</p>
+<ul>
+<li>Apresentações de slides;</li>
+<li>Relatórios de trabalhos de aula;</li>
+<li>Artigos científicos;</li>
+<li>Livros;</li>
+<li>Provas.</li>
+</ul>
+<p>E ainda mais. Tudo isso levando em conta uma ótima qualidade de tipografia,
+disposição dos elementos (evitando poluição visual, por exemplo), e outros
+fatores relacionados a estética.</p>
+<p>É possível ler mais sobre LaTeX na <a href="https://www.latex-project.org/about/">página oficial do
+projeto</a>.</p>
+<p>Então, seguem alguns dos motivos para se utilizar LaTeX:</p>
+<h3><a class="header" href="#qualidade-tipográfica" id="qualidade-tipográfica">Qualidade tipográfica</a></h3>
+<p>Como mencionado anteriormente, LaTeX foca em ter uma qualidade tipográfica
+excelente. Um PDF gerado com a ferramenta dificilmente terá algum serrilhado,
+apresentará alguma deformação ou coisa do tipo. Isso se torna ainda melhor
+quando se tratam de expressões matemáticas, como por exemplo:</p>
+<p><img src="./img/math-expr-sample.svg" alt="Expressão matemática renderizada" /></p>
+<p>Essa expressão é criada utilizando:</p>
+<pre><code class="language-latex">\begin{equation}
+    \sigma_{prod}^{pA}(s) = \int_{0}^{\infty} 2\pi bdb
+        \left\lbrace
+            1 -
+            \left[
+                1 -
+                \frac{T_{A}(b)\sigma_{inel}^{NN}(s)}{A}
+            \right]
+            ^{A}
+        \right\rbrace
+        \stackrel{A \gg 1}{\approx}
+        2\pi\int_{0}^{\infty} bdb
+        \left\lbrace
+            1 -
+            \exp\left[
+                -T_{A}(b)
+                \sigma_{inel}^{NN}(s)
+            \right]
+        \right\rbrace
+\end{equation}
+</code></pre>
+<h3><a class="header" href="#qualidade-para-gráficosdiagramas" id="qualidade-para-gráficosdiagramas">Qualidade para gráficos/diagramas</a></h3>
+<p>Se você precisa plotar dados ou desenhar diagramas, LaTeX disponibiliza
+componentes que são capazes de renderizá-los em alta qualidade. É possível,
+inclusive, descrever os diagramas utilizando o próprio LaTeX, podendo ser até
+Máquinas de Estado, ou mesmo gráficos 3D.</p>
+<p>Um exemplo de plotagem de função:</p>
+<p><img src="./img/math-fun-sample.svg" alt="Função matemática renderizada" /></p>
+<p>Feita com:</p>
+<pre><code class="language-tex">\begin{tikzpicture}
+    \begin{axis}[domain=-4:4, legend]
+        \addplot {sin(deg(x))};
+        \addplot {cos(deg(x))};
+
+        \legend{
+            $\sin(x)$,
+            $\cos(x)$
+        }
+    \end{axis}
+\end{tikzpicture}
+</code></pre>
+<h3><a class="header" href="#se-preocupe-com-o-conteúdo-não-a-formatação" id="se-preocupe-com-o-conteúdo-não-a-formatação">Se preocupe com o conteúdo, não a formatação</a></h3>
+<p>Este é um ponto que serve para entender como utilizar LaTeX: diferente de
+programas como Microsoft Word ou Google Docs, a sua prioridade não será alterar
+os mínimos detalhes para a formatação de margens, posicionamento de imagens,
+etc., e sim com o conteúdo. Quem cuidará da formatação é o próprio LaTeX, o que
+inclui deixar seu documento nas normas da ABNT! Vale lembrar que quem cuida do
+projeto LaTeX são pessoas que entendem de tipografia, formatação e
+apresentação, ou seja: não irão deixar a desejar nesses quesitos.</p>
+<h3><a class="header" href="#fácil-gerenciamento-de-referências" id="fácil-gerenciamento-de-referências">Fácil gerenciamento de referências</a></h3>
+<p>Quem escreve documentos como artigos científicos sabe como referências são
+importantes e, em muitos casos, difícieis de administrar. BibTeX, uma
+ferramenta voltada a LaTeX, cuida delas automaticamente, bastando apenas
+fornecer as informações das referências (título, autor, ano de publicação...).
+E se a mesma referência for necessária em diferentes formatos (por exemplo,
+publicar para dois <em>journals</em> que cobram formatações de referência
+específicas), basta apenas especificar qual o formato, sem que se tenha que
+reescrever as referências.</p>
+<h3><a class="header" href="#fácil-de-citar-referências" id="fácil-de-citar-referências">Fácil de citar referências</a></h3>
+<p>Assim como é fácil gerenciar as referências, citá-las também é. Por exemplo,
+suponha que seu em seu projeto tenha a seguinte referência descrita com BibTeX:</p>
+<pre><code class="language-bibtex">@inproceedings{AwesomeAuthors:2018,
+    title = {&quot;An awesome article about BibTeX&quot;},
+    author = {&quot;Mr. and Mrs. Awesome&quot;},
+    year = 2018,
+}
+</code></pre>
+<p>Em qualquer momento do texto, é possível citá-lo como:</p>
+<pre><code class="language-tex">Segundo~\cite{AwesomeAuthors:2018}, fazer citações LaTeX é maravilhoso.
+</code></pre>
+<p>Isso irá, dependendo do formato de citações escolhido (ABNT ou IEEE, por
+exemplo), colocar a citação corretamente. Se for um formato citações enumerado
+(ou seja, em vez de &quot;(Autor, ano)&quot; ser &quot;[1]&quot;, &quot;[2]&quot;, etc.), a enumeração é
+feita automaticamente.</p>
+<h1><a class="header" href="#ferramentas-e-documentação" id="ferramentas-e-documentação">Ferramentas e documentação</a></h1>
+<p>Para começar a utilizar LaTeX, você pode utilizar o
+<a href="https://overleaf.com">Overleaf</a> (uma espécie de Google Docs para LaTeX) ou
+editar a partir do seu próprio computador.</p>
+<p>No caso do Overleaf, é questão de criar uma conta, criar um projeto e começar a
+brincar.</p>
+<p>No caso do seu computador, é necessário:</p>
+<ul>
+<li>Instalar alguma distribuição LaTeX;</li>
+<li>Escrever um arquivo de .tex como arquivo principal do documento;</li>
+<li>Compilar para gerar o .pdf (ou corrigir os erros apontados pelo compilador).</li>
+</ul>
+<p>Você pode checar a seção <a href="tools.html#editores">Editores</a> nesta página para ver quais as
+possibilidades de aplicativos para editar LaTeX.</p>
+<h2><a class="header" href="#distribuições" id="distribuições">Distribuições</a></h2>
+<p>LaTeX vem em pacotes de ferramentas chamados de distribuições. Um resumo
+retirado da documentação do Overleaf:</p>
+<ul>
+<li><strong>MiKTeX</strong>: para Windows;</li>
+<li><strong>proTeXt</strong>: também para Windows, baseado no MiKTeX;</li>
+<li><strong>TeX Live</strong>: para Linux e outros sistemas Unix (ex: BSD);</li>
+<li><strong>MacTeX</strong>: redistribuição do TeX Live para MacOS.</li>
+</ul>
+<p>Para usuários de Windows, a distribuição <strong>proTeXt</strong> já inclui o MiKTeX, bem
+como o editor TeXStudio, feito para LaTeX e outras ferramentas menores. O
+MikTeX sozinho tem pouco menos de 200MB, enquanto o proTeXt chega a mais de
+1GB. Sendo assim, decidir entre um e outro é avaliar o <em>tradeoff</em> Armazenamento
+x Recursos.</p>
+<p>Independente de sua decisão de distribuição, é bem provável que você vá querer
+ter o TeX Live, visto que é o mais ativo e preferido na comunidade, mas como
+instalar em outro SO que não seja Unix é com você, portanto recomendo deixar
+isso para mais tarde se parecer complicado e primeiro ter seu início no mundo
+LaTeX.</p>
+<h2><a class="header" href="#compiladores" id="compiladores">Compiladores</a></h2>
+<p>Se tratando de LaTeX, o compilador é um programa que irá pegar o seu código
+LaTeX e gerar o documento em questão. Existem alguns compiladores mais
+conhecidos, sendo eles:</p>
+<ul>
+<li>
+<p><code>latex</code>: Compilador mais simples, porém aceita apenas imagens nos formatos
+.eps e .ps.</p>
+</li>
+<li>
+<p><a href="https://www.tug.org/applications/pdftex/">pdfLaTeX</a>: Suporta formatos mais
+comuns de imagem, como PNG, JPG, e mesmo outros PDFs.</p>
+</li>
+<li>
+<p><a href="https://www.overleaf.com/learn/latex/XeLaTeX">XeLaTeX</a>: Suporta, além das
+mesmas coisas que o pdfLaTeX, UTF-8 nativamente e permite utilizar fontes TTF
+e OTF.</p>
+</li>
+<li>
+<p><a href="http://www.luatex.org/">LuaTex</a>: Suporta, além das mesmas coisas que o
+XeLaTeX (com exceção de PostScript, uma linguagem feita para definição de
+layout de página para impressão - não significa que ela é obrigatória para
+gerar ou imprimir os PDFs), criar seus próprios comandos na linguagem Lua (em
+vez de LaTeX puro).</p>
+</li>
+</ul>
+<p>Mais informações sobre compiladores de LaTeX podem ser encontradas na
+<a href="https://www.overleaf.com/learn/latex/Choosing_a_LaTeX_Compiler">documentação do Overleaf sobre
+compiladores</a></p>
+<h2><a class="header" href="#editores" id="editores">Editores</a></h2>
+<p>Documentos LaTeX nada mais são do que arquivos de texto, padronizados com a
+extensão &quot;.tex&quot;. Então no fundo qualquer editor de texto serve, mas vale
+lembrar que vários editores oferecem recursos que facilitam sua vida.</p>
+<p>Editores específicos:</p>
+<ul>
+<li>
+<p><a href="https://overleaf.com">Overleaf</a>: Como apontado antes, é como um Google Docs
+para LaTeX. Funciona totalmente online, possui atalhos de teclado,
+compiladores, visualizador de PDF e etc. configurados prontamente sem que
+você precise fazer algo adicional. Pode ser ótimo para se aventurar com LaTeX
+sem se preocupar em adquirir ferramentas como TeX Live e semelhantes. Além
+disso, possui um sistema de colaboração em que várias pessoas podem editar o
+mesmo arquivo ao mesmo tempo. Também possui integração com repositórios do
+<a href="https://gitlab.com">GitLab</a>.</p>
+<p><img src="./img/example-overleaf.png" alt="Demonstração do Overleaf" /></p>
+</li>
+<li>
+<p><a href="https://www.texstudio.org/">TeXStudio</a>: Infelizmente não conheço do
+TeXStudio para dizer sobre ele, então sugiro ver a página oficial dele para
+mais detalhes. Se você já conhece o TeXStudio, sinta-se à vontade para fazer
+um Fork do <a href="https://github.com/pet-comp-ufsc/tutorials">repositório de
+tutoriais</a> e enviar um Pull
+Request com suas alterações descrevendo melhor o editor.</p>
+</li>
+</ul>
+<p>Editores independentes:</p>
+<ul>
+<li><a href="https://code.visualstudio.com/">VisualStudio Code</a>: Possui extensões para
+melhor uso de LaTeX, desde poder pré-visualizar seu documento e automatizar a
+compilação até destacar linhas com <em>warnings</em> e erros de compilação. Veja
+imagens e recursos na <a href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">Página da extensão de LaTeX para
+VSCode</a></li>
+</ul>
+<h2><a class="header" href="#documentação-recomendada" id="documentação-recomendada">Documentação recomendada</a></h2>
+<p>Há duas recomendações de documentação para caso precise tirar dúvidas sobre
+LaTeX:</p>
+<ol>
+<li>As documentações do Overleaf (o que inclui um guia de <a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">como aprender LaTeX
+em 30
+minutos</a>);</li>
+<li>As documentações dos pacotes que for utilizar.</li>
+</ol>
+<p><strong>Nota</strong>: No caso do overleaf, perceba o índice à esquerda para ver que há
+vários conteúdos interessantes para iniciantes.</p>
+<p>As documentações dos pacotes costumam ficar disponíveis em PDF no
+<a href="https://ctan.org/">CTAN</a>. Por exemplo, se vier na <a href="https://ctan.org/pkg/booktabs">documentação do
+<code>booktabs</code></a>, poderá ver que a documentação
+principal dele está disponível em 3 línguas diferentes (inglês, francês e
+espanhol). São esses PDFs de documentação que você deverá ler na maioria das
+vezes, que conterão toda a descrição do pacote, seus objetivos, e como fazer
+cada coisa que eles disponibilizam.</p>
+<h2><a class="header" href="#comunidade" id="comunidade">Comunidade</a></h2>
+<p>Por fim, é interessante estar atento à comunidade LaTeX:</p>
+<ul>
+<li>A nível internacional, você pode postar suas dúvidas no <a href="http://tex.stackexchange.com">LaTeX Stack
+Exchange</a>, sempre obedecendo às regras da
+comunidade.</li>
+<li>Ou você pode aproveitar também as comunidades brasileiras, como o
+<a href="https://t.me/latexbr">@latexbr</a> no Telegram, sempre lembrando de ser
+receptivo e manter a ordem e bom convívio social.</li>
+</ul>
+<h1><a class="header" href="#meu-primeiro-documento" id="meu-primeiro-documento">Meu primeiro documento</a></h1>
+<p>Para começar bem no mundo LaTeX, arme-se com seu editor preferido pois iremos à
+prática.</p>
+<p>Nestes tutoriais, o compilador utilizado será o XeLaTeX, mas você pode utilizar
+qualquer compilador que quiser.</p>
+<p>Você pode compilar os arquivos .tex utilizando:</p>
+<pre><code class="language-console">$ &lt;seu compilador&gt; &lt;nome do arquivo&gt;
+</code></pre>
+<p>Por exemplo, com o XeLaTeX:</p>
+<pre><code class="language-console">$ xelatex arquivo-principal.tex
+</code></pre>
+<h2><a class="header" href="#o-que-você-verá-neste-capítulo" id="o-que-você-verá-neste-capítulo">O que você verá neste capítulo</a></h2>
+<p>Este capítulo conterá um guia para você ter seu primeiro documento de exemplo
+pronto. Não será exatamente um documento para o fim que você utilizará LaTeX,
+mas servirá para você ir do início ao fim com um documento que tenha:</p>
+<ul>
+<li>Capa;</li>
+<li>Textos formatados;</li>
+<li>Pelo menos uma imagem;</li>
+<li>Referências bibliográficas.</li>
+</ul>
+<p>O que irá ajudá-lo a entender como LaTeX funciona e, assim, poder utilizá-lo
+com maior segurança.</p>
+<h2><a class="header" href="#partes-práticas-e-resultado" id="partes-práticas-e-resultado">Partes práticas e resultado</a></h2>
+<p>Ao final de cada tópico haverá duas seções: &quot;Prática&quot; e &quot;Resultado&quot;.</p>
+<p>Prática: contém um passo a passo para você fazer em seu documento de exemplo,
+de forma a justamente praticar o que foi visto naquele tópico. Essas práticas
+não levam muito tempo para fazer, são justamente curtas para que você não perca
+tempo e veja o impacto dos recursos que aprendeu naquele tópico.</p>
+<p>Resultado: contém imagens, em diferentes classes de documento, com o resultado
+da parte prática, para você poder checar se ambas batem. OBS: Nem todas as
+classes estarão lá, já que algumas alterações possuem o mesmo efeito para duas
+classes diferentes, por exemplo as classes <code>book</code> e <code>article</code>.</p>
+<h1><a class="header" href="#estrutura-geral-e-classes" id="estrutura-geral-e-classes">Estrutura geral e classes</a></h1>
+<p>Arquivos LaTeX são organizados, em resumo, da seguinte forma:</p>
+<ol>
+<li>Classe do documento</li>
+<li>Preâmbulo (próximo tópico)</li>
+<li>Documento</li>
+</ol>
+<p>Na <strong>classe do documento</strong> se define justamente que tipo de documento se trata.
+As classes principais são:</p>
+<ul>
+<li><code>article</code>: Apesar do nome, serve para documentos no geral (o que inclui
+também artigos científicos).</li>
+<li><code>book</code>: Para livros;</li>
+<li><code>beamer</code>: Para apresentações de slides.</li>
+</ul>
+<p>Há várias outras classes que podem ser interessantes, dependendo do tipo de
+documento. Você pode checar algumas delas <a href="https://www.overleaf.com/learn/latex/Creating_a_document_in_LaTeX#Reference_guide">na introdução a LaTeX do
+Overleaf</a>.</p>
+<p>No <strong>documento</strong> fica o conteúdo do seu documento: todos os capítulos,
+parágrafos, tabelas, imagens, etc. Ao longo deste capítulo serão vistos vários
+comandos que podem ser utilizados nele.</p>
+<h2><a class="header" href="#comandos-e-ambientes" id="comandos-e-ambientes">Comandos e ambientes</a></h2>
+<p>Você irá perceber que LaTeX é composto majoritariamente de comandos e
+ambientes.</p>
+<concept title="Comandos">
+Assim como _macros_, são precedidos por `\`. Comandos podem alterar a
+formatação de um texto, inserir elementos (como imagens, conteúdos de outros
+arquivos), e efetuar operações (como alterar a linguagem do texto, por
+exemplo).
+</concept>
+<p>Por exemplo, <code>\textbf{&lt;texto&gt;}</code> é o comando para deixar um texto em negrito:</p>
+<pre><code class="language-latex">\textbf{Este trecho está em negrito.}
+Já este outro trecho não.
+</code></pre>
+<p>O que irá gerar algo como:</p>
+<blockquote>
+<p><strong>Este trecho está em negrito.</strong>
+Já este outro não.</p>
+</blockquote>
+<concept title="Ambientes">
+São como comandos, porém para blocos de código em vez de pequenos textos. O seu
+documento, por exemplo, é definido no ambiente `document`, como você verá na
+parte prática.
+</concept>
+<p>Ambientes podem ser utilizados com:</p>
+<pre><code class="language-latex">\begin{&lt;ambiente&gt;}
+    &lt;conteúdo&gt;
+\end{&lt;ambiente&gt;}
+</code></pre>
+<h2><a class="header" href="#prática" id="prática">Prática</a></h2>
+<p>Esboce seu primeiro documento seguindo os passos:</p>
+<ol>
+<li>
+<p>Escolha uma das classes de sua vontade;</p>
+</li>
+<li>
+<p>Crie um arquivo de texto (em branco) chamado <code>main.tex</code> (o nome pode ser
+qualquer um, na verdade, mas para fins de nos entendermos por aqui, o
+chamarei de <code>main.tex</code>);</p>
+</li>
+<li>
+<p>Nesse arquivo, escreva <code>\documentclass{&lt;classe&gt;}</code>, trocando <code>&lt;classe&gt;</code> pela
+classe de documento escolhida. Por exemplo, para a <code>article</code>, seu documento
+será:</p>
+<pre><code class="language-latex">\documentclass{article}
+</code></pre>
+</li>
+<li>
+<p>Escreva alguma frase para o conteúdo do seu documento. O conteúdo do seu
+documento deve ficar entre uma linha contendo <code>\begin{document}</code> e outra
+contendo <code>\end{document}</code>. Por exemplo:</p>
+<pre><code class="language-latex">\begin{document}
+    Texto de exemplo
+\end{document}
+</code></pre>
+<p>Se você estiver utilizando <code>beamer</code>, cada slide deve estar em um ambiente
+<code>frame</code>, portanto o código deve ser:</p>
+<pre><code class="language-latex">\begin{document}
+    \begin{frame}
+        Texto de exemplo.
+    \end{frame}
+\end{document}
+</code></pre>
+<p>Você pode ainda aproveitar e colocar um título para esse <code>frame</code>, da forma:</p>
+<pre><code class="language-latex">\begin{document}
+    \begin{frame}{Primeiro Frame}
+        Texto de exemplo.
+    \end{frame}
+\end{document}
+</code></pre>
+</li>
+<li>
+<p>Utilize seu compilador para gerar o PDF a partir do <code>main.tex</code>, por exemplo:</p>
+<pre><code class="language-console">$ xelatex main.tex
+</code></pre>
+</li>
+</ol>
+<p>Tendo feito esses 5 passos, você agora terá um arquivo <code>main.pdf</code>. Abaixo
+seguem tanto o código final de exemplo quanto os PDFs gerados quando utilizando
+<code>article</code> e <code>beamer</code>.</p>
+<h3><a class="header" href="#com-article" id="com-article">Com <code>article</code></a></h3>
+<pre><code class="language-latex">\documentclass{article}
+
+\begin{document}
+    Texto de exemplo
+\end{document}
+</code></pre>
+<p><img src="first/./img/example-article-1.png" alt="Exemplo 1 compilado com Article" /></p>
+<h3><a class="header" href="#com-beamer" id="com-beamer">Com <code>beamer</code></a></h3>
+<pre><code class="language-latex">\documentclass{beamer}
+
+\begin{document}
+    \begin{frame}{Primeiro Frame}
+        Texto de exemplo
+    \end{frame}
+\end{document}
+</code></pre>
+<p><img src="first/./img/example-beamer-1.png" alt="Exemplo 1 compilado com Beamer" /></p>
+<h1><a class="header" href="#preâmbulo-autor-título-e-data" id="preâmbulo-autor-título-e-data">Preâmbulo: autor, título e data</a></h1>
+<p>Como visto no tópico anterior, o Preâmbulo é o que fica entre a definição da
+classe e o documento. Nele vão:</p>
+<ul>
+<li>Os pacotes utilizados (serão vistos mais à frente);</li>
+<li>(Re)Definição de comandos, ambientes e <em>macros</em>.</li>
+</ul>
+<p><strong>Macros</strong> são nomes que serão substituídos por algum conteúdo quando o seu
+LaTeX for compilado. Algumas <em>macros</em> são, por exemplo, <code>\title</code>, <code>\author</code> e
+<code>\date</code>, que representam respectivamente o título, autor e data do documento, e
+podem ser definidas da seguinte forma:</p>
+<pre><code class="language-latex">\title{Título de exemplo}
+\author{Autor exemplar}
+\date{\today}
+</code></pre>
+<p>Perceba que em <code>\date</code> foi utilizada uma outra <em>macro</em> como o valor. Essa macro
+contém o dia em que o documento foi compilado, portanto ela muda toda vez que
+você compilar em dias diferentes. Caso você queira especificar uma data, basta
+escrevê-la por extenso:</p>
+<p>Essas três macros serão úteis, por exemplo, quando você utilizar comandos como
+o <code>\maketitle</code>, que, dependendo do tipo de documento e das especificações dos
+pacotes, gera a parte de título do seu documento. No caso de um livro, isso
+significa a capa. No caso de um artigo, significa a área inicial dele que
+contém título, autores e etc. No caso de apresentações de slides, significa o
+slide de abertura/título.</p>
+<h2><a class="header" href="#prática-1" id="prática-1">Prática</a></h2>
+<ol>
+<li>Insira, depois da definição do <code>\documentclass{...}</code> e antes de
+<code>\begin{document}</code>, um título, autor e data apropriados para seu documento
+de exemplo.</li>
+<li>Em seguida, no ambiente do conteúdo do documento, faça a primeira coisa (ou
+seja, antes mesmo do seu texto de exemplo) ser o comando <code>\maketitle</code>.</li>
+<li>Por fim, compile e veja o resultado de seu documento.</li>
+</ol>
+<h2><a class="header" href="#resultado" id="resultado">Resultado</a></h2>
+<h3><a class="header" href="#com-article-1" id="com-article-1">Com <code>article</code></a></h3>
+<pre><code class="language-latex">\documentclass{article}
+
+\title{Aprendendo LaTeX}
+\author{PET Computação}
+\date{\today}
+
+\begin{document}
+    \maketitle
+
+    Texto de exemplo
+\end{document}
+</code></pre>
+<p><img src="first/./img/example-article-2.png" alt="Exemplo 2 compilado com Article" /></p>
+<h3><a class="header" href="#com-beamer-1" id="com-beamer-1">Com <code>beamer</code></a></h3>
+<pre><code class="language-latex">\documentclass{beamer}
+
+\title{Aprendendo LaTeX}
+\author{PET Computação}
+\date{\today}
+
+\begin{document}
+    \maketitle
+
+    \begin{frame}{Primeiro frame}
+        Texto de exemplo
+    \end{frame}
+\end{document}
+</code></pre>
+<p><img src="first/./img/example-beamer-2.png" alt="Exemplo 2 compilado com Beamer" /></p>
+<h1><a class="header" href="#formatação-de-texto" id="formatação-de-texto">Formatação de texto</a></h1>
+<h1><a class="header" href="#listagem" id="listagem">Listagem</a></h1>
+<h1><a class="header" href="#inserindo-imagens" id="inserindo-imagens">Inserindo imagens</a></h1>
+<h1><a class="header" href="#referências-com-bibtex" id="referências-com-bibtex">Referências com BibTeX</a></h1>
+<h1><a class="header" href="#apresentações-de-slides" id="apresentações-de-slides">Apresentações de slides</a></h1>
+<h1><a class="header" href="#tabelas" id="tabelas">Tabelas</a></h1>
+<h1><a class="header" href="#básico" id="básico">Básico</a></h1>
+<h1><a class="header" href="#linhas-horizontais-e-verticais" id="linhas-horizontais-e-verticais">Linhas horizontais e verticais</a></h1>
+<h1><a class="header" href="#colorir-células-colunas-e-linhas" id="colorir-células-colunas-e-linhas">Colorir células, colunas e linhas</a></h1>
+<h1><a class="header" href="#macros" id="macros">Macros</a></h1>
+<h1><a class="header" href="#definindo-variáveis" id="definindo-variáveis">Definindo variáveis</a></h1>
+<h1><a class="header" href="#definindo-ambientes" id="definindo-ambientes">Definindo ambientes</a></h1>
+<h1><a class="header" href="#aplicações-específicas" id="aplicações-específicas">Aplicações específicas</a></h1>
+<h1><a class="header" href="#código-fonte-com-minted" id="código-fonte-com-minted">Código-fonte com minted</a></h1>
+<h1><a class="header" href="#inserindo-código-fonte" id="inserindo-código-fonte">Inserindo código-fonte</a></h1>
+<h1><a class="header" href="#escapar-código" id="escapar-código">Escapar código</a></h1>
+<h1><a class="header" href="#código-fonte-em-slides" id="código-fonte-em-slides">Código-fonte em slides</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="/tutorials/js/special-tags.js"></script>
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
