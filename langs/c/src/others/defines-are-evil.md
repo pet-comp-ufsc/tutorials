@@ -278,7 +278,7 @@ int main() {
 se quer garantir que `p` seja igual a `{0, 0}`, senão o programa irá abortar
 indicando que aquela asserção falhou. Porém, como não há parênteses ao redor de
 `{0, 0}`, a macro entende que se estão passando 2 argumentos a ela:
-1. `p == {0`;
+1. `p == Point{0`;
 2. `0}`.
 
 Porém, `assert` só tem 1 parâmetro, e portanto o programa não compila:
