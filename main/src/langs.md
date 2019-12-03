@@ -9,4 +9,4 @@ Selecione sua linguagem de interesse para acessar tutoriais dedicados a ela:
 - [C++](./langs/cpp/index.md) (em construção)
 - [Java](./langs/java/index.md)
 - [LaTeX](./langs/latex/index.md) (em construção)
-- Python _(Em breve)_
+- [Python](./langs/python/index.md)
