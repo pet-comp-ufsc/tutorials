@@ -5,3 +5,4 @@ Linguagens
 - [C#](/langs/c-sharp/)
 - [C++](/langs/cpp/)
 - [Java](/langs/java/)
+- [Python](/langs/python/)
