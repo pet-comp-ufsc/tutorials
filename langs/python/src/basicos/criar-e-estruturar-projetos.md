@@ -22,9 +22,13 @@ Poetry](https://python-poetry.org/docs/#installation).
   <code class="language-console hljs shell">
 $ poetry config virtualenvs.in-project true
   </code>
-  <br>Isso evita que polua a sua pasta do usuário com <i>virtualenvs</i>, criando elas nas
-  pastas dos projetos em vez disso e facilitando integração com ferramentas como
-  VSCode (que buscam por <i>virtualenvs</i> na pasta do projeto).
+  <br>Isso evita que polua a sua pasta de usuário (a sua "Home") com
+  <i>virtualenvs</i>, pois por padrão o Poetry gera as virtualenvs em uma pasta
+  como <code>/home/usuário/.cache/pypoetry/virtualenvs</code>, o que é um pouco
+  mais complicado de gerenciar. A opção <code>in-project</code> faz com que a
+  <i>virtualenv</i> seja criada na pasta do projeto, o que acaba também
+  facilitando integração com ferramentas como VSCode (que buscam por
+  <i>virtualenvs</i> na pasta do projeto).
 </warn>
 
 Criando um projeto
@@ -37,7 +41,7 @@ estrutura pronta:
 $ poetry new poetry-demo
 ```
 
-Isso irá gerar uma pasta `poetry-demo` com o seguinte conteúdo:
+O comando acima irá gerar uma pasta `poetry-demo` com o seguinte conteúdo:
 
 ```console
 poetry-demo
@@ -57,16 +61,19 @@ Estruturando um projeto
 
 A estrutura de projeto gerada pelo `poetry` é já uma base interessante, pois
 há:
-- Um arquivo indicando as informações do projeto e suas dependências e que pode
-  ser utilizado por uma ferramenta pronta e funcional (`pyproject.toml`).
-- Um arquivo com informações gerais sobre o projeto, instruções de instalação,
-  uso e contribuição, e por aí vai (`README.md`).
-- Uma pasta contendo códigos para testes, que irão garantir que quem realizar
-  mudanças no projeto não será avisado quando elas quebrarem o comportamento
-  esperado do programa (por exemplo, se você sem querer fizer que uma função
-  `square(x)` não devolva o valor correto para alguns valores de `x`).
-- Um **pacote** com o código fonte do projeto (`poetry_demo`), que será
-  importado por outras bibliotecas/aplicações ou executado pelo usuário.
+- `pyproject.toml`: Um arquivo indicando as **informações do projeto** e suas
+  **dependências**, que pode ser utilizado por uma ferramenta pronta como o
+  próprio Poetry.
+- `README.md`: Um arquivo com informações gerais sobre o projeto, instruções de
+  instalação, uso, contribuição, e por aí vai.
+- `tests`: Uma pasta contendo códigos para testes, que irão garantir que quem
+  realizar mudanças no projeto será avisado quando elas quebrarem o
+  comportamento esperado do programa (por exemplo, se você sem querer fizer que
+  uma função `square(x)` não devolva o valor correto para alguns valores de
+  `x`).
+- `poetry_demo`: Um **pacote** com o código fonte do projeto, que será
+  importado por outras bibliotecas/aplicações ou executado pelo usuário com
+  `python -m poetry_demo`.
 
 Essa é uma estrutura mínima e saudável de projeto que você pode seguir sem
 medo. A ressalva fica em relação ao pacote do projeto (neste exemplo, a pasta
@@ -75,7 +82,7 @@ medo. A ressalva fica em relação ao pacote do projeto (neste exemplo, a pasta
 <concept title="Módulo">
 Um <a href="https://docs.python.org/pt-br/3/tutorial/modules.html">módulo</a>,
 em Python, é um arquivo contendo definições e instruções. Um arquivo
-<code>foo.py</code> é dito como o módulo <code>foo</code>.
+<code>foo.py</code> é chamado de "módulo <code>foo</code>".
 <br>
 Um exemplo de módulo pode ser um arquivo <code>geometry.py</code> que contenha:
 <br>
@@ -122,7 +129,8 @@ Um <a
 href="https://docs.python.org/pt-br/3/tutorial/modules.html#packages">pacote</a>,
 em Python, é uma forma de organizar o escopo de módulos no
 <code>pacote.modulo</code> (ou <code>pacote.subpacote.modulo</code>, quando o
-pacote possui um subpacote).
+pacote possui um subpacote). Toda pasta que contenha um arquivo
+<code>__init.__.py</code> é tratada como um pacote.
 </concept>
 
 Por exemplo, quando há em um código Python:

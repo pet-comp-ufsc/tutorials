@@ -93,7 +93,7 @@ build() {
 
 serve() {
     build
-    mdbook serve -d book/ -p 3004
+    python -m http.server -d book
 }
 
 clean() {
