@@ -7,7 +7,8 @@ Sobre
 Este repositório contém uma série de tutoriais feitos pelos membros do Programa
 de Educação Tutorial (PET) Computação da Universidade Federal de Santa Catarina
 (UFSC), com foco em melhorar o aprendizado dos alunos do curso (e possivelmente
-outros interessados em computação). Todos eles estão escritos em Markdown e
+outros interessados em computação), trazer links úteis e interessantes, ou mesmo
+trazer conceitos e materiais de áreas diversas da computação. Todos eles estão escritos em Markdown e
 compilados com [mdbook](https://rust-lang-nursery.github.io/mdBook/).
 
 [Clique aqui](https://pet-comp-ufsc.github.io/tutorials) para abrir os
@@ -52,7 +53,11 @@ Prefira [abrir uma issue](https://github.com/pet-comp-ufsc/tutorials/issues)
 caso queira entrar em contato por conta de algum dos seguintes itens:
 
 - Dúvida a respeito de algo explicado em algum tutorial;
-- Erros encontrados em algum dos tutoriais.
+- Erros encontrados em algum dos tutoriais;
+- Sugestão de temas ou materiais;
+- Colaboração na elaboração de conteúdo ou manutenção do site.
 
 Para outros casos, você pode entrar em contato com o PET-CCO-UFSC por algum dos
-contatos disponíveis no [nosso site oficial](http://pet.inf.ufsc.br/).
+contatos disponíveis no [nosso site oficial](https://petcomputacao.ufsc.br/) ou
+acessar nossa [linktree](https://linktr.ee/pet_computacao).
+
