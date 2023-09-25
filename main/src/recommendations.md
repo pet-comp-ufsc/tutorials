@@ -10,3 +10,7 @@ Recomendações de leitura
 
 - [Livro: "Pense em Python"](https://pense-python.caravela.club)
 - [Tutoriais sobre Python](./langs/python/index.md)
+
+### Bibliotecas Virtuais
+
+- [Biblioteca PET Computação](https://petcomputacao.ufsc.br/docs/)
