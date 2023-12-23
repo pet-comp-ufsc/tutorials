@@ -6,3 +6,7 @@ title = "Python"
 
 [build]
 build-dir = "../../book/langs/python"
+
+[output.html]
+additional-css = ["../../css/special-tags.css"]
+additional-js = ["../../js/special-tags.js"]
