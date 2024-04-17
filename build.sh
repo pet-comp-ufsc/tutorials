@@ -38,7 +38,7 @@ fix-js-css-path() {
 
     if [ "$1" = "--local" ];
     then
-        BASEPATH="$(pwd)/book"
+        BASEPATH=""
         local dst="${tag}=\"${BASEPATH//\//\\/}\/${ext}\/\2\""
         echo "Fixing ${ext} paths (local build)..."
         echo "    -> pat: ${pat}"
@@ -69,6 +69,8 @@ nofun() {
 # Commands
 
 build() {
+    check-mdbook
+
     echo "Build flags: $*"
 
     build-book main
@@ -91,11 +93,17 @@ build() {
 
 serve() {
     build
-    mdbook serve -d book/ -p 3004
+    python -m http.server -d book
 }
 
 clean() {
     rm -rf book
+}
+
+check-mdbook() {
+    if ! command -v mdbook &> /dev/null; then
+      printf "${ERROR} ${book}: mdbook not found or is not installed"
+    fi
 }
 
 FS="@(${FUNCTIONS})"
